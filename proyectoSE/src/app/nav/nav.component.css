@@ -1,0 +1,77 @@
+
+nav{
+    overflow: auto;
+    padding: 10px 0px;
+}
+
+div{
+    padding: 10px 10px;
+    width: 55%;
+    float: left;
+    height: min-content;
+}
+
+nav div:first-child, nav div:last-child{
+    max-width: 20%;
+}
+
+nav div:last-child{
+    text-align: right;
+}
+
+div#logoCont{
+    padding: 0px 0px;
+    float: left;
+}
+
+div input{
+    padding: 10px 10px;
+    font-size: 110%;
+    width: 85%;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+div#buscarCont button{
+    display: inline-block;
+    vertical-align: top;
+    width: 10%;
+    padding: 7px 0px;
+    background-color: var(--color-boton);
+    border: none;
+    box-shadow: 1px 0px 3px black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+div#buscarCont{
+    margin-top: 2px;
+}
+
+div .navBoton{
+    padding: 10px 20px;
+    margin: 3px 5px;
+    display: inline-block;
+    background-color: var(--color-boton);
+}
+
+div img{
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 65px;
+}
+
+#botonesCont{
+    width: max-content;
+}
+
+hr{
+    display: block;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
