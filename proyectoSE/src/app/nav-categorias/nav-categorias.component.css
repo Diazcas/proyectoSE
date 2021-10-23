@@ -67,6 +67,47 @@ div fa-icon{
     div h1{
         font-size: 150%;
         padding-top: 4px;
+        margin-right: 10px;
     }
     
+}
+
+@media (max-width:415px) {
+
+    nav{
+        margin-bottom: 10px;
+        position: relative;
+        height: 100px;
+    }
+
+    nav .h1Cont{
+        float: left;
+        width: fit-content;
+        height: 55px;
+    }
+
+    nav .h1Cont h1{
+        padding-left: 10px;
+    }
+
+    nav div:last-child{
+        float: right;
+        margin-right: 10px;
+    }
+
+    nav .categoriasCont{
+        max-width: 86%;
+        width: fit-content;
+        position: absolute;
+        height: 50px;
+        overflow-y: hidden;
+        left: 0;
+        right: 0;
+        margin: 50px auto;
+        overflow-x: hidden;
+    }
+
+    nav .categoriasCont div{
+        float: none;
+    }
 }

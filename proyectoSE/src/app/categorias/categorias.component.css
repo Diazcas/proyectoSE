@@ -1,0 +1,180 @@
+fa-icon {
+  color: grey;
+  margin: 0px 2px;
+}
+
+fa-icon.active {
+  color: white;
+}
+
+.categoriasCont {
+  overflow: auto;
+  margin-top: 20px;
+  width: fit-content;
+  min-width: 680px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.192);
+  box-shadow: 0px 0px 20px rgb(65, 65, 65);
+  padding: 20px;
+}
+
+section {
+  overflow: auto;
+  width: min-content;
+  max-width: 680px;
+}
+
+.empresas {
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 320px;
+  overflow-x: hidden;
+}
+
+.empresaCont {
+  float: left;
+  width: 300px;
+  background-image: url(../../assets/img/burguer-banner.jpg);
+  background-color: white;
+  background-size: auto 200px;
+  background-repeat: no-repeat;
+  height: 250px;
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: 0px 0px 15px rgb(189, 189, 189);
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  transition: box-shadow 0.5s ease;
+}
+
+.empresaCont:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 15px black;
+}
+
+.empresaCont:last-child {
+  margin-right: 20px;
+}
+
+.calificacion {
+  float: left;
+  margin-left: 10px;
+}
+
+.empresaLogo {
+  float: right;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.empresaLogo img {
+  height: 100%;
+}
+
+.detalleEmpresa {
+  margin-top: 155px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detalleEmpresa p {
+  margin: 0;
+  color: black;
+  padding: 0px 10px;
+  max-height: 40px;
+  overflow: hidden;
+  text-shadow: 0px 0px 2px grey;
+}
+
+.detalleEmpresa h2 {
+  text-shadow: -1px -2px 1px black;
+}
+
+.nombreCat h1 {
+  margin: 0;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+button{
+  padding: 10px 20px;
+  margin: 0px 20px;
+  float: right;
+}
+
+
+.empresasCont{
+  width: 1120px;
+  max-width: max-content;
+}
+
+
+@media (min-width: 1110px) {
+  section {
+    min-width: 1020px;
+  }
+
+  .empresas{
+    overflow: hidden;
+  }
+
+  .empresasCont{
+    width: auto;
+  }
+
+  
+
+}
+
+@media (max-width:415px) {
+
+  .categoriasCont{
+    width: 90%;
+    min-width: 0px;
+    padding: 0;
+  }
+  
+  .empresasCont{
+    margin-top: 40px;
+    width: max-content;
+  }
+
+  section{
+    overflow: hidden;
+    position: relative;
+  }
+
+  .nombreCat{
+    position: absolute;
+  }
+
+  button{
+    margin: 10px 20px;
+    margin-top: 0px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    color: white;
+    background-color: var(--color-boton);
+  }
+
+  button:last-child{
+    margin: 10px 0px;
+    margin-top: 0px;
+  }
+  
+  .empresasCont{
+    width: max-content;
+  }
+
+  section{
+    max-width: none;
+  }
+
+}
