@@ -10,6 +10,55 @@
     <link rel="stylesheet" href="pag.css">
 </head>
 <body>
-    <h1>Este es otro cambio</h1>
+    <div class="carritoCont">
+        <h1>Carrito</h1>
+        <div class="carrito">
+            <div class="objetoCont">
+                <div class="objetoImagen">
+                    <h2>Texana burguer</h2>
+                </div>
+                <div class="objetoDetalle">
+                    <b>Ingredientes:</b>
+                    <p class="descripcion"> Tomatillo y triple level de carne y con todo el queso que quieras, puedes agregar a tu disposicion</p>
+                    <p class="precio">25.99$</p>
+                    <button (click)="activarModal()">Agregar</button>
+                </div>
+            </div>
+            <div class="objetoCont">
+                <div class="objetoImagen">
+                    <h2>Texana burguer</h2>
+                </div>
+                <div class="objetoDetalle">
+                    <b>Ingredientes:</b>
+                    <p class="descripcion"> Tomatillo y triple level de carne y con todo el queso que quieras, puedes agregar a tu disposicion</p>
+                    <p class="precio">25.99$</p>
+                    <button (click)="activarModal()">Agregar</button>
+                </div>
+            </div>
+            <div class="objetoCont">
+                <div class="objetoImagen">
+                    <h2>Texana burguer</h2>
+                </div>
+                <div class="objetoDetalle">
+                    <b>Ingredientes:</b>
+                    <p class="descripcion"> Tomatillo y triple level de carne y con todo el queso que quieras, puedes agregar a tu disposicion</p>
+                    <p class="precio">25.99$</p>
+                    <button (click)="eliminarProd()">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modalBack" *ngIf="modalCantidad == 'active'">
+        <div class="modalInfoBack factura">
+            <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
+            <p>Coste de producto: </p>
+            <p>Coste de envio: </p>
+            <p>Total: </p>
+            <button>Ir a pago</button>
+        </div>
+    </div>
+
+
 </body>
 </html>

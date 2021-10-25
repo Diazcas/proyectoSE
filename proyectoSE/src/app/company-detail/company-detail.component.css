@@ -134,7 +134,7 @@ fa-icon.active {
   backdrop-filter: blur(5px);
 }
 
-.modalBack .cantidadProd{
+.modalBack .modalInfoBack{
   position: absolute;
   top: 0;
   bottom: 0;
@@ -146,11 +146,11 @@ fa-icon.active {
   padding: 10px;
 }
 
-.cantidadProd p {
+.modalInfoBack p {
   margin-top: 30px;
 }
 
-.cantidadProd input{
+.modalInfoBack input{
   width: 150px;
 }
 
