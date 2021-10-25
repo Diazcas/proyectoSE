@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faCoffee, faBars  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -11,9 +12,13 @@ export class NavComponent implements OnInit {
   faBars = faBars;
   regionVisible = 'botones';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  cambiarPant(){
+    this.router.navigateByUrl('')
   }
 
 }

@@ -52,9 +52,12 @@
     <div class="modalBack" *ngIf="modalCantidad == 'active'">
         <div class="modalInfoBack factura">
             <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
-            <p>Coste de producto: </p>
-            <p>Coste de envio: </p>
-            <p>Total: </p>
+            <p class="izq">Coste de producto: </p>
+            <p class="der">25.99$</p>
+            <p class="izq">Coste de envio: </p>
+            <p class="der">43$</p>
+            <p class="izq">Total: </p>
+            <p class="der">67$</p>
             <button>Ir a pago</button>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faWindowClose, faStar , faStore , faUtensils, faTools, faPrescriptionBottleAlt,  } from '@fortawesome/free-solid-svg-icons';
+import {faWindowClose} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-company-detail',

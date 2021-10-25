@@ -1,9 +1,9 @@
 <nav>
-    <div class="navDiv" id="logoCont">
+    <div (click)="cambiarPant()" class="navDiv" id="logoCont">
         <img src="../../assets/img/logo.jpg" alt="">
     </div>
     <div class="navDiv" id="buscarCont">
-        <input type="text">
+        <input type="text" placeholder="Restaurantes">
         <button><fa-icon [icon]="faCoffee" size="2x"></fa-icon></button>
     </div>
     <div class="navDiv" id="botonesCont" *ngIf="regionVisible == 'botones'">

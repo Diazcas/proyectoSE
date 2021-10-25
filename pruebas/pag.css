@@ -108,15 +108,28 @@
     text-shadow: none;
     width: max-content;
     padding: 10px 30px;
+    width: 220px;
+    text-align: center;
   }
   
   .modalInfoBack p {
     margin-top: 30px;
+    width: 150px;
+    display: inline-block;
+    margin-bottom: 0;
   }
-  
+
+  .modalInfoBack p.der{
+    width: 60px;
+    text-align: left;
+  }
+
+  .modalInfoBack p.izq{
+      text-align: right;
+  }
+
   .modalBack button{
-    display: block;
-    float: right;
     margin: 20px 0px;
+    padding: 10px 30px;
   }
   

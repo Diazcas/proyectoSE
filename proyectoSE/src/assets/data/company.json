@@ -1,0 +1,39 @@
+{
+    "restaurantes": [
+        {
+            "id": 0,
+            "nombre": "Burguer King",
+            "banner": "burguer_banner.jpg",
+            "productos": [
+                {
+                    "id": 0,
+                    "img": "texana.jpg",
+                    "nombre": "Texana Burguer",
+                    "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                    "precio": "5.99$"
+                },
+                {
+                    "id": 1,
+                    "img": "whopper.jpg",
+                    "nombre": "Whopper Burguer",
+                    "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                    "precio": "3.99$"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "nombre": "Mc'Donalds",
+            "banner": "mc_banner.jpg",
+            "productos": [
+                {
+                    "id": 0,
+                    "img": "Mc'Nifica.jpg",
+                    "nombre": "Mc'Nifica",
+                    "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                    "precio": "4.99$"
+                }
+            ]
+        }
+    ]
+}

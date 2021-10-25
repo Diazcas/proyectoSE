@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faStar , faStore , faUtensils, faTools, faPrescriptionBottleAlt,  } from '@fortawesome/free-solid-svg-icons';
+import { LocalStoService } from '../local-sto.service'
 
 
 @Component({
@@ -14,11 +15,13 @@ export class TodasCatComponent implements OnInit {
   faTools = faTools;
   faPrescriptionBottleAlt = faPrescriptionBottleAlt;
   movilVisible = 'nada';
-
-  constructor() { }
-
+  
+  constructor(private localSto: LocalStoService) { }
+  
   ngOnInit(): void {
+    console.log(this.localSto.traerLS('companias','restaurantes',0))
   }
+
 
   mostrarCat(){
     this.movilVisible = 'movil'

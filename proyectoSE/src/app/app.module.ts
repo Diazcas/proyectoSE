@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { TodasCatComponent } from './todas-cat/todas-cat.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { LandingComponent } from './landing/landing.component';
+import { LocalStoService } from './local-sto.service';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,15 @@ import { CarritoComponent } from './carrito/carrito.component';
     AboutComponent,
     TodasCatComponent,
     CompanyDetailComponent,
-    CarritoComponent
+    CarritoComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [LocalStoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
