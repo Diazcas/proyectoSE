@@ -1,0 +1,172 @@
+fa-icon {
+  color: grey;
+  margin: 0px 2px;
+}
+
+fa-icon.active {
+  color: white;
+}
+
+.categoriasCont {
+  width: 90%;
+  min-width: 0px;
+  padding: 0;
+  overflow: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.192);
+  box-shadow: 0px 0px 20px rgb(65, 65, 65);
+}
+
+section {
+  overflow: hidden;
+}
+
+.empresaCont {
+  margin: 30px 20px;
+  background-image: url(../../assets/img/burguer-banner.jpg);
+  background-color: white;
+  background-size: auto 200px;
+  background-repeat: no-repeat;
+  height: 250px;
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: 0px 0px 15px rgb(189, 189, 189);
+  transition: box-shadow 0.5s ease;
+}
+
+.empresaCont:first-child {
+  margin-top: 0px;
+}
+
+.empresaCont:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px black;
+}
+
+.empresaCont:last-child {
+  margin-right: 20px;
+}
+
+.calificacion {
+  float: left;
+  margin-left: 10px;
+}
+
+.empresaLogo {
+  float: right;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.empresaLogo img {
+  height: 100%;
+}
+
+.detalleEmpresa {
+  margin-top: 155px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detalleEmpresa p {
+  margin: 0;
+  color: black;
+  padding: 0px 10px;
+  max-height: 40px;
+  overflow: hidden;
+  text-shadow: 0px 0px 2px grey;
+}
+
+.detalleEmpresa h2 {
+  text-shadow: -1px -2px 1px black;
+  padding: 0px 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0px 20px;
+  float: right;
+}
+
+.nombreCat {
+  text-align: center;
+}
+
+#botonMenu {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s ease;
+}
+
+#botonMenu fa-icon {
+  font-size: 30px;
+  color: var(--color-boton);
+}
+
+#botonMenu:hover {
+  background-color: var(--color-boton);
+}
+
+#botonMenu:hover fa-icon {
+  color: white;
+}
+
+.todasCatCont {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+  overflow: hidden;
+}
+
+.todasCatCont ul {
+  padding: 20px 0px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: min-content;
+  height: min-content;
+  list-style: none;
+  padding-inline-start: 0px;
+  z-index: 100;
+}
+
+.todasCatCont li {
+  padding: 20px 20px;
+  text-align: center;
+  font-size: 150%;
+  width: 300px;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid black;
+}
+
+.todasCatCont li:first-child {
+  border-top: 1px solid black;
+}
+
+li fa-icon {
+  margin-right: 15px;
+}
+
+li a {
+  text-decoration: none;
+  box-shadow: none;
+  text-shadow: -1px -1px 2px rgb(92, 92, 92);
+}

@@ -1,0 +1,40 @@
+<div class="categoriasCont">
+    <section>
+        <div class="empresas">
+            <div class="nombreCat">
+                <h1>Restaurantes</h1>
+            </div>
+            <div class="empresasCont">
+                <div class="empresaCont">
+                    <p class="calificacion">
+                        <fa-icon class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon class="" [icon]="faStar"></fa-icon>
+                        <fa-icon class="" [icon]="faStar"></fa-icon>
+                    </p>
+                    <div class="empresaLogo">
+                        <img src="../../assets/img/burguer-logo.png" alt="">
+                    </div>
+                    <div class="detalleEmpresa">
+                        <h2>Burguer King</h2>
+                        <p class="descripcion"> Soasdasdasdadasd asdas dasd mos una empresa que vende hamburguesas delis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="botonMenu" (click)='mostrarCat()'>
+    <fa-icon [icon]="faStore"></fa-icon>
+</div>
+
+<div class="todasCatCont" *ngIf="movilVisible == 'movil'" (click)='quitarCat()'>
+    <ul>
+        <li (click)='verCat()'><fa-icon [icon]="faUtensils"></fa-icon><a href="">Restaurantes</a></li>
+        <li (click)='verCat()'><fa-icon [icon]="faPrescriptionBottleAlt"></fa-icon><a href="">Farmacias</a></li>
+        <li (click)='verCat()'><fa-icon [icon]="faTools"></fa-icon><a href="">Ferreterias</a></li>
+        <li (click)='verCat()'><fa-icon [icon]="faStore"></fa-icon><a href="">Supermercados</a></li>
+    </ul>
+</div>

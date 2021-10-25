@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavCategoriasComponent } from './nav-categorias/nav-categorias.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { AboutComponent } from './about/about.component';
+import { TodasCatComponent } from './todas-cat/todas-cat.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     NavComponent,
     NavCategoriasComponent,
     CategoriasComponent,
-    AboutComponent
+    AboutComponent,
+    TodasCatComponent
   ],
   imports: [
     BrowserModule,
