@@ -1,0 +1,123 @@
+.banner{
+  width: 105%;
+  height: 150px;
+  margin-left: -10px;
+  box-shadow: 0px 0px 5px black;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-image: url(../../assets/img/burguer-banner.jpg);
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.banner .nombreCompany{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: max-content;
+  height: min-content;
+}
+
+.banner h1{
+  text-shadow: 0px 0px 15px black;
+}
+
+.banner img{
+  width: 100%;
+  margin: auto;
+}
+
+fa-icon {
+  color: grey;
+  margin: 0px 2px;
+}
+
+fa-icon.active {
+  color: white;
+}
+
+.objetoCont {
+  margin: 30px 20px;
+  background-image: url(../../assets/img/burguer-banner.jpg);
+  background-color: white;
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 280px;
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: 0px 0px 15px rgb(189, 189, 189);
+  transition: box-shadow 0.5s ease;
+}
+
+.objetoCont:first-child {
+  margin-top: 0px;
+}
+
+.objetoCont:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px black;
+}
+
+.objetoCont:last-child {
+  margin-right: 20px;
+}
+
+.calificacion {
+  float: left;
+  margin-left: 10px;
+}
+
+.empresaLogo {
+  float: right;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.empresaLogo img {
+  height: 100%;
+}
+
+.objetoDetalle {
+  margin-top: 155px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.objetoDetalle p {
+  margin: 0;
+  color: black;
+  padding: 0px 10px;
+  height: 60px;
+  overflow: hidden;
+  text-shadow: 0px 0px 2px grey;
+  width: 80%;
+  max-width: 225px;
+}
+
+.objetoDetalle h2 {
+  text-shadow: -1px -2px 1px black;
+  padding: 0px 10px;
+  margin-bottom: 25px;
+}
+
+.objetoDetalle .precio {
+  float: right;
+  width: 60px;
+  padding: 0px;
+  margin: 0px;
+  margin-top: -60px;
+}
+
+.objetoCont button{
+  float: right;
+  margin-right: 20px;
+  margin-top: -32px;
+  padding: 5px 10px;
+}

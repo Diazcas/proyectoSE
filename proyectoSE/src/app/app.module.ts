@@ -9,6 +9,7 @@ import { NavCategoriasComponent } from './nav-categorias/nav-categorias.componen
 import { CategoriasComponent } from './categorias/categorias.component';
 import { AboutComponent } from './about/about.component';
 import { TodasCatComponent } from './todas-cat/todas-cat.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TodasCatComponent } from './todas-cat/todas-cat.component';
     NavCategoriasComponent,
     CategoriasComponent,
     AboutComponent,
-    TodasCatComponent
+    TodasCatComponent,
+    CompanyDetailComponent
   ],
   imports: [
     BrowserModule,
