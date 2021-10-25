@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faStar , faStore , faUtensils, faTools, faPrescriptionBottleAlt,  } from '@fortawesome/free-solid-svg-icons';
+import {faWindowClose, faStar , faStore , faUtensils, faTools, faPrescriptionBottleAlt,  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-company-detail',
@@ -7,15 +7,20 @@ import { faStar , faStore , faUtensils, faTools, faPrescriptionBottleAlt,  } fro
   styleUrls: ['./company-detail.component.css']
 })
 export class CompanyDetailComponent implements OnInit {
-  faStar = faStar;
-  faStore = faStore;
-  faUtensils = faUtensils;
-  faTools = faTools;
-  faPrescriptionBottleAlt = faPrescriptionBottleAlt;
+  faWindowClose = faWindowClose;
+  modalCantidad = 'false'
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  activarModal(){
+    this.modalCantidad = 'active'
+  }
+
+  quitarModal(){
+    this.modalCantidad = 'false'
   }
 
 }

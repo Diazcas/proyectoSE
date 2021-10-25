@@ -10,6 +10,7 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { AboutComponent } from './about/about.component';
 import { TodasCatComponent } from './todas-cat/todas-cat.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CompanyDetailComponent } from './company-detail/company-detail.componen
     CategoriasComponent,
     AboutComponent,
     TodasCatComponent,
-    CompanyDetailComponent
+    CompanyDetailComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

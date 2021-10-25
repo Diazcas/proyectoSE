@@ -34,6 +34,10 @@
 fa-icon {
   color: grey;
   margin: 0px 2px;
+  font-size: 150%;
+  right: 0;
+  top: 0;
+  position: absolute;
 }
 
 fa-icon.active {
@@ -142,8 +146,16 @@ fa-icon.active {
   padding: 10px;
 }
 
+.cantidadProd p {
+  margin-top: 30px;
+}
+
+.cantidadProd input{
+  width: 150px;
+}
+
 .modalBack button{
   display: block;
   float: right;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
