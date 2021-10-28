@@ -6,13 +6,14 @@
         <input type="text" placeholder="Restaurantes">
         <button><fa-icon [icon]="faCoffee" size="2x"></fa-icon></button>
     </div>
-    <div class="navDiv" id="botonesCont" *ngIf="regionVisible == 'botones'">
+    <div class="navDiv" id="botonesCont"  *ngIf="regionVisible == 'modal'">
         <div class="botonesCel">
+            <fa-icon id="closeTag" [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
             <a class="navBoton">Login</a>
             <a class="navBoton">Login</a>
         </div>
     </div>
-    <div id="botonCel">
+    <div id="botonCel" (click)="verModal()">
         <fa-icon [icon]="faBars"></fa-icon>
     </div>
 

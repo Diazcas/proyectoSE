@@ -4,10 +4,10 @@
     <section>
         <div class="empresas">
             <div class="nombreCat">
-                <h1>Restaurantes</h1>
+                <h1>{{catActual}}</h1>
             </div>
             <div class="empresasCont">
-                <div class="objetoCont">
+                <div routerLink="/productos" class="objetoCont"  *ngFor="let item of data" style="background-image: url(../../assets/img/banners/{{item.banner}})" >
                     <p class="calificacion">
                         <fa-icon class="active" [icon]="faStar"></fa-icon>
                         <fa-icon class="active" [icon]="faStar"></fa-icon>
@@ -16,43 +16,11 @@
                         <fa-icon class="" [icon]="faStar"></fa-icon>
                     </p>
                     <div class="empresaLogo">
-                        <img src="../../assets/img/burguer-logo.png" alt="">
+                        <img src="../../assets/img/logos/{{item.logo}}" alt="">
                     </div>
                     <div class="objetoDetalle">
-                        <h2>Burguer King</h2>
-                        <p class="descripcion"> Soasdasdasdadasd asdas dasd mos una empresa que vende hamburguesas delis</p>
-                    </div>
-                </div>
-                <div class="objetoCont">
-                    <p class="calificacion">
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="" [icon]="faStar"></fa-icon>
-                        <fa-icon class="" [icon]="faStar"></fa-icon>
-                    </p>
-                    <div class="empresaLogo">
-                        <img src="../../assets/img/burguer-logo.png" alt="">
-                    </div>
-                    <div class="objetoDetalle">
-                        <h2>Burguer King</h2>
-                        <p class="descripcion"> Soasdasdasdadasd asdas dasd mos una empresa que vende hamburguesas delis</p>
-                    </div>
-                </div>
-                <div class="objetoCont">
-                    <p class="calificacion">
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="" [icon]="faStar"></fa-icon>
-                        <fa-icon class="" [icon]="faStar"></fa-icon>
-                    </p>
-                    <div class="empresaLogo">
-                        <img src="../../assets/img/burguer-logo.png" alt="">
-                    </div>
-                    <div class="objetoDetalle">
-                        <h2>Burguer King</h2>
-                        <p class="descripcion"> Soasdasdasdadasd asdas dasd mos una empresa que vende hamburguesas delis</p>
+                        <h2>{{item.nombre}}</h2>
+                        <p class="descripcion">{{item.descripcion}}</p>
                     </div>
                 </div>
             </div>
@@ -64,11 +32,12 @@
     <fa-icon [icon]="faStore"></fa-icon>
 </div>
 
-<div class="todasCatCont" *ngIf="movilVisible == 'movil'" (click)='quitarCat()'>
+<div class="todasCatCont" *ngIf="movilVisible == 'movil'">
     <ul>
-        <li (click)='verCat()'><fa-icon [icon]="faUtensils"></fa-icon><a href="">Restaurantes</a></li>
-        <li (click)='verCat()'><fa-icon [icon]="faPrescriptionBottleAlt"></fa-icon><a href="">Farmacias</a></li>
-        <li (click)='verCat()'><fa-icon [icon]="faTools"></fa-icon><a href="">Ferreterias</a></li>
-        <li (click)='verCat()'><fa-icon [icon]="faStore"></fa-icon><a href="">Supermercados</a></li>
+        <fa-icon id="closeTag" [icon]="faWindowClose" (click)="quitarCat()"></fa-icon>
+        <li (click)='verCat("Restaurantes")' [routerLink]="['/categorias/R']"><fa-icon [icon]="faUtensils"></fa-icon><a>Restaurantes</a></li>
+        <li (click)='verCat("Farmacias")' [routerLink]="['/categorias/Fa']"><fa-icon [icon]="faPrescriptionBottleAlt"></fa-icon><a>Farmacias</a></li>
+        <li (click)='verCat("Ferreterias")' [routerLink]="['/categorias/Fe']"><fa-icon [icon]="faTools"></fa-icon><a>Ferreterias</a></li>
+        <li (click)='verCat("Supermercados")' [routerLink]="['/categorias/S']"><fa-icon [icon]="faStore"></fa-icon><a>Supermercados</a></li>
     </ul>
 </div>

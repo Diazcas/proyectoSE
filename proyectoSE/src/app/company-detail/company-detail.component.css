@@ -5,9 +5,7 @@
   box-shadow: 0px 0px 5px black;
   position: relative;
   margin-bottom: 10px;
-  overflow: hidden;
-  background-image: url(../../assets/img/burguer-banner.jpg);
-  background-size: 100% auto;
+  overflow: hidden;background-size: 100% auto;
   background-position: center;
 }
 
@@ -47,7 +45,6 @@ fa-icon.active {
 .objetoImagen{
   height: 100%;
   width: 100%;
-  background-image: url(../../assets/img/burguer-banner.jpg);
   background-size: contain;
   overflow: hidden;
 }

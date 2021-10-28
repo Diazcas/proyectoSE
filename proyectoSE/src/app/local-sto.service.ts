@@ -7,24 +7,38 @@ export class LocalStoService {
 
   constructor() { }
 
-  actualizarLS(){
+  actualizarLS() {
 
   }
 
-  traerLS(data:string, rubro:string, id:number){
-    if(data == 'companias'){
-      console.log(rubro)
-      let companias = JSON.parse(localStorage.getItem("companys") || '{}').restaurantes
-      console.log(companias)
-
-      companias.forEach((element: any) => {
-        if(element.id == (id)){
-          console.log(element)
-        }
-      });
-
-      // return prueba;
-    }
+  traerCategorias() {
+    let item = JSON.parse(localStorage.getItem("companys") || '{}')
+    // console.log(item)
+    let categorias: any[] = [];
+    item.forEach((Element: any) => {
+      categorias.push(Element.tipo)
+    });
+    // console.log(categorias)
+    return categorias;
   }
+
+  traerCompanias(categoria:string){
+    let item = JSON.parse(localStorage.getItem('companys') || '{}')
+    // console.log(categoria)
+    // console.log(item)
+    let companias = item.filter((compa: any) => compa.tipo == categoria)[0].datos
+    return companias;
+  }
+
+  subirCatActual(categoria:string){
+    localStorage.setItem('categoria', categoria);
+
+  }
+
+  verCatActual(){
+    let actual = (localStorage.getItem('categoria') || '{}')
+    return actual;
+  }
+
 
 }

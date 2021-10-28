@@ -4,10 +4,7 @@
     </div>
     <div class="categoriasCont">
         <div>
-            <a href="">Categoria 1</a>
-            <a href="">Categoria 2</a>
-            <a href="">Categoria 3</a>
-            <a href="">Categoria 4</a>
+            <a *ngFor="let item of categorias" (click)="mostrarCategoria(item)">{{item}}</a>
         </div>
     </div>
     <div>

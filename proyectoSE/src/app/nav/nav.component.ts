@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { faCoffee, faBars  } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faWindowClose, faBars  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +10,8 @@ import { faCoffee, faBars  } from '@fortawesome/free-solid-svg-icons';
 export class NavComponent implements OnInit {
   faCoffee = faCoffee;
   faBars = faBars;
-  regionVisible = 'botones';
+  regionVisible = '';
+  faWindowClose = faWindowClose;
 
   constructor(private router: Router) { }
 
@@ -18,7 +19,15 @@ export class NavComponent implements OnInit {
   }
 
   cambiarPant(){
-    this.router.navigateByUrl('')
+    this.router.navigateByUrl('/')
+  }
+
+  verModal(){
+    this.regionVisible = "modal";
+  }
+
+  quitarModal(){
+    this.regionVisible = "";
   }
 
 }

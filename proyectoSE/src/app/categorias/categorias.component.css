@@ -37,7 +37,6 @@ section {
 .objetoCont {
   float: left;
   width: 300px;
-  background-image: url(../../assets/img/burguer-banner.jpg);
   background-color: white;
   background-size: auto 200px;
   background-repeat: no-repeat;
@@ -162,11 +161,6 @@ button{
     box-shadow: 0px 0px 5px black;
     color: white;
     background-color: var(--color-boton);
-  }
-
-  button:last-child{
-    margin: 10px 0px;
-    margin-top: 0px;
   }
   
   .empresasCont{

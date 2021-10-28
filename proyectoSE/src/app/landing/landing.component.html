@@ -1,4 +1,4 @@
 <app-nav></app-nav>
-<app-nav-categorias></app-nav-categorias>
-<app-categorias></app-categorias>
+<app-nav-categorias (cambiarCategoria)="cambiarCategoria($event)"></app-nav-categorias>
+<app-categorias *ngFor="let r of reset" [companias]="companias" [categoria]="categoria"></app-categorias>
 <app-about></app-about>

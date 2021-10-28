@@ -1,39 +1,90 @@
-{
-    "restaurantes": [
-        {
-            "id": 0,
-            "nombre": "Burguer King",
-            "banner": "burguer_banner.jpg",
-            "productos": [
-                {
-                    "id": 0,
-                    "img": "texana.jpg",
-                    "nombre": "Texana Burguer",
-                    "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
-                    "precio": "5.99$"
-                },
-                {
-                    "id": 1,
-                    "img": "whopper.jpg",
-                    "nombre": "Whopper Burguer",
-                    "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
-                    "precio": "3.99$"
-                }
-            ]
-        },
-        {
-            "id": 1,
-            "nombre": "Mc'Donalds",
-            "banner": "mc_banner.jpg",
-            "productos": [
-                {
-                    "id": 0,
-                    "img": "Mc'Nifica.jpg",
-                    "nombre": "Mc'Nifica",
-                    "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
-                    "precio": "4.99$"
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "tipo": "Restaurantes",
+        "datos": [
+            {
+                "id": 0,
+                "nombre": "Burguer King",
+                "banner": "burguer.jpg",
+                "logo": "burguer.png",
+                "descripcion": "Somos una empresa que vende muy buenas burguers",
+                "productos": [
+                    {
+                        "id": 0,
+                        "img": "texana.jpg",
+                        "nombre": "Texana Burguer",
+                        "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                        "precio": "5.99$"
+                    },
+                    {
+                        "id": 1,
+                        "img": "whopper.jpg",
+                        "nombre": "Whopper Burguer",
+                        "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                        "precio": "3.99$"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "nombre": "Mc'Donalds",
+                "banner": "mc.jpg",
+                "logo": "mc.png",
+                "descripcion": "Somos otra empresa que vende muy buenas burguers",
+                "productos": [
+                    {
+                        "id": 0,
+                        "img": "Mc'Nifica.jpg",
+                        "nombre": "Mc'Nifica",
+                        "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                        "precio": "4.99$"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tipo": "Farmacias",
+        "datos": [
+            {
+                "id": 0,
+                "nombre": "Farma City",
+                "banner": "fc.jfif",
+                "logo": "fc.jpg",
+                "descripcion": "Somos una empresa que vende pastillas muy buenas",
+                "productos": [
+                    {
+                        "id": 0,
+                        "img": "panadol.jpg",
+                        "nombre": "Panadol",
+                        "detalle": "quita el malesstar estomacal",
+                        "precio": "0.99$"
+                    },
+                    {
+                        "id": 1,
+                        "img": "tabcin.jpg",
+                        "nombre": "Tabcin",
+                        "detalle": "quita el malesstar estomacal",
+                        "precio": "1.99$"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "nombre": "Farmacia del ahorro",
+                "banner": "fa.jfif",
+                "logo": "fa.png",
+                "descripcion": "Somos otra empresa que vende pastillas muy buenas",
+                "productos": [
+                    {
+                        "id": 0,
+                        "img": "tabcin.jpg",
+                        "nombre": "Tabcin",
+                        "detalle": "quita el malesstar estomacal",
+                        "precio": "1.99$"
+                    }
+                ]
+            }
+        ]
+    }
+]

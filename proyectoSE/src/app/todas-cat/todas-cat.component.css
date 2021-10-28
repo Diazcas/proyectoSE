@@ -27,7 +27,6 @@ section {
 
 .objetoCont {
   margin: 30px 20px;
-  background-image: url(../../assets/img/burguer-banner.jpg);
   background-color: white;
   background-size: auto 200px;
   background-repeat: no-repeat;
@@ -170,3 +169,16 @@ li a {
   box-shadow: none;
   text-shadow: -1px -1px 2px rgb(92, 92, 92);
 }
+
+.todasCatCont fa-icon#closeTag {
+    color: grey;
+    margin: 10px 15px;
+    font-size: 150%;
+    right: 0;
+    top: -20px;
+    position: absolute;
+  }
+  
+  .todasCatCont fa-icon.active {
+    color: white;
+  }

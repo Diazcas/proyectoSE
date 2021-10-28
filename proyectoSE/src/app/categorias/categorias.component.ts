@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faStar  } from '@fortawesome/free-solid-svg-icons';
+import { LocalStoService } from '../local-sto.service';
 
 @Component({
   selector: 'app-categorias',
@@ -7,11 +9,27 @@ import { faStar  } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent implements OnInit {
+  @Input() companias:any;
+  @Input() categoria:any;
+  data:any;
+  dataStr:any;
+  
+  
   faStar = faStar;
-
-  constructor() { }
-
+  
+  constructor(
+    private router: Router,
+    private localSto: LocalStoService) { }
+  
   ngOnInit(): void {
+    this.data = [{
+      "companias" : this.companias,
+      "categoria" : this.categoria
+    }]
   }
 
+  actualizarCate(){
+    this.localSto.subirCatActual(this.categoria)
+  }
+  
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { faStar , faStore , faUtensils, faTools, faPrescriptionBottleAlt,  } from '@fortawesome/free-solid-svg-icons';
-import { LocalStoService } from '../local-sto.service'
+import {faWindowClose, faStar , faStore , faUtensils, faTools, faPrescriptionBottleAlt,  } from '@fortawesome/free-solid-svg-icons';
+import { LocalStoService } from '../local-sto.service';
+import { ActivatedRoute } from '@angular/router'
 
 
 @Component({
@@ -15,11 +16,22 @@ export class TodasCatComponent implements OnInit {
   faTools = faTools;
   faPrescriptionBottleAlt = faPrescriptionBottleAlt;
   movilVisible = 'nada';
+  faWindowClose = faWindowClose;
+  companias:any
+  categoria:any
+  data: any;
+  dataStr:any;
+  catActual: string | undefined;
   
-  constructor(private localSto: LocalStoService) { }
+  constructor(
+    private localSto: LocalStoService,
+    private _route: ActivatedRoute) {}
   
   ngOnInit(): void {
-    console.log(this.localSto.traerLS('companias','restaurantes',0))
+    this.catActual = (this.localSto.verCatActual())
+    console.log(this.catActual)
+    this.data = (this.localSto.traerCompanias(this.catActual))
+    console.log(this.data)
   }
 
 
@@ -31,9 +43,8 @@ export class TodasCatComponent implements OnInit {
     this.movilVisible = 'no'
   }
 
-  verCat(){
-    console.log(this)
-    this.movilVisible = 'movil'
+  verCat(categoria:string){
+    this.localSto.subirCatActual(categoria)
   }
 
 }

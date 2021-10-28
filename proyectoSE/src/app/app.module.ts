@@ -13,6 +13,7 @@ import { CompanyDetailComponent } from './company-detail/company-detail.componen
 import { CarritoComponent } from './carrito/carrito.component';
 import { LandingComponent } from './landing/landing.component';
 import { LocalStoService } from './local-sto.service';
+import { ProductosCompaniaComponent } from './productos-compania/productos-compania.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LocalStoService } from './local-sto.service';
     TodasCatComponent,
     CompanyDetailComponent,
     CarritoComponent,
-    LandingComponent
+    LandingComponent,
+    ProductosCompaniaComponent
   ],
   imports: [
     BrowserModule,

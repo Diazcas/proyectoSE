@@ -12,9 +12,3 @@ export class AppComponent {
 }
 
 localStorage.setItem('companys', JSON.stringify(info))
-
-
-function obtenerCompanias(){
-  let companias = JSON.parse(localStorage.getItem("companys") || '{}')
-  return companias;
-}
