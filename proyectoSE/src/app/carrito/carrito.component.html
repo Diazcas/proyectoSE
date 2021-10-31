@@ -1,51 +1,37 @@
+<app-nav></app-nav>
 <div class="carritoCont">
     <h1>Carrito</h1>
     <div class="carrito">
-        <div class="objetoCont">
-            <div class="objetoImagen">
-                <h2>Texana burguer</h2>
+        <div class="objetoCont" *ngFor="let item of carrito; let i = index">
+            <div class="objetoImagen" style="background-image: url(../../assets/img/productos/{{item.img}});">
+                <h2>{{item.nombre}}</h2>
             </div>
             <div class="objetoDetalle">
                 <b>Ingredientes:</b>
-                <p class="descripcion"> Tomatillo y triple level de carne y con todo el queso que quieras, puedes agregar a tu disposicion</p>
-                <p class="precio">25.99$</p>
-                <button (click)="activarModal()">Agregar</button>
-            </div>
-        </div>
-        <div class="objetoCont">
-            <div class="objetoImagen">
-                <h2>Texana burguer</h2>
-            </div>
-            <div class="objetoDetalle">
-                <b>Ingredientes:</b>
-                <p class="descripcion"> Tomatillo y triple level de carne y con todo el queso que quieras, puedes agregar a tu disposicion</p>
-                <p class="precio">25.99$</p>
-                <button (click)="activarModal()">Agregar</button>
-            </div>
-        </div>
-        <div class="objetoCont">
-            <div class="objetoImagen">
-                <h2>Texana burguer</h2>
-            </div>
-            <div class="objetoDetalle">
-                <b>Ingredientes:</b>
-                <p class="descripcion"> Tomatillo y triple level de carne y con todo el queso que quieras, puedes agregar a tu disposicion</p>
-                <p class="precio">25.99$</p>
-                <button (click)="eliminarProd()">Eliminar</button>
+                <p class="descripcion"> {{item.detalle}}</p>
+                <div class="detalle">Cantidad: {{carritoArray[i].cantidad}}</div>
+                <div class="detalle"></div>
+                <div class="detalle">Precio unitario: {{item.precio}}$</div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modalBack" *ngIf="modalCantidad == 'active'">
+<div (click)=activarModal() class="botonFlotante">
+    <div>Resumen</div>
+</div>
+
+<div class="modalBack" *ngIf="modal == 'active'">
     <div class="modalInfoBack factura">
         <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
         <p class="izq">Coste de producto: </p>
-        <p class="der">25.99$</p>
-        <p class="izq">Coste de envio: </p>
-        <p class="der">43$</p>
+        <p class="der">{{precioArticulos}}$</p>
+        <p class="izq">Precio envio: </p>
+        <p class="der">{{precioEnvio}}$</p>
+        <p class="izq">Impuestos: </p>
+        <p class="der">{{precioISV}}$</p>
         <p class="izq">Total: </p>
-        <p class="der">67$</p>
-        <button>Ir a pago</button>
+        <p class="der">{{precioTotal}}$</p>
+        <button routerLink="/clientes/ubicacion">Finalizar compra</button>
     </div>
 </div>

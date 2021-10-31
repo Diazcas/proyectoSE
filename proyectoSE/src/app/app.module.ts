@@ -14,6 +14,11 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { LandingComponent } from './landing/landing.component';
 import { LocalStoService } from './local-sto.service';
 import { ProductosCompaniaComponent } from './productos-compania/productos-compania.component';
+import { DriverNavComponent } from './driver-nav/driver-nav.component';
+import { DriverHomeComponent } from './driver-home/driver-home.component';
+import { DriverMisOrdenesComponent } from './driver-mis-ordenes/driver-mis-ordenes.component';
+import { DummyComponentComponent } from './dummy-component/dummy-component.component';
+import { CliUbicacionComponent } from './cli-ubicacion/cli-ubicacion.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { ProductosCompaniaComponent } from './productos-compania/productos-compa
     CompanyDetailComponent,
     CarritoComponent,
     LandingComponent,
-    ProductosCompaniaComponent
+    ProductosCompaniaComponent,
+    DriverNavComponent,
+    DriverHomeComponent,
+    DriverMisOrdenesComponent,
+    DummyComponentComponent,
+    CliUbicacionComponent
   ],
   imports: [
     BrowserModule,

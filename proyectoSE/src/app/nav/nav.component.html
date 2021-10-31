@@ -9,8 +9,8 @@
     <div class="navDiv" id="botonesCont"  *ngIf="regionVisible == 'modal'">
         <div class="botonesCel">
             <fa-icon id="closeTag" [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
-            <a class="navBoton">Login</a>
-            <a class="navBoton">Login</a>
+            <a routerLink="/clientes/carrito" class="navBoton">Carrito</a>
+            <a class="navBoton">Iniciar sesion</a>
         </div>
     </div>
     <div id="botonCel" (click)="verModal()">

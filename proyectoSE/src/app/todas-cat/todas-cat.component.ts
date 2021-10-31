@@ -19,8 +19,7 @@ export class TodasCatComponent implements OnInit {
   faWindowClose = faWindowClose;
   companias:any
   categoria:any
-  data: any;
-  dataStr:any;
+  data:any;
   catActual: string | undefined;
   
   constructor(
@@ -29,9 +28,7 @@ export class TodasCatComponent implements OnInit {
   
   ngOnInit(): void {
     this.catActual = (this.localSto.verCatActual())
-    console.log(this.catActual)
     this.data = (this.localSto.traerCompanias(this.catActual))
-    console.log(this.data)
   }
 
 
@@ -45,6 +42,11 @@ export class TodasCatComponent implements OnInit {
 
   verCat(categoria:string){
     this.localSto.subirCatActual(categoria)
+  }
+
+  selectComp(){
+    console.log(this.data)
+
   }
 
 }

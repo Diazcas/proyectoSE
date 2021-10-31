@@ -1,18 +1,18 @@
 <div class="companyCont">
-    <div class="banner">
+    <div class="banner" style="background-image: url(../../assets/img/banners/{{compania.banner}});">
         <div class="nombreCompany">
-            <h1>Burguer King</h1>
+            <h1>{{compania.nombre}}</h1>
         </div>
     </div>
     <div id="menu">
-        <div class="objetoCont">
-            <div class="objetoImagen">
-                <h2>Texana burguer</h2>
+        <div class="objetoCont" *ngFor="let item of compania.productos; let i = index">
+            <div class="objetoImagen" style="background-image: url(../../assets/img/productos/{{compania.productos[i].img}});">
+                <h2>{{compania.productos[i].nombre}}</h2>
             </div>
             <div class="objetoDetalle">
                 <b>Ingredientes:</b>
-                <p class="descripcion"> Tomatillo y triple level de carne y con todo el queso que quieras, puedes agregar a tu disposicion</p>
-                <p class="precio">25.99$</p>
+                <p class="descripcion"> {{compania.productos[i].detalle}}</p>
+                <p class="precio">{{compania.productos[i].precio}}</p>
                 <button (click)="activarModal()">Agregar</button>
             </div>
         </div>

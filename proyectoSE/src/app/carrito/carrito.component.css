@@ -14,7 +14,9 @@ fa-icon {
 
 .objetoImagen{
     height: 100%;
-    width: 100%;background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
     overflow: hidden;
   }
   
@@ -56,13 +58,11 @@ fa-icon {
     margin-top: 55%;
     margin-left: 10px;
   }
-  
-  .objetoDetalle .precio {
-    padding: 5px 10px;
-    margin: 0px;
-    padding-bottom: 0px;
-    height: min-content;
+  .objetoDetalle .detalle{
     color: red;
+    float: left;
+    margin-left: 10px;
+    
   }
   
   .objetoDetalle b{
@@ -121,10 +121,11 @@ fa-icon {
     padding: 10px 30px;
     width: 220px;
     text-align: center;
+    padding-top: 30px;
   }
   
   .modalInfoBack p {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 150px;
     display: inline-block;
     margin-bottom: 0;
@@ -143,3 +144,14 @@ fa-icon {
     margin: 20px 0px;
     padding: 10px 30px;
   }
+
+  .botonFlotante{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: grey;
+    box-shadow: 0px 0px 5px black;
+  }
+

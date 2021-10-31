@@ -19,7 +19,7 @@ export class NavComponent implements OnInit {
   }
 
   cambiarPant(){
-    this.router.navigateByUrl('/')
+    this.router.navigateByUrl('/clientes')
   }
 
   verModal(){

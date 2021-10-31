@@ -1,10 +1,11 @@
-#landing{
-    overflow-x: hidden;
-    overflow-y: auto;
+#landing {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-@media (min-width:1000px) {
-    #landing{
-        overflow-y: hidden;
-    }
+
+@media (min-width: 1000px) {
+  #landing {
+    overflow-y: hidden;
+  }
 }

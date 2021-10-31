@@ -1,0 +1,20 @@
+<nav>
+    <a routerLink="/driver">
+        <div class="logo">
+            <img src="../../assets/img/logo.jpg" alt="">
+        </div>
+    </a>
+    <div class="usuarioActual"  (click)="cambiarModal()">
+        <div>{{nombreDriverActive}}</div>
+        <fa-icon [icon]="faSortDown" size="2x"></fa-icon>
+    </div>
+    <div class="modalBack" *ngIf="modal == 'active'">
+        <div class="drivers">
+            <ul>
+                <li (click)="cambiarDriver((item.id))" *ngFor="let item of drivers; let i = index">{{item.pNombre}} {{item.pApellido}}</li>
+            </ul>
+        </div>
+    </div>
+    <fa-icon [icon]="faTasks" size="3x"></fa-icon>
+</nav>
+<hr>

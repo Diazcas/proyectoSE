@@ -1,0 +1,55 @@
+section{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
+    margin-block-end: 20px;
+    background-image: linear-gradient(to right, rgb(0, 162, 255), var(--color-boton));
+}
+
+.info h2, .info p{
+    margin: 0px;
+}
+
+.info p{
+    margin-bottom: 10px;
+}
+
+.iconosCont{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px grey;
+    color: black;
+    text-shadow: none;
+    padding: 5px 0px;
+}
+
+.iconosCont div{
+    text-align: center;
+    height: min-content;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.iconosCont div.active{
+    border: 1px solid black;
+}
+
+.iconosCont p{
+    margin: 0px;
+}
+
+.tomada fa-icon{
+    color: burlywood;
+}
+
+.camino fa-icon{
+    color: rgb(255, 67, 67);
+}
+
+.punto fa-icon{
+    color: rgb(74, 74, 255);
+}

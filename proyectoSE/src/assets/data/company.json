@@ -11,17 +11,17 @@
                 "productos": [
                     {
                         "id": 0,
-                        "img": "texana.jpg",
+                        "img": "texana.png",
                         "nombre": "Texana Burguer",
                         "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
-                        "precio": "5.99$"
+                        "precio": 5.99
                     },
                     {
                         "id": 1,
-                        "img": "whopper.jpg",
+                        "img": "whopper.png",
                         "nombre": "Whopper Burguer",
                         "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
-                        "precio": "3.99$"
+                        "precio": 3.99
                     }
                 ]
             },
@@ -37,7 +37,14 @@
                         "img": "Mc'Nifica.jpg",
                         "nombre": "Mc'Nifica",
                         "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
-                        "precio": "4.99$"
+                        "precio": 4.99
+                    },
+                    {
+                        "id": 1,
+                        "img": "Mc'Nifica.jpg",
+                        "nombre": "Mc'Nifica2",
+                        "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                        "precio": 4.99
                     }
                 ]
             }
@@ -58,14 +65,14 @@
                         "img": "panadol.jpg",
                         "nombre": "Panadol",
                         "detalle": "quita el malesstar estomacal",
-                        "precio": "0.99$"
+                        "precio": 0.99
                     },
                     {
                         "id": 1,
-                        "img": "tabcin.jpg",
+                        "img": "tabcin.png",
                         "nombre": "Tabcin",
                         "detalle": "quita el malesstar estomacal",
-                        "precio": "1.99$"
+                        "precio": 1.99
                     }
                 ]
             },
@@ -78,10 +85,10 @@
                 "productos": [
                     {
                         "id": 0,
-                        "img": "tabcin.jpg",
+                        "img": "tabcin.png",
                         "nombre": "Tabcin",
                         "detalle": "quita el malesstar estomacal",
-                        "precio": "1.99$"
+                        "precio": 1.99
                     }
                 ]
             }

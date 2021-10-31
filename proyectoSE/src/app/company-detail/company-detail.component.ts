@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {faWindowClose} from '@fortawesome/free-solid-svg-icons';
+import { LocalStoService } from '../local-sto.service';
 
 @Component({
   selector: 'app-company-detail',
@@ -7,12 +8,18 @@ import {faWindowClose} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./company-detail.component.css']
 })
 export class CompanyDetailComponent implements OnInit {
+  @Input() data = '';
+  info:any
+  compania:any
   faWindowClose = faWindowClose;
   modalCantidad = 'false'
 
-  constructor() { }
+  constructor(private localSto: LocalStoService) { }
 
   ngOnInit(): void {
+    this.info = (this.data[0])
+    this.compania = this.localSto.verCompaniaActual(this.info.categoria, this.info.companiaId)
+    console.log(this.compania)
   }
 
   activarModal(){

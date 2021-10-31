@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import info from '../assets/data/company.json'
+import companias from '../assets/data/company.json'
+import carrito from '../assets/data/carrito.json'
+import drivers from '../assets/data/drivers.json'
 
 @Component({
   selector: 'app-root',
@@ -7,8 +9,14 @@ import info from '../assets/data/company.json'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  info = info;
+  companias = companias;
+  carrito = carrito;
+  drivers = drivers;
   title = 'proyectoSE';
 }
 
-localStorage.setItem('companys', JSON.stringify(info))
+localStorage.setItem('companys', JSON.stringify(companias))
+localStorage.setItem('carrito', JSON.stringify(carrito))
+localStorage.setItem('drivers', JSON.stringify(drivers))
+localStorage.setItem('driver', '0')
+
