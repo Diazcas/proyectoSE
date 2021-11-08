@@ -1,4 +1,5 @@
 import { Component, OnInit, NgModule } from '@angular/core';
+import {faWindowClose} from '@fortawesome/free-solid-svg-icons';
 import { MapService } from '../map.service';
 
 @Component({
@@ -7,11 +8,47 @@ import { MapService } from '../map.service';
   styleUrls: ['./cli-ubicacion.component.css']
 })
 export class CliUbicacionComponent implements OnInit {
+  faWindowClose = faWindowClose;
+  mapa:any;
+  direccion:any;
+  interval:any;
+  modal = 'false';
 
   constructor(private map: MapService) { }
 
   ngOnInit(): void {
-    this.map.buildMap();
+
+    localStorage.setItem('direccionCambio', '0')
+
+    this.mapa = this.map.buildMap();
+    this.map.crearMarcador(this.mapa,-86.5689223,14.0193161)
+
+    this.interval = setInterval(() => {
+      this.verificarDireccion()
+    }, 500);
+  }
+  
+  verificarDireccion(){
+    if(localStorage.getItem('direccionCambio') == '1'){
+      this.direccion = JSON.parse(localStorage.getItem('direccion') || '[]')
+      console.log('Esta es: ', this.direccion)
+      clearInterval(this.interval)
+      this.activarModal()
+
+    } else{
+    }
+  }
+  
+  activarModal(){
+    this.modal = 'active'
+  }
+
+  quitarModal(){
+    this.modal = 'false';
+    this.interval = setInterval(() => {
+      this.verificarDireccion()
+    }, 500);
+    localStorage.setItem('direccionCambio', '0')
   }
 
 }
