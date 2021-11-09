@@ -3,6 +3,7 @@ nav{
     overflow: auto;
     padding: 10px 0px;
     position: relative;
+    box-sizing: content-box;
 }
 
 div{

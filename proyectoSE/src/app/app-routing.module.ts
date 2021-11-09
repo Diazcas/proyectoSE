@@ -7,6 +7,7 @@ import { CarritoComponent } from "./carrito/carrito.component"
 import { DriverHomeComponent } from './driver-home/driver-home.component'
 import { DriverMisOrdenesComponent } from './driver-mis-ordenes/driver-mis-ordenes.component'
 import { CliUbicacionComponent } from './cli-ubicacion/cli-ubicacion.component'
+import { CliCrearCuentaComponent } from './cli-crear-cuenta/cli-crear-cuenta.component'
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'clientes/carrito',
     component: CarritoComponent
+  },
+  {
+    path: 'clientes/registro',
+    component: CliCrearCuentaComponent
   },
   {
     path: 'clientes/ubicacion',

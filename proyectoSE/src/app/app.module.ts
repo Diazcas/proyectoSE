@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { DriverHomeComponent } from './driver-home/driver-home.component';
 import { DriverMisOrdenesComponent } from './driver-mis-ordenes/driver-mis-ordenes.component';
 import { DummyComponentComponent } from './dummy-component/dummy-component.component';
 import { CliUbicacionComponent } from './cli-ubicacion/cli-ubicacion.component';
+import { CliCrearCuentaComponent } from './cli-crear-cuenta/cli-crear-cuenta.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +38,13 @@ import { CliUbicacionComponent } from './cli-ubicacion/cli-ubicacion.component';
     DriverHomeComponent,
     DriverMisOrdenesComponent,
     DummyComponentComponent,
-    CliUbicacionComponent
+    CliUbicacionComponent,
+    CliCrearCuentaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FontAwesomeModule
   ],
   providers: [LocalStoService],

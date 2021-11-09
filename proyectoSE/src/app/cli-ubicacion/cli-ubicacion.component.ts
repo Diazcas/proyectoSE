@@ -13,6 +13,7 @@ export class CliUbicacionComponent implements OnInit {
   direccion:any;
   interval:any;
   modal = 'false';
+  carritoActual:any;
 
   constructor(private map: MapService) { }
 
@@ -26,6 +27,9 @@ export class CliUbicacionComponent implements OnInit {
     this.interval = setInterval(() => {
       this.verificarDireccion()
     }, 500);
+
+    this.carritoActual = JSON.parse(localStorage.getItem('carritoActual')||'')
+    console.log(this.carritoActual)
   }
   
   verificarDireccion(){

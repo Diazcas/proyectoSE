@@ -1,23 +1,48 @@
-[{
-    "id": 0,
-    "productos" : [
-        {
-            "categoria": 0,
-            "compania": 1,
-            "idProducto": 0,
-            "cantidad": 3
-        },
-        {
-            "categoria": 0,
-            "compania": 1,
-            "idProducto": 1,
-            "cantidad": 3
-        },
-        {
-            "categoria": 1,
-            "compania": 1,
-            "idProducto": 0,
-            "cantidad": 2
-        }
-    ]
-}]
+[
+    {
+        "id": 0,
+        "productos": [
+            {
+                "categoria": 0,
+                "compania": 1,
+                "idProducto": 0,
+                "cantidad": 3
+            },
+            {
+                "categoria": 0,
+                "compania": 1,
+                "idProducto": 1,
+                "cantidad": 3
+            },
+            {
+                "categoria": 1,
+                "compania": 1,
+                "idProducto": 0,
+                "cantidad": 2
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "productos": [
+            {
+                "categoria": 0,
+                "compania": 1,
+                "idProducto": 0,
+                "cantidad": 5
+            },
+            {
+                "categoria": 0,
+                "compania": 1,
+                "idProducto": 1,
+                "cantidad": 1
+            },
+            {
+                "categoria": 1,
+                "compania": 1,
+                "idProducto": 0,
+                "cantidad": 2
+            }
+        ]
+    }
+]

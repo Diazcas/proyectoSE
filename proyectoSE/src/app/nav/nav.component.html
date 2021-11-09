@@ -10,13 +10,13 @@
         <div class="botonesCel">
             <fa-icon id="closeTag" [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
             <a routerLink="/clientes/carrito" class="navBoton">Carrito</a>
-            <a class="navBoton">Iniciar sesion</a>
+            <a routerLink="/clientes/registro" class="navBoton">Registrate</a>
+            <a routerLink="/clientes/login" class="navBoton">Iniciar sesion</a>
+
         </div>
     </div>
     <div id="botonCel" (click)="verModal()">
         <fa-icon [icon]="faBars"></fa-icon>
     </div>
-
-
 </nav>
 <hr>

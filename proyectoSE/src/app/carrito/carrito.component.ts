@@ -51,6 +51,11 @@ export class CarritoComponent implements OnInit {
     
   }
 
+  agregarProd(){
+    console.log(this.carritoArray)
+    localStorage.setItem('carritoActual', JSON.stringify(this.carritoArray));
+  }
+
 
 
 }
