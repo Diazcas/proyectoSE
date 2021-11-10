@@ -8,6 +8,8 @@ import { DriverHomeComponent } from './driver-home/driver-home.component'
 import { DriverMisOrdenesComponent } from './driver-mis-ordenes/driver-mis-ordenes.component'
 import { CliUbicacionComponent } from './cli-ubicacion/cli-ubicacion.component'
 import { CliCrearCuentaComponent } from './cli-crear-cuenta/cli-crear-cuenta.component'
+import { CliIniciarSesionComponent } from './cli-iniciar-sesion/cli-iniciar-sesion.component'
+import { CliPagoComponent } from './cli-pago/cli-pago.component'
 
 const routes: Routes = [
   {
@@ -47,8 +49,16 @@ const routes: Routes = [
     component: CliCrearCuentaComponent
   },
   {
+    path: 'clientes/login',
+    component: CliIniciarSesionComponent
+  },
+  {
     path: 'clientes/ubicacion',
     component: CliUbicacionComponent
+  },
+  {
+    path: 'clientes/pago',
+    component: CliPagoComponent
   },
   {
     path: 'driver',

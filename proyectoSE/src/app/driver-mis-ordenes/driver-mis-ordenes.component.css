@@ -12,8 +12,37 @@ section{
     margin: 0px;
 }
 
+.info p:last-child{
+    margin-bottom: 5px;
+}
+
 .info p{
-    margin-bottom: 10px;
+    float: left;
+}
+
+.info button{
+    float: right;
+    width: 100px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.info button.buttonArriba{
+    margin-top: 20px;
+}
+
+.info{
+    overflow: auto;
+}
+
+.info span{
+    color: black;
+}
+
+.info .precio{
+    width: 50%;
 }
 
 .iconosCont{
@@ -52,4 +81,15 @@ section{
 
 .punto fa-icon{
     color: rgb(74, 74, 255);
+}
+
+.objetoCont{
+    text-align: left;
+    padding: 5px 0px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.objetoCont .detalle{
+    text-indent: 25px;
 }

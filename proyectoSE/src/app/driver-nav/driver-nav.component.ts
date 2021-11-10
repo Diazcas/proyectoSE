@@ -25,9 +25,9 @@ export class DriverNavComponent implements OnInit {
 
   ngOnInit(): void {
     this.drivers = this.localSto.traerDrivers()
-    console.log(this.drivers)
+    // console.log(this.drivers)
     this.driverActive = this.localSto.driverActive()
-    console.log(this.driverActive)
+    // console.log(this.driverActive)
     this.nombreDriverActive = `${this.driverActive.pNombre} ${this.driverActive.pApellido}`
   }
 

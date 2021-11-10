@@ -1,13 +1,10 @@
-<nav>
-    <div class="h1Cont">
-        <h1>Bienvenido</h1>
-    </div>
-    <div class="categoriasCont">
-        <div>
-            <a *ngFor="let item of categorias" (click)="mostrarCategoria(item)">{{item}}</a>
-        </div>
-    </div>
-    <div>
-        <fa-icon [icon]="faShoppingCart" size="2x"></fa-icon>
-    </div>
-</nav>
+<div class="h1Cont">
+    <h1>Bienvenido</h1>
+    <fa-icon [icon]="faShoppingCart" size="2x"></fa-icon>
+</div>
+<ul class="nav justify-content-center">
+
+    <li class="nav-item" *ngFor="let item of categorias" >
+      <a class="nav-link border active" (click)="mostrarCategoria(item)">{{item}}</a>
+    </li>
+  </ul>

@@ -1,157 +1,110 @@
+.objetoImagen {
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-position: center -20px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
 
-fa-icon {
-    color: grey;
-    margin: 10px 15px;
-    font-size: 150%;
-    right: 0;
-    top: 0;
-    position: absolute;
-  }
-  
-  fa-icon.active {
-    color: white;
-  }
+.objetoCont {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  height: 150px;
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: 0px 0px 15px black;
+  transition: box-shadow 0.5s ease;
+  background-image: linear-gradient(to right, rgb(124, 124, 124), white);
+}
 
-.objetoImagen{
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    overflow: hidden;
-  }
-  
-  .objetoCont {
-    display: flex;
-    align-items: center;
-    margin: 10px auto;
-    height: 150px;
-    border-radius: 20px;
-    overflow: auto;
-    box-shadow: 0px 0px 15px black;
-    transition: box-shadow 0.5s ease;
-    background-image: linear-gradient(to right ,rgb(124, 124, 124), white);
-  }
-  
-  .objetoCont:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 15px rgb(189, 189, 189);
-  }
+.objetoCont:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px rgb(189, 189, 189);
+}
 
 .objetoDetalle {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .objetoDetalle p {
-    margin: 0;
-    color: black;
-    padding: 0px 10px;
-    height: 60px;
-    overflow: hidden;
-    text-shadow: 0px 0px 2px grey;
-    width: 90%;
-  }
-  
-  .objetoCont h2 {
-    text-shadow: -1px -2px 1px black;
-    margin-top: 55%;
-    margin-left: 10px;
-  }
-  .objetoDetalle .detalle{
-    color: red;
-    float: left;
-    margin-left: 10px;
-    
-  }
-  
-  .objetoDetalle b{
-    padding: 5px 10px;
-  }
-  
-  .objetoCont button{
-    float: right;
-    margin-right: 15px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  .objetoCont button:hover{
-    background-color: rgb(165, 165, 165);
-  }
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .carritoCont h1{
-      text-align: center;
-  }
+.objetoDetalle p {
+  margin: 0;
+  color: black;
+  padding: 0px 10px;
+  height: 50px;
+  overflow: hidden;
+  text-shadow: 0px 0px 2px grey;
+  width: 90%;
+}
+.objetoDetalle .detalle {
+  color: red;
+  float: left;
+  margin-left: 10px;
+}
 
+.objetoCont h3 {
+  text-shadow: -1px -2px 1px black;
+  margin-top: 55%;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.288);
+  padding: 0px 10px;
+  max-height: 30px;
+  overflow: hidden;
+}
 
+.objetoDetalle b {
+  padding: 5px 10px;
+}
+
+.objetoCont button {
+  float: right;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.objetoCont button:hover {
+  background-color: rgb(165, 165, 165);
+}
+
+.carritoCont h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.carritoCont {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+h3.error{
+  text-align: center;
+}
 
 /*------------------------------- modal -------------------------------*/
 
-.modalBack{
-    position: fixed;
-    margin-left: -10px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(5px);
-  }
-  
-  .modalBack .modalInfoBack{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: min-content;
-    height: min-content;
-    padding: 10px;
-  }
+.modalBody p{
+  display: inline-block;
+  min-width: 50%;
+}
 
-  
-.modalBack .modalInfoBack.factura{
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    color: black;
-    text-shadow: none;
-    width: max-content;
-    padding: 10px 30px;
-    width: 220px;
-    text-align: center;
-    padding-top: 30px;
-  }
-  
-  .modalInfoBack p {
-    margin-top: 10px;
-    width: 150px;
-    display: inline-block;
-    margin-bottom: 0;
-  }
+.modalBody div p:first-child{
+  text-align: right;
+}
 
-  .modalInfoBack p.der{
-    width: 60px;
-    text-align: right;
-  }
-
-  .modalInfoBack p.izq{
-      text-align: right;
-  }
-
-  .modalBack button{
-    margin: 20px 0px;
-    padding: 10px 30px;
-  }
-
-  .botonFlotante{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    border-radius: 10px;
-    padding: 10px 20px;
-    background-color: grey;
-    box-shadow: 0px 0px 5px black;
-  }
-
+.botonFlotante {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: grey;
+  box-shadow: 0px 0px 5px black;
+}

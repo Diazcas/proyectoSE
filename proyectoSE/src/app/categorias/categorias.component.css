@@ -62,6 +62,7 @@ section {
 .calificacion {
   float: left;
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 .empresaLogo {
@@ -76,7 +77,7 @@ section {
 }
 
 .objetoDetalle {
-  margin-top: 155px;
+  margin-top: 162px;
   width: 280px;
   margin-left: auto;
   margin-right: auto;
@@ -85,20 +86,20 @@ section {
 .objetoDetalle p {
   margin: 0;
   color: black;
-  padding: 0px 10px;
-  max-height: 40px;
+  padding: 0px 20px;
   overflow: hidden;
   text-shadow: 0px 0px 2px grey;
 }
 
 .objetoDetalle h2 {
   text-shadow: -1px -2px 1px black;
+  color: white;
 }
 
 .nombreCat h1 {
-  margin: 0;
+  margin: 10px;
   margin-left: 40px;
-  margin-top: 10px;
+  color: white;
 }
 
 button{
@@ -140,17 +141,12 @@ button{
   }
   
   .empresasCont{
-    margin-top: 40px;
     width: max-content;
   }
 
   section{
     overflow: hidden;
     position: relative;
-  }
-
-  .nombreCat{
-    position: absolute;
   }
 
   button{

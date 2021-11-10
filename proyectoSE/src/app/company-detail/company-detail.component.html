@@ -1,29 +1,41 @@
 <div class="companyCont">
-    <div class="banner" style="background-image: url(../../assets/img/banners/{{compania.banner}});">
-        <div class="nombreCompany">
-            <h1>{{compania.nombre}}</h1>
-        </div>
+  <div class="banner" style="background-image: url(../../assets/img/banners/{{compania.banner}});">
+    <div class="nombreCompany">
+      <h1>{{compania.nombre}}</h1>
     </div>
-    <div id="menu">
-        <div class="objetoCont" *ngFor="let item of compania.productos; let i = index">
-            <div class="objetoImagen" style="background-image: url(../../assets/img/productos/{{compania.productos[i].img}});">
-                <h2>{{compania.productos[i].nombre}}</h2>
-            </div>
-            <div class="objetoDetalle">
-                <b>Ingredientes:</b>
-                <p class="descripcion"> {{compania.productos[i].detalle}}</p>
-                <p class="precio">{{compania.productos[i].precio}}</p>
-                <button (click)="activarModal()">Agregar</button>
-            </div>
-        </div>
+  </div>
+  <div id="menu">
+    <div class="objetoCont" *ngFor="let item of compania.productos; let i = index">
+      <div class="objetoImagen"
+        style="background-image: url(../../assets/img/productos/{{compania.productos[i].img}});">
+        <h3>{{compania.productos[i].nombre}}</h3>
+      </div>
+      <div class="objetoDetalle">
+        <b>Descripcion:</b>
+        <p class="descripcion"> {{compania.productos[i].detalle}}</p>
+        <span>{{compania.productos[i].precio}}$</span>
+        <button (click)="activarModal((compania.productos[i]))">Agregar</button>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="modalBack" *ngIf="modalCantidad == 'active'">
-    <div class="modalInfoBack">
-        <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
-        <p>Ingrese la cantidad:</p>
-        <input type="number">
-        <button>Agregar</button>
+  <div class="modalCont">
+    <div class="modalNav">
+      <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
+      <h4></h4>
+      <hr>
     </div>
+    <div class="modalBody">
+      <form [formGroup]='cantidadForm'>
+        <p>Ingrese la cantidad:</p>
+        <input type="number" formControlName='cantidad'>
+      </form>
+      <hr>
+    </div>
+    <div class="modalFooter">
+      <button (click)="agregarProducto()">Agregar</button>
+    </div>
+  </div>
 </div>

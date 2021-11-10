@@ -1,6 +1,6 @@
 <div id="map" class="map-container"> </div>
 
-<div class="modalBack" *ngIf="modal == 'active'">
+<!-- <div class="modalBack" *ngIf="modal == 'active'">
     <div class="modalInfoBack factura">
         <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
         <p class="izq"><b>Esta es su direccion</b></p><br>
@@ -8,6 +8,25 @@
         <p class="izq">{{direccion.lng}}</p>
         <p class="izq"><b>Su latitud es: </b></p>
         <p class="izq">{{direccion.lat}}</p>
-        <button routerLink="/clientes/ubicacion">Finalizar compra</button>
+    </div>
+</div> -->
+
+<div class="modalBack" *ngIf="modal == 'active'">
+    <div class="modalCont">
+        <div class="modalNav">
+            <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
+            <h4>¿Esta es su dirección?</h4>
+            <hr>
+        </div>
+        <div class="modalBody">
+            <p><b>Su longitud es: </b></p>
+            <p>{{direccion.lng}}</p>
+            <p><b>Su latitud es: </b></p>
+            <p>{{direccion.lat}}</p>
+            <hr>
+        </div>
+        <div class="modalFooter">
+            <button routerLink="/clientes/ubicacion" (click)="guardarOrden()" routerLink="/clientes/pago">Ir a pago</button>
+        </div>
     </div>
 </div>

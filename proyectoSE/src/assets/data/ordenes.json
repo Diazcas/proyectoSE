@@ -1,0 +1,56 @@
+[
+    {
+        "id": 0,
+        "clienteNombre": "Anibal Diaz",
+        "driverId": 0,
+        "estado": 2,
+        "direccion": {"lng":-86.5689081432162, "lat":14.019570199425004},
+        "totalOrden": 50,
+        "costes":[{}],
+        "productos": [
+            {
+                "cantidad": 1,
+                "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                "id": 0,
+                "img": "texana.png",
+                "nombre": "Texana Burguer",
+                "precio": 5.99
+            },
+            {
+                "cantidad": 2,
+                "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                "id": 1,
+                "img": "whopper.png",
+                "nombre": "Whopper Burguer",
+                "precio": 3.99
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "clienteNombre": "Oscar Diaz",
+        "driverId": 0,
+        "estado": 0,
+        "direccion": {"lng":-86.5689081432111, "lat":16.019570199425004},
+        "totalOrden": 20,
+        "productos": [
+            {
+                "cantidad": 5,
+                "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                "id": 0,
+                "img": "texana.png",
+                "nombre": "Texana Burguer",
+                "precio": 5.99
+            },
+            {
+                "cantidad": 4,
+                "detalle": "Tomate, cebolla, triple carne, ajo, salsa de ajo",
+                "id": 1,
+                "img": "whopper.png",
+                "nombre": "Whopper Burguer",
+                "precio": 3.99
+            }
+        ]
+    }
+
+]

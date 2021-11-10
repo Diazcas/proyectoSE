@@ -1,22 +1,27 @@
-<nav>
-    <div (click)="cambiarPant()" class="navDiv" id="logoCont">
-        <img src="../../assets/img/logo.jpg" alt="">
-    </div>
-    <div class="navDiv" id="buscarCont">
-        <input type="text" placeholder="Restaurantes">
-        <button><fa-icon [icon]="faCoffee" size="2x"></fa-icon></button>
-    </div>
-    <div class="navDiv" id="botonesCont"  *ngIf="regionVisible == 'modal'">
-        <div class="botonesCel">
-            <fa-icon id="closeTag" [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
-            <a routerLink="/clientes/carrito" class="navBoton">Carrito</a>
-            <a routerLink="/clientes/registro" class="navBoton">Registrate</a>
-            <a routerLink="/clientes/login" class="navBoton">Iniciar sesion</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/clientes">Navbar</a>
+    <div class="saludo" *ngIf="sesion == '1'"><b>Hola!</b> Anibal Diaz</div>
+    <button class="navbar-toggler" type="button" (click)='mostrarNav()'>
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        </div>
+    <div class="navbar-collapse" id="navbarNav" *ngIf="navbar == 'active'">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="sesion == '0'">
+          <a class="nav-link" routerLink="/clientes/login">Iniciar sesion</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '1'">
+          <a class="nav-link" (click)="configCuenta()">Configuracion de cuenta</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '1'">
+          <a class="nav-link" (click)="cerrarSesion()">Cerrar sesion</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '0'">
+          <a class="nav-link" routerLink="/clientes/registro">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/clientes/carrito">Carrito</a>
+        </li>
+      </ul>
     </div>
-    <div id="botonCel" (click)="verModal()">
-        <fa-icon [icon]="faBars"></fa-icon>
-    </div>
-</nav>
-<hr>
+  </nav>

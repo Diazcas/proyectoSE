@@ -21,6 +21,10 @@ import { DriverMisOrdenesComponent } from './driver-mis-ordenes/driver-mis-orden
 import { DummyComponentComponent } from './dummy-component/dummy-component.component';
 import { CliUbicacionComponent } from './cli-ubicacion/cli-ubicacion.component';
 import { CliCrearCuentaComponent } from './cli-crear-cuenta/cli-crear-cuenta.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CliIniciarSesionComponent } from './cli-iniciar-sesion/cli-iniciar-sesion.component';
+import { DriverVerOrdenComponent } from './driver-ver-orden/driver-ver-orden.component';
+import { CliPagoComponent } from './cli-pago/cli-pago.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +43,17 @@ import { CliCrearCuentaComponent } from './cli-crear-cuenta/cli-crear-cuenta.com
     DriverMisOrdenesComponent,
     DummyComponentComponent,
     CliUbicacionComponent,
-    CliCrearCuentaComponent
+    CliCrearCuentaComponent,
+    CliIniciarSesionComponent,
+    DriverVerOrdenComponent,
+    CliPagoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule
   ],
   providers: [LocalStoService],
   bootstrap: [AppComponent]

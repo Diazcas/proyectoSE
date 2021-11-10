@@ -55,4 +55,8 @@ export class CliUbicacionComponent implements OnInit {
     localStorage.setItem('direccionCambio', '0')
   }
 
+  guardarOrden(){
+
+  }
+
 }

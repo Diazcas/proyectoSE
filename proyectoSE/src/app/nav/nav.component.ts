@@ -12,10 +12,13 @@ export class NavComponent implements OnInit {
   faBars = faBars;
   regionVisible = '';
   faWindowClose = faWindowClose;
+  navbar = 'false'
+  sesion:string = '';
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.sesion = localStorage.getItem('cuentaActivada') || ''
   }
 
   cambiarPant(){
@@ -30,4 +33,22 @@ export class NavComponent implements OnInit {
     this.regionVisible = "";
   }
 
+  cerrarSesion(){
+    localStorage.setItem('cuentaActivada','0');
+    let link = ["clientes"]
+    this.router.navigateByUrl('/clientes/login', {skipLocationChange: true}).then(()=>
+    this.router.navigate(link)); 
+  }
+
+  configCuenta(){
+    
+  }
+
+  mostrarNav(){
+    if(this.navbar == 'false'){
+      this.navbar = 'active'
+    } else{
+      this.navbar = 'false'
+    }
+  }
 }

@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<form [formGroup]="iniciarSesionForm">
+    <fieldset>
+        <legend>Iniciar sesion</legend>
+        
+        <div>
+            <label for="email">Correo:</label><br>
+            <input type="text" id="email" name="email" formControlName="email">
+        </div>
+        <br>
+        <div>
+            <label for="password">Contraseña:</label><br>
+            <input type="text" id="password" name="password" formControlName="password">
+        </div>
+        <br>
+        
+        <button (click)="iniciarSesion()">Iniciar sesion</button>
+    </fieldset>
+</form>

@@ -1,15 +1,16 @@
 <app-nav></app-nav>
 <div class="carritoCont">
     <h1>Carrito</h1>
-    <div class="carrito">
+    <h3 class="error" *ngIf="carritoLleno == false">Agrega algo a tu carrito primero!</h3>
+    <div class="carrito"  *ngIf="carritoLleno == true">
         <div class="objetoCont" *ngFor="let item of carrito; let i = index">
             <div class="objetoImagen" style="background-image: url(../../assets/img/productos/{{item.img}});">
-                <h2>{{item.nombre}}</h2>
+                <h3>{{item.nombre}}</h3>
             </div>
             <div class="objetoDetalle">
                 <b>Ingredientes:</b>
                 <p class="descripcion"> {{item.detalle}}</p>
-                <div class="detalle">Cantidad: {{carritoArray[i].cantidad}}</div>
+                <div class="detalle">Cantidad: {{item.cantidad}}</div>
                 <div class="detalle"></div>
                 <div class="detalle">Precio unitario: {{item.precio}}$</div>
             </div>
@@ -22,16 +23,33 @@
 </div>
 
 <div class="modalBack" *ngIf="modal == 'active'">
-    <div class="modalInfoBack factura">
-        <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
-        <p class="izq">Coste de producto: </p>
-        <p class="der">{{precioArticulos}}$</p>
-        <p class="izq">Precio envio: </p>
-        <p class="der">{{precioEnvio}}$</p>
-        <p class="izq">Impuestos: </p>
-        <p class="der">{{precioISV}}$</p>
-        <p class="izq">Total: </p>
-        <p class="der">{{precioTotal}}$</p>
-        <button routerLink="/clientes/ubicacion" (click)="agregarProd()">Finalizar compra</button>
+    <div class="modalCont">
+        <div class="modalNav">
+            <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
+            <h4>Carrito</h4>
+            <hr>
+        </div>
+        <div class="modalBody">
+            <div>
+                <p>Coste producto: </p>
+                <p>{{precioArticulos}}$</p>
+            </div>
+            <div>
+                <p class="izq">Precio envio: </p>
+                <p class="der">{{precioEnvio}}$</p>
+            </div>
+            <div>
+                <p class="izq">Impuestos: </p>
+                <p class="der">{{precioISV}}$</p>
+            </div>
+            <div>
+                <p class="izq">Total: </p>
+                <p class="der">{{precioTotal}}$</p>
+            </div>
+            <hr>
+        </div>
+        <div class="modalFooter">
+            <button routerLink="/clientes/ubicacion" (click)="guardarObjetos()">Finalizar compra</button>
+        </div>
     </div>
 </div>
