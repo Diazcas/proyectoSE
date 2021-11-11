@@ -10,6 +10,9 @@ import { CliUbicacionComponent } from './cli-ubicacion/cli-ubicacion.component'
 import { CliCrearCuentaComponent } from './cli-crear-cuenta/cli-crear-cuenta.component'
 import { CliIniciarSesionComponent } from './cli-iniciar-sesion/cli-iniciar-sesion.component'
 import { CliPagoComponent } from './cli-pago/cli-pago.component'
+import { DriverOrdenEntregadaComponent } from './driver-orden-entregada/driver-orden-entregada.component'
+import { DriverOrdenDisponibleComponent } from './driver-orden-disponible/driver-orden-disponible.component'
+import { HomeComponent } from './admin/home/home.component'
 
 const routes: Routes = [
   {
@@ -70,11 +73,15 @@ const routes: Routes = [
   },
   {
     path: 'driver/ordenesEntregadas',
-    component: DriverHomeComponent
+    component: DriverOrdenEntregadaComponent
   },
   {
     path: 'driver/ordenesDisponibles',
-    component: DriverHomeComponent
+    component: DriverOrdenDisponibleComponent
+  },
+  {
+    path: 'admin',
+    component: HomeComponent
   },
   {
     path: 'DummyComponent',

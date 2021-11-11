@@ -1,0 +1,27 @@
+<h2 class="tabla">{{tableName}}</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let item of tableHead" scope="col">
+                {{item}}
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="visible == 'empresas'">
+        <tr *ngFor="let obj of tableData; index as i">
+            <th>{{i+1}}</th>
+            <th>{{obj.nombre}}</th>
+            <th>{{obj.empresa}}</th>
+            <th>{{obj.puntuacion}}</th>
+        </tr>
+    </tbody>
+    <tbody *ngIf="visible == 'productos'">
+        <tr *ngFor="let obj of tableData; index as i">
+            <th>{{i+1}}</th>
+            <th>{{obj.nombre}}</th>
+            <th>{{obj.empresa}}</th>
+            <th>{{obj.detalle}}</th>
+            <th>{{obj.precio}}$</th>
+        </tr>
+    </tbody>
+</table>

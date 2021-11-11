@@ -3,12 +3,11 @@ import {faCheck , faWindowClose ,faThumbtack, faMotorcycle, faHome } from '@fort
 import { LocalStoService } from '../local-sto.service'
 
 @Component({
-  selector: 'app-driver-mis-ordenes',
-  templateUrl: './driver-mis-ordenes.component.html',
-  styleUrls: ['./driver-mis-ordenes.component.css']
+  selector: 'app-driver-orden-disponible',
+  templateUrl: './driver-orden-disponible.component.html',
+  styleUrls: ['./driver-orden-disponible.component.css']
 })
-export class DriverMisOrdenesComponent implements OnInit {
-  
+export class DriverOrdenDisponibleComponent implements OnInit {
   modal = 'false';
   faCheck = faCheck;
   faWindowClose = faWindowClose;
@@ -24,8 +23,8 @@ export class DriverMisOrdenesComponent implements OnInit {
 
   ngOnInit(): void {
     this.ordenesArray = (JSON.parse(localStorage.getItem('ordenes')||""))
-    this.ordenes = (this.localSto.traerOrdenesActuales()[0])
-    this.tieneO = this.localSto.traerOrdenesActuales()[1]
+    this.ordenes = (this.localSto.traerOrdenesDisponibles()[0])
+    this.tieneO = this.localSto.traerOrdenesDisponibles()[1]
     console.log(this.tieneO)
 
     // console.log(this.ordenes)
@@ -43,6 +42,7 @@ export class DriverMisOrdenesComponent implements OnInit {
 
   cambiarEstado(estado:any, orden:any){
     orden.estado = estado;
+    orden.driverId = localStorage.getItem('driver')
     this.ordenesArray[orden.id] = orden;
     console.log(this.ordenesArray)
     localStorage.setItem('ordenes',JSON.stringify(this.ordenesArray))

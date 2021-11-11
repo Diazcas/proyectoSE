@@ -85,3 +85,34 @@ hr{
     border: none;
     border-radius: 10px;
   }
+
+  h2.titulo{
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    padding: 5px 20px;
+}
+
+h1.avisoError{
+  padding: 5px 20px;
+  text-align: center;
+}
+
+h2.tabla{
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: -1px -1px 5px black;
+}
+
+thead{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+td, th{
+  text-align: center;
+}
+
+table{
+  background-color: white;
+}

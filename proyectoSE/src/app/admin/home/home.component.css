@@ -1,0 +1,54 @@
+.body{
+    width: 100%;
+    max-width: 1440px;
+    box-shadow: 0px 0px 5px black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.opciones{
+    width: 20%;
+
+}
+
+.opciones ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 0px 5px white;
+}
+
+ul li{
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    padding: 10px 20px;
+    background-color: black;
+    border-bottom: 1px solid white;
+    transition: all 0.5s ease;
+}
+
+ul li.active{
+    background-color: rgb(77, 77, 77);
+}
+
+ul li:hover{
+    cursor: pointer;
+    background-color: rgb(77, 77, 77);
+}
+
+.tablaCont{
+    width: 70%;
+    padding: 10px 15px;
+}

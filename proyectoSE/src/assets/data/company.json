@@ -8,6 +8,7 @@
                 "banner": "burguer.jpg",
                 "logo": "burguer.png",
                 "descripcion": "Somos una empresa que vende muy buenas burguers",
+                "puntuacion": 4,
                 "productos": [
                     {
                         "id": 0,
@@ -31,6 +32,7 @@
                 "banner": "mc.jpg",
                 "logo": "mc.png",
                 "descripcion": "Somos otra empresa que vende muy buenas burguers",
+                "puntuacion": 5,
                 "productos": [
                     {
                         "id": 0,
@@ -59,6 +61,7 @@
                 "banner": "fc.jfif",
                 "logo": "fc.jpg",
                 "descripcion": "Somos una empresa que vende pastillas muy buenas",
+                "puntuacion": 3,
                 "productos": [
                     {
                         "id": 0,
@@ -82,6 +85,7 @@
                 "banner": "fa.jfif",
                 "logo": "fa.png",
                 "descripcion": "Somos otra empresa que vende pastillas muy buenas",
+                "puntuacion": 4,
                 "productos": [
                     {
                         "id": 0,

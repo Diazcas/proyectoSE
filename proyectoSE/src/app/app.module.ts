@@ -25,6 +25,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CliIniciarSesionComponent } from './cli-iniciar-sesion/cli-iniciar-sesion.component';
 import { DriverVerOrdenComponent } from './driver-ver-orden/driver-ver-orden.component';
 import { CliPagoComponent } from './cli-pago/cli-pago.component';
+import { DriverOrdenEntregadaComponent } from './driver-orden-entregada/driver-orden-entregada.component';
+import { DriverOrdenDisponibleComponent } from './driver-orden-disponible/driver-orden-disponible.component';
+import { HomeComponent } from './admin/home/home.component';
+import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { AdminTablaEmpresaComponent } from './admin/admin-tabla-empresa/admin-tabla-empresa.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,12 @@ import { CliPagoComponent } from './cli-pago/cli-pago.component';
     CliCrearCuentaComponent,
     CliIniciarSesionComponent,
     DriverVerOrdenComponent,
-    CliPagoComponent
+    CliPagoComponent,
+    DriverOrdenEntregadaComponent,
+    DriverOrdenDisponibleComponent,
+    HomeComponent,
+    AdminNavComponent,
+    AdminTablaEmpresaComponent
   ],
   imports: [
     BrowserModule,
