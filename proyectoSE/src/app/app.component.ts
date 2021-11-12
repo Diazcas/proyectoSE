@@ -19,7 +19,10 @@ export class AppComponent {
 
 localStorage.setItem('companys', JSON.stringify(companias))
 // localStorage.setItem('carritoActual', '[]')
-localStorage.setItem('drivers', JSON.stringify(drivers))
+if(!localStorage.getItem('drivers')){
+  localStorage.setItem('drivers', JSON.stringify(drivers))
+}
+
 localStorage.setItem('clientes', JSON.stringify(cliente))
 if(!localStorage.getItem('ordenes')){
   localStorage.setItem('ordenes', JSON.stringify(ordenes))

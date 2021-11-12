@@ -86,6 +86,36 @@ hr{
     border-radius: 10px;
   }
 
+  .modalBody ul {
+    width: 100%;
+    height: min-content;
+    list-style: none;
+    padding-inline-start: 0px;
+    z-index: 100;
+    border: 1px solid black;
+  }
+  
+  .modalBody li {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 150%;
+    color: white;
+    width: 100%;
+    transition: all 0.5s ease;
+    border: 1px solid rgb(78, 78, 78);
+  }
+
+  .modalBody li:hover{
+    background-color: black;
+    border: 1px solid black;
+}
+  
+  li a {
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: -1px -1px 2px rgb(92, 92, 92);
+  }
+
   h2.titulo{
     text-align: center;
     margin: 0px 0px 20px 0px;
@@ -116,3 +146,5 @@ td, th{
 table{
   background-color: white;
 }
+
+

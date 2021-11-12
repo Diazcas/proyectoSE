@@ -135,6 +135,18 @@ export class LocalStoService {
     return driverActive;
   }
 
+  traerDriver(id:any){
+    console.log(id)
+    if(id == null || id == undefined){
+      return null
+    } else{
+      let drivers = JSON.parse(localStorage.getItem('drivers') || '{}');
+      let driver = drivers.filter((item:any) => item.id == id)[0]
+      let nombre = (driver.pNombre + ' ' + driver.pApellido)
+      return nombre
+    }
+  }
+
   actualizarDriver(id: any) {
     localStorage.setItem('driver', id);
   }
@@ -306,4 +318,41 @@ export class LocalStoService {
 
     return [tableData, tableHead, tableName];
   }
+
+  traerTablaMotorista() {
+    let tableData = this.traerDrivers();
+    console.log(tableData)
+
+    let tableHead = ['Noº', 'Nombre', 'Estado', 'Cambiar estado'];
+    let tableName = 'Tabla Motoristas'
+
+    return [tableData, tableHead, tableName];
+  }
+
+  traerTablaOrdenes() {
+    let tableData: any = ['[]'] 
+    let ordenes = JSON.parse(localStorage.getItem('ordenes') || '{}');
+    for(let i = 0; i < ordenes.length; i++){
+      console.log(ordenes[i])
+      let motorista = this.traerDriver(ordenes[i].driverId)
+      let json = {
+        id: ordenes[i].id,
+        clienteNombre: ordenes[i].clienteNombre,
+        direccion: ordenes[i].direccion,
+        precioTotal: ordenes[i].costes.total,
+        motorista: motorista
+      };
+
+      if (tableData[0] == '[]') {
+        tableData[0] = json;
+      } else {
+        tableData.push(json);
+      }
+    }
+    let tableHead = ['Noº', 'Cliente', 'Dirección','Precio Total', 'Motorista'];
+    let tableName = 'Tabla Ordenes'
+
+    return [tableData, tableHead, tableName];
+  }
+
 }

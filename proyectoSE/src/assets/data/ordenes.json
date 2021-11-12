@@ -6,7 +6,12 @@
         "estado": 2,
         "direccion": {"lng":-86.5689081432162, "lat":14.019570199425004},
         "totalOrden": 50,
-        "costes":[{}],
+        "costes":{
+            "ISV": null,
+            "costePro": null,
+            "precioEnv": null,
+            "total": null
+        },
         "productos": [
             {
                 "cantidad": 1,
@@ -33,6 +38,12 @@
         "estado": 0,
         "direccion": {"lng":-86.5689081432111, "lat":16.019570199425004},
         "totalOrden": 20,
+        "costes":{
+            "ISV": null,
+            "costePro": null,
+            "precioEnv": null,
+            "total": null
+        },
         "productos": [
             {
                 "cantidad": 5,
