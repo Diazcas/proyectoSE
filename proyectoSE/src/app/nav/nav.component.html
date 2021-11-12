@@ -1,9 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" routerLink="/clientes">Navbar</a>
-    <div class="saludo" *ngIf="sesion == '1'"><b>Hola!</b> Anibal Diaz</div>
+    <a class="navbar-brand" routerLink="/clientes">
+      <img src="../../assets/img/logo.png" alt="">
+    </a>
     <button class="navbar-toggler" type="button" (click)='mostrarNav()'>
       <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="saludo" *ngIf="sesion == '1'"><b>Hola {{nombreCliente}}!</b></div>
 
     <div class="navbar-collapse" id="navbarNav" *ngIf="navbar == 'active'">
       <ul class="navbar-nav">
@@ -20,7 +22,7 @@
           <a class="nav-link" routerLink="/clientes/registro">Registrarse</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/clientes/carrito">Carrito</a>
+          <a class="nav-link" routerLink="/clientes/carrito">Carrito ({{productosCarrito}})</a>
         </li>
       </ul>
     </div>

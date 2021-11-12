@@ -28,7 +28,8 @@ export class CliIniciarSesionComponent implements OnInit {
       console.log('Te redirijo')
       this.router.navigate(['/clientes'])
       localStorage.setItem('cuentaActivada','1')
-      localStorage.setItem('idClienteActivo', clienteEncontrado)
+      localStorage.setItem('idClienteActivo', clienteEncontrado[0])
+      localStorage.setItem('idClienteActivoNombre', clienteEncontrado[1])
     }else{
       alert('Error de correo o contraseña')
     }

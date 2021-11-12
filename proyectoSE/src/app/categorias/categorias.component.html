@@ -7,11 +7,16 @@
             <div class="empresasCont">
                 <div class="objetoCont"  *ngFor="let item of companias" style="background-image: url(../../assets/img/banners/{{item.banner}})" >
                     <p class="calificacion">
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="active" [icon]="faStar"></fa-icon>
-                        <fa-icon class="" [icon]="faStar"></fa-icon>
-                        <fa-icon class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 1" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 1" class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 2" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 2" class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 3" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 3" class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 4" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 4" class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 5" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 5" class="" [icon]="faStar"></fa-icon>
                     </p>
                     <div class="empresaLogo">
                         <img src="../../assets/img/logos/{{item.logo}}" alt="">

@@ -33,7 +33,11 @@ export class TodasCatComponent implements OnInit {
 
 
   mostrarCat(){
-    this.movilVisible = 'movil'
+    if(this.movilVisible == 'movil'){
+      this.movilVisible = 'no'
+    } else{
+      this.movilVisible = 'movil'
+    }
   }
 
   quitarCat(){

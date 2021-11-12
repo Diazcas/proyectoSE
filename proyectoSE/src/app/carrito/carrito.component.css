@@ -14,10 +14,11 @@
   height: 150px;
   border-radius: 20px;
   overflow: auto;
-  box-shadow: 0px 0px 15px black;
+  box-shadow: 0px 0px 5px grey;
   transition: box-shadow 0.5s ease;
-  background-image: linear-gradient(to right, rgb(124, 124, 124), white);
+  background-color: rgba(255, 255, 255, 0.589);
 }
+
 
 .objetoCont:hover {
   cursor: pointer;
@@ -46,13 +47,14 @@
 }
 
 .objetoCont h3 {
-  text-shadow: -1px -2px 1px black;
+  text-shadow: 0px 0px 3px black;
   margin-top: 55%;
   margin-left: 10px;
-  background-color: rgba(0, 0, 0, 0.288);
   padding: 0px 10px;
   max-height: 30px;
   overflow: hidden;
+  color: white;
+  text-align: center;
 }
 
 .objetoDetalle b {
@@ -75,13 +77,13 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 5px grey;
 }
 
 .carritoCont {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  color: white;
 }
 
 h3.error{
@@ -105,6 +107,7 @@ h3.error{
   right: 10px;
   border-radius: 10px;
   padding: 10px 20px;
-  background-color: grey;
-  box-shadow: 0px 0px 5px black;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  box-shadow: 0px 0px 5px grey;
 }

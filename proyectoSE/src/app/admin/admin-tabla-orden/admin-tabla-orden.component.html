@@ -1,0 +1,39 @@
+<h2 class="tabla">{{tableName}}</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let item of tableHead" scope="col">
+                {{item}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of tableData; index as i">
+            <th>{{i+1}}</th>
+            <th>{{obj.clienteNombre}}</th>
+            <th>Lat: {{obj.direccion.lat}}, <br> Lng: {{obj.direccion.lng}}</th>
+            <th>{{obj.precioTotal}}$</th>
+            <th *ngIf="obj.motorista != null">{{obj.motorista}}</th>
+            <th *ngIf="obj.motorista == null"><button (click)="activarModal((i))">Seleccionar</button></th>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modalBack" *ngIf="modal == 'active'">
+    <div class="modalCont">
+        <div class="modalNav">
+            <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
+            <h4>Motoristas disponibles</h4>
+            <hr>
+        </div>
+        <div class="modalBody">
+            <ul>
+                <li *ngFor="let item of drivers" (click)="actualizarDriver((item.id))">{{item.pNombre}}
+                    {{item.pApellido}}</li>
+            </ul>
+            <hr>
+        </div>
+        <div class="modalFooter">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<h2 class="tabla">{{tableName}}</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let item of tableHead" scope="col">
+                {{item}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of tableData; index as i">
+            <th>{{i+1}}</th>
+            <th>{{obj.pNombre}} {{obj.sNombre}} {{obj.pApellido}} {{obj.sApellido}}</th>
+            <th *ngIf="obj.estado == true">Activo</th>
+            <th *ngIf="obj.estado == false">Inactivo</th>
+            <th>
+                <button *ngIf="obj.estado == false" (click)="cambiarEstadoMotorista(true,i)">Activar</button>
+                <button *ngIf="obj.estado == true" (click)="cambiarEstadoMotorista(false,i)">Desactivar</button>
+            </th>
+        </tr>
+    </tbody>
+</table>

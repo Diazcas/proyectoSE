@@ -30,6 +30,9 @@ import { DriverOrdenDisponibleComponent } from './driver-orden-disponible/driver
 import { HomeComponent } from './admin/home/home.component';
 import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
 import { AdminTablaEmpresaComponent } from './admin/admin-tabla-empresa/admin-tabla-empresa.component';
+import { AdminTablaProductoComponent } from './admin/admin-tabla-producto/admin-tabla-producto.component';
+import { AdminTablaMotoristaComponent } from './admin/admin-tabla-motorista/admin-tabla-motorista.component';
+import { AdminTablaOrdenComponent } from './admin/admin-tabla-orden/admin-tabla-orden.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { AdminTablaEmpresaComponent } from './admin/admin-tabla-empresa/admin-ta
     DriverOrdenDisponibleComponent,
     HomeComponent,
     AdminNavComponent,
-    AdminTablaEmpresaComponent
+    AdminTablaEmpresaComponent,
+    AdminTablaProductoComponent,
+    AdminTablaMotoristaComponent,
+    AdminTablaOrdenComponent
   ],
   imports: [
     BrowserModule,

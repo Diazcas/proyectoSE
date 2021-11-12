@@ -84,7 +84,7 @@ export class LocalStoService {
 
     if (clienteEncontrado != undefined) {
       console.log('encontrado');
-      return clienteEncontrado.id;
+      return [clienteEncontrado.id, clienteEncontrado.nombre + ' ' + clienteEncontrado.apellido];
     }
     // console.log(todos)
     // console.log(cliente)
@@ -231,7 +231,7 @@ export class LocalStoService {
 
     ordenes = ordenes.replace('}]}]', `}]},${nuevaOrden}]`);
 
-    console.log(JSON.parse(ordenes));
+    // console.log(JSON.parse(ordenes));
     localStorage.setItem('ordenes', ordenes);
     this.borrarLocal();
   }
@@ -240,7 +240,6 @@ export class LocalStoService {
     localStorage.removeItem('carritoActual');
     localStorage.removeItem('direccion');
     localStorage.removeItem('cuentaTotalActual');
-    alert('Carrito, direccion y cuenta total eliminados');
   }
 
   //--------------------------TABLAS----------------------

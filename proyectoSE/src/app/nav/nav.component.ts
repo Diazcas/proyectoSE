@@ -1,7 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { faCoffee, faWindowClose, faBars  } from '@fortawesome/free-solid-svg-icons';
-
+import { LocalStoService } from '../local-sto.service'
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -14,11 +14,17 @@ export class NavComponent implements OnInit {
   faWindowClose = faWindowClose;
   navbar = 'false'
   sesion:string = '';
+  nombreCliente = localStorage.getItem('idClienteActivoNombre')
+  productosCarrito = JSON.parse(localStorage.getItem('carritoActual') || '[]').length
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private localSto:LocalStoService) { }
 
   ngOnInit(): void {
     this.sesion = localStorage.getItem('cuentaActivada') || ''
+    setInterval(() =>{
+      this.productosCarrito = JSON.parse(localStorage.getItem('carritoActual') || '[]').length }, 500);
   }
 
   cambiarPant(){
@@ -35,6 +41,8 @@ export class NavComponent implements OnInit {
 
   cerrarSesion(){
     localStorage.setItem('cuentaActivada','0');
+    localStorage.setItem('idClienteActivo', 'null')
+    localStorage.removeItem('carritoActual')
     let link = ["clientes"]
     this.router.navigateByUrl('/clientes/login', {skipLocationChange: true}).then(()=>
     this.router.navigate(link)); 

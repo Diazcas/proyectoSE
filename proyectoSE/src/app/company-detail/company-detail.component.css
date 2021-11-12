@@ -2,7 +2,6 @@
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  color: white;
 }
 
 .banner{
@@ -31,6 +30,7 @@
 
 .banner h1{
   text-shadow: 0px 0px 15px black;
+  color: white;
 }
 
 .banner img{
@@ -54,14 +54,14 @@
   height: 150px;
   border-radius: 20px;
   overflow: auto;
-  box-shadow: 0px 0px 15px black;
+  box-shadow: 0px 0px 5px grey;
   transition: box-shadow 0.5s ease;
-  background-image: linear-gradient(to right ,rgb(124, 124, 124), white);
+  background-color: rgba(255, 255, 255, 0.589);
 }
 
 .objetoCont:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 15px rgb(189, 189, 189);
+  box-shadow: 0px 0px 15px black(189, 189, 189);
 }
 
 .empresaLogo {
@@ -89,22 +89,25 @@
 }
 
 .objetoCont h3 {
-  text-shadow: -1px -2px 1px black;
+  text-shadow: 0px 0px 3px black;
   margin-top: 55%;
   margin-left: 10px;
-  background-color: rgba(0, 0, 0, 0.288);
   padding: 0px 10px;
   max-height: 30px;
   overflow: hidden;
+  color: white;
+  text-align: center;
 }
 
 .objetoDetalle b{
   padding: 5px 10px;
+  text-shadow: 0px 0px 3px grey;
 }
 
 .objetoDetalle span{
   color: red;
   margin-left: 10px;
+  font-weight: bold;
 }
 
 .objetoCont button{
@@ -114,6 +117,8 @@
   padding: 5px 10px;
   border-radius: 5px;
   border: none;
+  font-weight: bold;
+  background-color: burlywood;
 }
 
 

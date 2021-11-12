@@ -72,6 +72,7 @@ fa-icon{
     padding: 10px 0px;
     border-top: 1px solid rgb(91, 214, 252);
     text-indent: 10px;
+    color: white;
 }
 
 .drivers li:last-child{
@@ -79,6 +80,7 @@ fa-icon{
 }
 
 hr{
-    margin: 20px 0px;
+    margin: 20px auto;
+    
 }
 

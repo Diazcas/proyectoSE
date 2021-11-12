@@ -1,26 +1,26 @@
-button{
-    width: 100px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px grey;
+button {
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px grey;
 }
 
-.modalBack{
-    width: 105%;
-    margin-left: -30%;
+.modalBack {
+  width: 105%;
+  margin-left: -30%;
 }
 
-.modalCont{
-    max-width: 600px;
+.modalCont {
+  max-width: 600px;
 }
 
-li{
-    padding: 5px 10px;
+li {
+  padding: 5px 10px;
 }
 
 @media (min-width: 1600px) {
-    .modalBack{
-        width: 105%;
-        margin-left: -35%;
-    }
+  .modalBack {
+    width: 105%;
+    margin-left: -35%;
+  }
 }

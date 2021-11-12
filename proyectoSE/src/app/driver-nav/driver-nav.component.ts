@@ -47,4 +47,11 @@ export class DriverNavComponent implements OnInit {
     console.log('hola')
   }
 
+  misOrdenes(){
+    console.log('hola')
+    let link = ["/driver/misOrdenes"]
+    this.router.navigateByUrl('/clientes/login', {skipLocationChange: true}).then(()=>
+    this.router.navigate(link)); 
+  }
+
 }

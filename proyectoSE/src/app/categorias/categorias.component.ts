@@ -26,6 +26,8 @@ export class CategoriasComponent implements OnInit {
       "companias" : this.companias,
       "categoria" : this.categoria
     }]
+
+    console.log(this.data)
   }
 
   actualizarCate(){

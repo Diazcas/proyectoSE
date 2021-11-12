@@ -3,14 +3,17 @@
     <div class="cont">
         <div class="opciones">
             <ul>
-                <li>Empresas</li>
-                <li>Productos</li>
-                <li>Motoristas</li>
-                <li>Ordenes</li>
+                <li (click)="cambiarTabla('empresas')" [ngClass]="{'active': visible=='empresas'}">Empresas</li>
+                <li (click)="cambiarTabla('productos')" [ngClass]="{'active': visible=='productos'}">Productos</li>
+                <li (click)="cambiarTabla('motoristas')" [ngClass]="{'active': visible=='motoristas'}">Motoristas</li>
+                <li (click)="cambiarTabla('ordenes')" [ngClass]="{'active': visible=='ordenes'}">Ordenes</li>
             </ul>
         </div>
         <div class="tablaCont">
-            <app-admin-tabla-empresa></app-admin-tabla-empresa>
+            <app-admin-tabla-empresa *ngIf="visible == 'empresas'"></app-admin-tabla-empresa>
+            <app-admin-tabla-producto *ngIf="visible == 'productos'"></app-admin-tabla-producto>
+            <app-admin-tabla-motorista *ngIf="visible == 'motoristas'"></app-admin-tabla-motorista>
+            <app-admin-tabla-orden *ngIf="visible == 'ordenes'"></app-admin-tabla-orden>
         </div>
     </div>
 </div>

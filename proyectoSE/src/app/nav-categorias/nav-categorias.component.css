@@ -1,6 +1,8 @@
 a{
-    color: white;
+    color: black;
     margin: 0px 5px;
+    text-shadow: 0px 0px 0px;
+    border: 1px solid rgba(78, 78, 78, 0.61)!important;
 }
 
 .h1Cont{
@@ -12,9 +14,8 @@ a{
 
 h1{
     display: inline-block;
-    color: white;
+    text-shadow: 1px 1px 3px grey;
 }
 
 fa-icon{
-    color: white;
 }

@@ -1,7 +1,7 @@
 <nav>
     <a routerLink="/driver">
         <div class="logo">
-            <img src="../../assets/img/logo.jpg" alt="">
+            <img src="../../assets/img/logo.png" alt="">
         </div>
     </a>
     <div class="usuarioActual"  (click)="cambiarModal()">
@@ -15,6 +15,6 @@
             </ul>
         </div>
     </div>
-    <fa-icon [icon]="faTasks" size="3x"></fa-icon>
+    <fa-icon (click)="misOrdenes()" [icon]="faTasks" size="3x"></fa-icon>
 </nav>
 <hr>
