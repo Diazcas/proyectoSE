@@ -8,7 +8,10 @@
         <input type="text" name="apellido" id="apellido" formControlName="apellido"  required>
 
         <label for="email">E-mail:</label>
-        <input type="email"  formControlName="email"  required>
+        <input type="email" name="email"  formControlName="email"  required>
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error">
+            <span *ngIf="email?.errors?.email">Error, ingrese un correo válido</span>
+        </div>
 
         <label for="contrasenia">Contraseña:</label>
         <input [ngClass]="{'input-error':contrasenia?.invalid && (contrasenia?.dirty || contrasenia?.touched)}" type="password" formControlName="contrasenia" required>
@@ -21,7 +24,7 @@
         <input type="text" name="tel" id="tel" formControlName="tel" required>
 
         <div>
-            <button [disabled]="!formularioCliente.valid" (click)='guardarCli()'>Resgistrarme</button>
+            <button [disabled]="!formularioCliente.valid" routerLink="/clientes" (click)='guardarCli()'>Resgistrarme</button>
         </div>
         <a (click)="cambiarform('repartidor')">Quiero registrarme como repartidor!</a>
     </fieldset>
@@ -52,14 +55,25 @@
         
         <label for="email">E-mail:</label>
         <input type="email" name="email" id="email" formControlName="email">
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error">
+            <span *ngIf="email?.errors?.email">Error, ingrese un correo válido</span>
+        </div>
+        
         <label for="password">Contraseña:</label>
         <input type="password" name="password" id="password" formControlName="contrasenia">
+        <div *ngIf="contrasenia?.invalid && (contrasenia?.dirty || contrasenia?.touched)" class="error">
+            <span *ngIf="contrasenia?.errors?.required">Error, el campo es obligatorio</span>
+            <span *ngIf="contrasenia?.errors?.minlength">La contraseña debe contener un minimo de 5 caracteres</span>
+        </div>
+
         <label for="tel">Telefono:</label>
         <input type="text" name="tel" id="tel" formControlName="tel">
 
         <div>
-            <button (click)='guardarRep()'>Resgistrarme</button>
+            <button [disabled]="!formularioRepartidor.valid" routerLink="/clientes" (click)='guardarRep()'>Resgistrarme</button>
         </div>
         <a (click)="cambiarform('cliente')">Quiero registrarme como cliente!</a>
     </fieldset>
 </form>
+
+

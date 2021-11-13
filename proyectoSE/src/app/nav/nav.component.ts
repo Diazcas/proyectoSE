@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
     private localSto:LocalStoService) { }
 
   ngOnInit(): void {
-    this.sesion = localStorage.getItem('cuentaActivada') || ''
+    this.sesion = localStorage.getItem('cuentaActivada') || '0'
     setInterval(() =>{
       this.productosCarrito = JSON.parse(localStorage.getItem('carritoActual') || '[]').length }, 500);
   }

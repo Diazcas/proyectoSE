@@ -22,6 +22,7 @@ localStorage.setItem('companys', JSON.stringify(companias))
 if(!localStorage.getItem('drivers')){
   localStorage.setItem('drivers', JSON.stringify(drivers))
 }
+localStorage.setItem('idClienteActivo', 'null') 
 
 localStorage.setItem('clientes', JSON.stringify(cliente))
 if(!localStorage.getItem('ordenes')){

@@ -26,6 +26,7 @@ export class CliCrearCuentaComponent implements OnInit {
     email : new FormControl('', [Validators.required, Validators.email]),
     contrasenia : new FormControl('', [Validators.required, Validators.minLength(5)]),
     tel : new FormControl('', [Validators.required]),
+    estado : new FormControl(false)
   });
 
   mostrarRegion = 'cliente';
@@ -45,9 +46,24 @@ export class CliCrearCuentaComponent implements OnInit {
   guardarRep(){
     console.log(this.formularioRepartidor.value)
     console.log(this.formularioRepartidor.valid)
+    this.localSto.aniadirRep(this.formularioRepartidor.value)
   }
 
   get contrasenia(){
-    return this.formularioCliente.get('contrasenia');
+    if(this.mostrarRegion == 'repartidor'){
+      return this.formularioRepartidor.get('contrasenia');
+    }else{
+      return this.formularioCliente.get('contrasenia');
+    }
   }
+  get email(){
+    if(this.mostrarRegion == 'repartidor'){
+      return this.formularioRepartidor.get('email');
+    }else{
+      return this.formularioCliente.get('email');
+    }
+  }
+
+
+
 }

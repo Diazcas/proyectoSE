@@ -1,5 +1,6 @@
 form{
     margin-top: 10px;
+    font-weight: bold;
 }
 
 form input, form label{
@@ -25,13 +26,15 @@ form input{
 form a{
     padding: 5px 10px;
     text-align: center;
-    color: yellow;
-    box-shadow: 0px 0px 0px;
+    color: grey;
+    margin: 20px 20px;
+    box-shadow: 0px 0px 3px grey;
     display: block;
 }
 
 form button{
     padding: 10px 20px;
+    font-weight: bold;
 }
 
 form div{
@@ -39,8 +42,14 @@ form div{
     margin-block-end: 10px;
 }
 
+form section{
+    width: min-content;
+    min-width: 400px;
+    margin: 0px auto;
+}
+
 form section div{
-    width: 45%;
+    width: 50%;
     padding: 0px 5px;
     display: inline-block;
 }

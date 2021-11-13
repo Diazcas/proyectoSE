@@ -1,18 +1,18 @@
 [
     {
         "id": 0,
-        "nombre": "Anibal",
-        "apellido": "Diaz",
-        "email": "maucastillo@gmail.com",
+        "nombre": "Pedro Manuel",
+        "apellido": "Izaguirre",
+        "email": "pedrito@gmail.com",
         "contrasenia": "12345",
-        "tel": "88397812"
+        "tel": "85237812"
     },
     {
         "id": 1,
-        "nombre": "Oscar",
-        "apellido": "Diaz",
-        "email": "mastercastillo@gmail.com",
+        "nombre": "Oscar Osman",
+        "apellido": "Martinez",
+        "email": "Osmanosc@gmail.com",
         "contrasenia": "12345",
-        "tel": "88397812"
+        "tel": "81274812"
     }
 ]

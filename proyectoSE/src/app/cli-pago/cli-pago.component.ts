@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStoService } from '../local-sto.service'
+import {FormGroup, FormControl} from '@angular/forms'
 
 @Component({
   selector: 'app-cli-pago',
@@ -7,6 +8,12 @@ import { LocalStoService } from '../local-sto.service'
   styleUrls: ['./cli-pago.component.css']
 })
 export class CliPagoComponent implements OnInit {
+  pagoForm = new FormGroup({
+    metodo : new FormControl(''),
+    tarjeta : new FormControl(''),
+    codigo : new FormControl(''),
+    fecha : new FormControl('')
+  })
 
   constructor(private localSto: LocalStoService) { }
 
@@ -24,10 +31,12 @@ export class CliPagoComponent implements OnInit {
       "driverId": null,
       "estado": null,
       "direccion": direccion,
-      "totalOrden": 50,
+      "totalOrden": cuenta.total,
       "costes": cuenta,
       "productos": productos
     }
+
+
 
   }
   

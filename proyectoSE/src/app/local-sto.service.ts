@@ -122,6 +122,22 @@ export class LocalStoService {
 
   //--------------------------DRIVER----------------------
 
+  aniadirRep(data:JSON){
+    let traerjson = localStorage.getItem('drivers') || '';
+    console.log(data)
+    console.log(traerjson);
+    let todos = JSON.parse(localStorage.getItem('drivers') || '');
+    console.log(todos)
+
+    let stringj = JSON.stringify(data);
+    let stringAgregar = `,"id":"${todos.length}"}]`;
+    stringj = stringj.replace('{"', ',{"');
+    stringj = stringj.replace('}', stringAgregar);
+    traerjson = traerjson.replace(']', stringj);
+    console.log(traerjson);
+    localStorage.setItem('drivers', traerjson);
+  }
+
   traerDrivers() {
     let todos = JSON.parse(localStorage.getItem('drivers') || '{}');
     return todos;

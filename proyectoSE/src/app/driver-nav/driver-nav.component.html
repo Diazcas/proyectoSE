@@ -11,7 +11,7 @@
     <div class="modalBack" *ngIf="modal == 'active'">
         <div class="drivers">
             <ul>
-                <li (click)="cambiarDriver((item.id))" *ngFor="let item of drivers; let i = index">{{item.pNombre}} {{item.pApellido}}</li>
+                <li (click)="cambiarDriver((item.id))" *ngFor="let item of drivers; let i = index"> <span *ngIf="item.estado != false">{{item.pNombre}} {{item.pApellido}}</span></li>
             </ul>
         </div>
     </div>

@@ -5,15 +5,9 @@
     "pApellido": "Diaz",
     "sApellido": "Castillo",
     "correo":"anibalmauriciod@gmail.com",
-    "password": "1234",
+    "password": "12345",
     "tel": "33442567",
-    "estado": true,
-    "misOrdenes": [{
-        "id": 0
-    },
-    {
-        "id": 2
-    }]
+    "estado": true
 },
 {
     "id": 1,
@@ -24,14 +18,5 @@
     "correo":"oscarismad@gmail.com",
     "password": "12345",
     "tel": "89231454",
-    "estado": false,
-    "misOrdenes": [{
-        "id": 1
-    },
-    {
-        "id": 3
-    }],
-    "entregadas": [{
-        "id": 4
-    }]
+    "estado": false
 }]
