@@ -6,6 +6,28 @@ import { Injectable } from '@angular/core';
 export class LocalStoService {
   constructor() {}
 
+  //----------------------------------admin
+  
+  buscarAdmin(admin: any) {
+    let todos = JSON.parse(localStorage.getItem('admin') || '');
+    console.log(todos)
+    let adminEncontrado = todos.filter(
+      (item: any) =>
+        item.correo == admin.email && item.password == admin.password
+    )[0];
+
+    if (adminEncontrado != undefined) {
+      console.log('encontrado');
+      return adminEncontrado.id;
+    }
+    // console.log(driver)
+    // console.log(driverEncontrado)
+    // console.log(clienteEncontrado)
+    return false;
+  }
+
+  //---------------------------------------------------
+
   traerProducto(categoria: any, compania: any, productoid: any) {
     console.log(categoria, compania, productoid);
     let item = JSON.parse(localStorage.getItem('companys') || '{}')[categoria]
@@ -121,6 +143,24 @@ export class LocalStoService {
   }
 
   //--------------------------DRIVER----------------------
+
+  buscarDri(driver: any) {
+    let todos = JSON.parse(localStorage.getItem('drivers') || '');
+    console.log(todos)
+    let driverEncontrado = todos.filter(
+      (item: any) =>
+        item.correo == driver.email && item.password == driver.password
+    )[0];
+
+    if (driverEncontrado != undefined) {
+      console.log('encontrado');
+      return driverEncontrado.id;
+    }
+    // console.log(driver)
+    // console.log(driverEncontrado)
+    // console.log(clienteEncontrado)
+    return false;
+  }
 
   aniadirRep(data:JSON){
     let traerjson = localStorage.getItem('drivers') || '';

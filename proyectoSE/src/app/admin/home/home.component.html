@@ -1,6 +1,27 @@
+
 <div class="body">
     <app-admin-nav></app-admin-nav>
-    <div class="cont">
+    <div class="sesion" *ngIf="sesion == '0'">
+        <form [formGroup]="iniciarSesionForm">
+            <fieldset>
+                <legend>Iniciar Sesion Administrador</legend>
+                <div class="error" *ngIf="error == 1">Error en el correo o contraseña</div>
+                <div>
+                    <label for="email">Correo:</label><br>
+                    <input type="text" id="email" name="email" formControlName="email">
+                </div>
+                <br>
+                <div>
+                    <label for="password">Contraseña:</label><br>
+                    <input type="password" id="password" name="password" formControlName="password">
+                </div>
+                <br>
+                
+                <button (click)="iniciarSesion()">Iniciar sesion</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="cont" *ngIf="sesion == '1'">
         <div class="opciones">
             <ul>
                 <li (click)="cambiarTabla('empresas')" [ngClass]="{'active': visible=='empresas'}">Empresas</li>

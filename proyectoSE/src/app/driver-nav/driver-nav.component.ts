@@ -54,4 +54,12 @@ export class DriverNavComponent implements OnInit {
     this.router.navigate(link)); 
   }
 
+  cerrarSesion(){
+    localStorage.setItem('driverSesion', '0')
+    let link = ["/driver"]
+    this.router.navigateByUrl('/clientes/login', {skipLocationChange: true}).then(()=>
+    this.router.navigate(link)); 
+
+  }
+
 }

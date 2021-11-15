@@ -1,0 +1,10 @@
+[{
+    "id": 0,
+    "pNombre": "Anibal",
+    "sNombre": "Mauricio",
+    "pApellido": "Diaz",
+    "sApellido": "Castillo",
+    "correo":"anibalmauriciod@gmail.com",
+    "password": "12345",
+    "tel": "33442567"
+}]

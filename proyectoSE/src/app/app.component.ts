@@ -4,6 +4,7 @@ import carrito from '../assets/data/carrito.json'
 import drivers from '../assets/data/drivers.json'
 import cliente from '../assets/data/cliente.json'
 import ordenes from '../assets/data/ordenes.json'
+import admin from '../assets/data/admin.json'
 
 @Component({
   selector: 'app-root',
@@ -29,4 +30,5 @@ if(!localStorage.getItem('ordenes')){
   localStorage.setItem('ordenes', JSON.stringify(ordenes))
 }
 localStorage.setItem('driver', '0')
+localStorage.setItem('admin', JSON.stringify(admin))
 

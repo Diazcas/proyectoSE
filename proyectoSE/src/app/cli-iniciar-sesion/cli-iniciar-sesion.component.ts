@@ -17,6 +17,7 @@ export class CliIniciarSesionComponent implements OnInit {
     email : new FormControl('', [Validators.required]),
     password : new FormControl('', [Validators.required])
   })
+  error = 0;
 
   ngOnInit(): void {
   }
@@ -31,7 +32,7 @@ export class CliIniciarSesionComponent implements OnInit {
       localStorage.setItem('idClienteActivo', clienteEncontrado[0])
       localStorage.setItem('idClienteActivoNombre', clienteEncontrado[1])
     }else{
-      alert('Error de correo o contraseña')
+      this.error = 1;
     }
   }
 
