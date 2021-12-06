@@ -173,4 +173,21 @@ table{
   color: rgb(255, 255, 0);
 }
 
+div.error{
+  background-color: rgba(255, 87, 87, 0.993);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+div.exitoso{
+  background-color: rgba(121, 255, 87, 0.993);
+  color: black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
 

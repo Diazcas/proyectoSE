@@ -9,4 +9,10 @@ export class AdminNavComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  cerrarSesion(){
+  localStorage.setItem('adminSesion', '0')
+  }
+
 }
+

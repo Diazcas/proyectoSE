@@ -16,6 +16,7 @@
 
 section {
   overflow: hidden;
+  min-width: 320px;
 }
 
 .objetoCont {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 import {faCheck , faWindowClose ,faThumbtack, faMotorcycle, faHome } from '@fortawesome/free-solid-svg-icons'
-import { LocalStoService } from '../local-sto.service'
+import { ConnectService } from '../connect.service'
 
 @Component({
   selector: 'app-driver-orden-entregada',
@@ -19,13 +20,16 @@ export class DriverOrdenEntregadaComponent implements OnInit {
   ordenes:any
   objetos:any
   tieneO = false;
+  cargando = true;
 
-  constructor(private localSto: LocalStoService) { }
+  constructor(private connectDb: ConnectService, private router: Router) { }
 
-  ngOnInit(): void {
-    this.ordenes = (this.localSto.traerOrdenesEntregadas()[0])
-    this.tieneO = this.localSto.traerOrdenesEntregadas()[1]
-    console.log(this.tieneO)
+  async ngOnInit(): Promise<void> {
+    this.ordenes = await this.connectDb.traerOrdenFinalizadas(localStorage.getItem('driverSesion_id'))
+    this.cargando = false
+    if(this.ordenes.length > 0){
+      this.tieneO = true
+    }
 
     // console.log(this.ordenes)
   }
@@ -45,5 +49,11 @@ export class DriverOrdenEntregadaComponent implements OnInit {
     this.ordenesArray[orden.id] = orden;
     // console.log(this.ordenesArray)
     // localStorage.setItem('ordenes',JSON.stringify(this.ordenesArray))
+  }
+
+  verMapa(dir:any){
+    console.log(dir)
+    localStorage.setItem('driverDir',JSON.stringify(dir))
+    this.router.navigate(['driver/ordenUbicacion'])
   }
 }

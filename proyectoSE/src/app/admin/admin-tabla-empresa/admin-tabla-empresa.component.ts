@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
-import { LocalStoService } from '../../local-sto.service';
+import { ConnectService } from '../../connect.service'
 
 @Component({
   selector: 'app-admin-tabla-empresa',
@@ -9,7 +8,7 @@ import { LocalStoService } from '../../local-sto.service';
   styleUrls: ['./admin-tabla-empresa.component.css'],
 })
 export class AdminTablaEmpresaComponent implements OnInit {
-  constructor(private locaSto: LocalStoService, private router: Router) {}
+  constructor(private connect: ConnectService) {}
   faWindowClose = faWindowClose;
 
   tableData: any;
@@ -18,12 +17,13 @@ export class AdminTablaEmpresaComponent implements OnInit {
   drivers: any;
   ordenSeleccionada: any;
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     //EMPRESAS
-    let data = this.locaSto.traerTablaEmpresas();
+    let data:any = await this.connect.tablaEmpresas();
+    // console.log(data[0])
     this.tableData = data[0];
     this.tableHead = data[1];
     this.tableName = data[2];
-    console.log(this.tableData[0]);
+    // console.log(this.tableData[0]);
   }
 }

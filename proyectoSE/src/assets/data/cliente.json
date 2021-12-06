@@ -1,6 +1,5 @@
 [
     {
-        "id": 0,
         "nombre": "Pedro Manuel",
         "apellido": "Izaguirre",
         "email": "pedrito@gmail.com",
@@ -8,7 +7,6 @@
         "tel": "85237812"
     },
     {
-        "id": 1,
         "nombre": "Oscar Osman",
         "apellido": "Martinez",
         "email": "Osmanosc@gmail.com",

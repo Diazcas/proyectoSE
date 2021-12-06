@@ -1,20 +1,20 @@
 <div class="companyCont">
-  <div class="banner" style="background-image: url(../../assets/img/banners/{{compania.banner}});">
+  <div class="banner" style="background-image: url(http://localhost:8888/public/empresas/{{compania.banner}});">
     <div class="nombreCompany">
       <h1>{{compania.nombre}}</h1>
     </div>
   </div>
   <div id="menu">
-    <div class="objetoCont" *ngFor="let item of compania.productos; let i = index">
+    <div class="objetoCont" *ngFor="let item of productos; let i = index">
       <div class="objetoImagen"
-        style="background-image: url(../../assets/img/productos/{{compania.productos[i].img}});">
-        <h3>{{compania.productos[i].nombre}}</h3>
+        style="background-image: url(http://localhost:8888/public/productos/{{item.img}});">
+        <h3>{{item.nombre}}</h3>
       </div>
       <div class="objetoDetalle">
         <b>Descripcion:</b>
-        <p class="descripcion"> {{compania.productos[i].detalle}}</p>
-        <span>{{compania.productos[i].precio}}$</span>
-        <button (click)="activarModal((compania.productos[i]))">Agregar</button>
+        <p class="descripcion"> {{item.detalle}}</p>
+        <span>{{item.precio}}$</span>
+        <button (click)="activarModal((item))">Agregar</button>
       </div>
     </div>
   </div>
@@ -32,6 +32,11 @@
         <p>Ingrese la cantidad:</p>
         <input type="number" formControlName='cantidad'>
       </form>
+      <div *ngIf="error != 0" class="error">
+        <span *ngIf="error == 1">Debes iniciar sesion primero</span>
+        <span *ngIf="error == 2">Ingrese una cantidad válida</span>
+      </div>
+      <div class="exitoso" *ngIf="productoAgregado == true">Producto agregado!</div>
       <hr>
     </div>
     <div class="modalFooter">

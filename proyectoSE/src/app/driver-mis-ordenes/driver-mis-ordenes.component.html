@@ -1,12 +1,13 @@
 <app-driver-nav></app-driver-nav>
-<h1 class="avisoError" *ngIf="tieneO == false">No tiene ordenes seleccionadas</h1>
+<h1 class="avisoError" *ngIf="cargando == true">Cargando...</h1>
+<h1 class="avisoError" *ngIf="tieneO == false && cargando == false">No tiene ordenes seleccionadas</h1>
 <div *ngIf="tieneO == true">
     <h2 class="titulo">Ordenes en seguimiento</h2>
     <section *ngFor="let item of ordenes">
         <div class="info">
             <h2>Cliente: {{item.clienteNombre}}</h2>
             <p>Direccion:</p>
-            <button  class="buttonArriba">Ver mapa</button>
+            <button  class="buttonArriba" (click)="verMapa(item.direccion)">Ver mapa</button>
             <p> <span> Lng: </span> {{item.direccion.lng}}</p>
             <button  (click)="abrirOrden((item.productos))">Ver objetos</button>
             <p> <span> Lat: </span> {{item.direccion.lat}}</p>

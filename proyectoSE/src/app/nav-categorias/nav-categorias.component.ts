@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { faShoppingCart  } from '@fortawesome/free-solid-svg-icons';
 import { LocalStoService } from '../local-sto.service';
+import { ConnectService } from '../connect.service'
 
 @Component({
   selector: 'app-nav-categorias',
@@ -10,17 +11,18 @@ import { LocalStoService } from '../local-sto.service';
 export class NavCategoriasComponent implements OnInit {
   @Output() cambiarCategoria = new EventEmitter();
   faShoppingCart = faShoppingCart;
-  categorias:string[] = (this.localSto.traerCategorias())
+  categorias:any
 
-  constructor(private localSto: LocalStoService) {
+  constructor(private localSto: LocalStoService, private connectBd: ConnectService) {
   }
   
-  ngOnInit(): void {
-    // console.log(this.categorias)
+  async ngOnInit(): Promise<void> {
+    this.categorias = await this.connectBd.traerCategorias();
+    console.log(this.categorias);
   }
 
-  mostrarCategoria(categoria:string){
-    this.cambiarCategoria.emit(categoria)
+  mostrarCategoria(categorias:string){
+    console.log(categorias)
+    this.cambiarCategoria.emit(categorias)
   }
-
 }

@@ -17,6 +17,16 @@ button {
   li {
     padding: 5px 10px;
   }
+
+  .trash{
+    padding-right: 20px;
+    color: rgb(255, 115, 115);
+  }
+
+  .trash:hover{
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+  }
   
   @media (min-width: 1600px) {
     .modalBack {

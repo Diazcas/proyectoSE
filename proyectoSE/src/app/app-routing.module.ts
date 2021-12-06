@@ -12,6 +12,7 @@ import { CliIniciarSesionComponent } from './cli-iniciar-sesion/cli-iniciar-sesi
 import { CliPagoComponent } from './cli-pago/cli-pago.component'
 import { DriverOrdenEntregadaComponent } from './driver-orden-entregada/driver-orden-entregada.component'
 import { DriverOrdenDisponibleComponent } from './driver-orden-disponible/driver-orden-disponible.component'
+import { DriverUbicacionComponent } from './driver-ubicacion/driver-ubicacion.component'
 import { HomeComponent } from './admin/home/home.component'
 
 const routes: Routes = [
@@ -78,6 +79,10 @@ const routes: Routes = [
   {
     path: 'driver/ordenesDisponibles',
     component: DriverOrdenDisponibleComponent
+  },
+  {
+    path: 'driver/ordenUbicacion',
+    component: DriverUbicacionComponent
   },
   {
     path: 'admin',

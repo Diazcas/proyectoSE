@@ -5,6 +5,9 @@
             <th *ngFor="let item of tableHead" scope="col">
                 {{item}}
             </th>
+            <th class="trash">
+                <fa-icon [icon]="faTrash" size="lg"></fa-icon>
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -14,9 +17,31 @@
             <th *ngIf="obj.estado == true">Activo</th>
             <th *ngIf="obj.estado == false">Inactivo</th>
             <th>
-                <button *ngIf="obj.estado == false" (click)="cambiarEstadoMotorista(true,i)">Activar</button>
-                <button *ngIf="obj.estado == true" (click)="cambiarEstadoMotorista(false,i)">Desactivar</button>
+                <button *ngIf="obj.estado == false" (click)="cambiarEstadoMotorista(true, (obj))">Activar</button>
+                <button *ngIf="obj.estado == true" (click)="cambiarEstadoMotorista(false, (obj))">Desactivar</button>
+            </th>
+            <th class="trash" (click)="modalEliminarDriver((obj))">
+                <fa-icon [icon]="faTrash" size="lg"></fa-icon>
             </th>
         </tr>
     </tbody>
 </table>
+
+<div class="modalBack" *ngIf="modal == true">
+    <div class="modalCont">
+        <div class="modalNav">
+            <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
+            <h4>Eliminar</h4>
+            <hr>
+        </div>
+        <div class="modalBody">
+            <p>Se eliminará el motorista seleccionada.</p>
+            <p>Desea continuar?</p>
+            <hr>
+        </div>
+        <div class="modalFooter">
+            <button style="margin-right: 10px;" (click)="eliminarMoto()">Continuar</button>
+            <button (click)="quitarModal()">Cancelar</button>
+        </div>
+    </div>
+</div>

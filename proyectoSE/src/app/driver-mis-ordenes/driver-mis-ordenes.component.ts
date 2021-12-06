@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 import {faCheck , faWindowClose ,faThumbtack, faMotorcycle, faHome } from '@fortawesome/free-solid-svg-icons'
-import { LocalStoService } from '../local-sto.service'
+import { ConnectService } from '../connect.service'
 
 @Component({
   selector: 'app-driver-mis-ordenes',
@@ -15,17 +16,19 @@ export class DriverMisOrdenesComponent implements OnInit {
   faThumbtack = faThumbtack;
   faMotorcycle = faMotorcycle;
   faHome = faHome;
-  ordenesArray:any;
   ordenes:any
   objetos:any
   tieneO = false;
+  cargando = true;
 
-  constructor(private localSto: LocalStoService) { }
+  constructor(private connectDb: ConnectService, private router: Router) { }
 
-  ngOnInit(): void {
-    this.ordenesArray = (JSON.parse(localStorage.getItem('ordenes')||""))
-    this.ordenes = (this.localSto.traerOrdenesActuales()[0])
-    this.tieneO = this.localSto.traerOrdenesActuales()[1]
+  async ngOnInit(): Promise<void> {
+    this.ordenes = await this.connectDb.traerOrdenSeguimiento(localStorage.getItem('driverSesion_id'))
+    this.cargando = false
+    if(this.ordenes.length > 0){
+      this.tieneO = true
+    }
     console.log(this.tieneO)
 
     // console.log(this.ordenes)
@@ -43,8 +46,12 @@ export class DriverMisOrdenesComponent implements OnInit {
 
   cambiarEstado(estado:any, orden:any){
     orden.estado = estado;
-    this.ordenesArray[orden.id] = orden;
-    console.log(this.ordenesArray)
-    localStorage.setItem('ordenes',JSON.stringify(this.ordenesArray))
+    this.connectDb.actualizarOrden(orden);
+  }
+
+  verMapa(dir:any){
+    console.log(dir)
+    localStorage.setItem('driverDir',JSON.stringify(dir))
+    this.router.navigate(['driver/ordenUbicacion'])
   }
 }

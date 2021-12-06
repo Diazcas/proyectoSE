@@ -27,6 +27,8 @@ export class CategoriasComponent implements OnInit {
       "categoria" : this.categoria
     }]
 
+    console.log(this.categoria)
+
     // console.log(this.data)
   }
 

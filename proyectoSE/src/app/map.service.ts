@@ -17,12 +17,12 @@ export class MapService {
     // Asignamos el token desde las variables de entorno
     this.mapbox.accessToken = environment.mapBoxToken;
   }
-  buildMap() {
+  buildMap(lng:number, lat:number) {
     this.map = new mapboxgl.Map({
       container: 'map',
       style: this.style,
       zoom: this.zoom,
-      center: [this.lng, this.lat]
+      center: [lng, lat]
     });
     this.map.addControl(new mapboxgl.NavigationControl());
 
@@ -33,7 +33,7 @@ export class MapService {
     const marker = new mapboxgl.Marker({
       draggable: true
     })
-    .setLngLat([this.lng,this.lat])
+    .setLngLat([lng,lat])
     .addTo(map)
     let direccion;
 

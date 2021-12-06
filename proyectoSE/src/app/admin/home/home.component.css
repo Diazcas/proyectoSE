@@ -96,6 +96,6 @@ ul li:hover {
 .tablaCont {
   width: 70%;
   padding: 10px 15px;
-  max-height: 700px;
+  max-height: 650px;
   overflow: auto;
 }

@@ -4,7 +4,7 @@
 </div>
 <ul class="nav justify-content-center">
 
-    <li class="nav-item" *ngFor="let item of categorias" >
-      <a class="nav-link border active" (click)="mostrarCategoria(item)">{{item}}</a>
+    <li class="nav-item" *ngFor="let item of categorias; let i = index;" >
+      <a *ngIf="i < 3" class="nav-link border active" (click)="mostrarCategoria(item._id)">{{item.nombre}}</a>
     </li>
   </ul>
