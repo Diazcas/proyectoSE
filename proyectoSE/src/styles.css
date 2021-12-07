@@ -9,6 +9,11 @@ html{
 }
 
 @font-face {
+  font-family: "cookie";
+  src: url("./assets/fonts/Cookie/Cookie-Regular.ttf");
+}
+
+@font-face {
     font-family: 'Varela Round';
     src: url(../src/assets/fonts/Varela_Round/VarelaRound-Regular.ttf);
 }
@@ -150,6 +155,14 @@ table{
   background-color: white;
 }
 
+table th:first-child{
+  padding-left: 10px;
+}
+
+table th:last-child{
+  padding-right: 10px;
+}
+
 .categoriasCont {
   overflow: auto;
   margin-top: 20px;
@@ -171,6 +184,27 @@ table{
 
 .calificacion fa-icon.active {
   color: rgb(255, 255, 0);
+}
+
+div.error{
+  background-color: rgba(255, 87, 87, 0.993);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+div.exitoso{
+  background-color: rgba(121, 255, 87, 0.993);
+  color: black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.modalFooter button:first-child{
+  margin-right: 5px;
 }
 
 

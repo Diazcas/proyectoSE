@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +34,7 @@ import { AdminTablaEmpresaComponent } from './admin/admin-tabla-empresa/admin-ta
 import { AdminTablaProductoComponent } from './admin/admin-tabla-producto/admin-tabla-producto.component';
 import { AdminTablaMotoristaComponent } from './admin/admin-tabla-motorista/admin-tabla-motorista.component';
 import { AdminTablaOrdenComponent } from './admin/admin-tabla-orden/admin-tabla-orden.component';
+import { DriverUbicacionComponent } from './driver-ubicacion/driver-ubicacion.component';
 
 @NgModule({
   declarations: [
@@ -62,14 +64,16 @@ import { AdminTablaOrdenComponent } from './admin/admin-tabla-orden/admin-tabla-
     AdminTablaEmpresaComponent,
     AdminTablaProductoComponent,
     AdminTablaMotoristaComponent,
-    AdminTablaOrdenComponent
+    AdminTablaOrdenComponent,
+    DriverUbicacionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [LocalStoService],
   bootstrap: [AppComponent]

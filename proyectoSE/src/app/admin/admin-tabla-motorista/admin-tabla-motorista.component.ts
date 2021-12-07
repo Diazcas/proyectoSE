@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
-import { LocalStoService } from '../../local-sto.service';
+import { faWindowClose, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { ConnectService } from '../../connect.service';
 
 @Component({
   selector: 'app-admin-tabla-motorista',
@@ -9,27 +9,46 @@ import { LocalStoService } from '../../local-sto.service';
   styleUrls: ['./admin-tabla-motorista.component.css'],
 })
 export class AdminTablaMotoristaComponent implements OnInit {
-  constructor(private locaSto: LocalStoService, private router: Router) {}
+  constructor(private connect: ConnectService, private router: Router) {}
   faWindowClose = faWindowClose;
+  faTrash = faTrash;
 
   tableData: any;
   tableHead: any;
   tableName = '';
-  ordenSeleccionada: any;
+  modal = false;
+  driverSeleccionado:any
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     //Motoristas
-    let data = this.locaSto.traerTablaMotorista();
+    let data: any = await this.connect.tablaMotorista();
     this.tableData = data[0];
     this.tableHead = data[1];
     this.tableName = data[2];
-    console.log(this.tableData);
+    // console.log(this.tableData);
   }
 
-  cambiarEstadoMotorista(estado: boolean, id: number) {
-    console.log(estado, id);
-    this.tableData[id].estado = estado;
-    console.log(this.tableData);
-    localStorage.setItem('drivers', JSON.stringify(this.tableData));
+  cambiarEstadoMotorista(estado: boolean, driver: any) {
+    driver.estado = estado;
+    // console.log(estado, driver);
+    this.connect.actualizarDriver(driver);
+  }
+
+  quitarModal() {
+    this.modal = false;
+  }
+
+  modalEliminarDriver(driver: any) {
+    this.modal = true;
+    this.driverSeleccionado = driver;
+  }
+
+  eliminarMoto(){
+    this.connect.eliminarDriverId(this.driverSeleccionado);
+    this.quitarModal();
+    let link = ['admin'];
+    this.router
+      .navigateByUrl('/clientes/login', { skipLocationChange: true })
+      .then(() => this.router.navigate(link));
   }
 }

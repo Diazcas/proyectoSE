@@ -1,3 +1,4 @@
+
 a{
     color: black;
     margin: 0px 5px;
@@ -18,4 +19,11 @@ h1{
 }
 
 fa-icon{
+    color: #00cbffa8;
+}
+
+p{
+    padding: 0px 30px;
+    font-family: "cookie";
+    font-size: 170%;
 }

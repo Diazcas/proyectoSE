@@ -1,0 +1,226 @@
+[
+	{
+        "nombre": "Pedro Manuel",
+        "apellido": "Izaguirre",
+        "email": "pedrito@gmail.com",
+        "password": "12345",
+        "tel": "85237812"
+    },
+    {
+        "nombre": "Oscar Osman",
+        "apellido": "Martinez",
+        "email": "Osmanosc@gmail.com",
+        "password": "12345",
+        "tel": "81274812"
+    },
+	{
+		"nombre": "Jolie Fuentes",
+		"apellido": "Coffey Knight",
+		"email": "joliefuentes7854@outlook.com",
+		"tel": "90572315",
+		"password": "671e8c28"
+	},
+	{
+		"nombre": "Amir Adkins",
+		"apellido": "Pennington Sloan",
+		"email": "amiradkins972@gmail.com",
+		"tel": "31823561",
+		"password": "348d6f26"
+	},
+	{
+		"nombre": "Kane Whitley",
+		"apellido": "Moon Henry",
+		"email": "kanewhitley7496@yahoo.com",
+		"tel": "34461558",
+		"password": "578v3i44"
+	},
+	{
+		"nombre": "Shea Hancock",
+		"apellido": "Kelley Key",
+		"email": "sheahancock@yahoo.com",
+		"tel": "85215216",
+		"password": "439d7u67"
+	},
+	{
+		"nombre": "Kaye Wood",
+		"apellido": "Dillon Bush",
+		"email": "kayewood9377@yahoo.com",
+		"tel": "87466173",
+		"password": "681p4j24"
+	},
+	{
+		"nombre": "Edan Flynn",
+		"apellido": "Arnold Shaw",
+		"email": "edanflynn@gmail.com",
+		"tel": "89351231",
+		"password": "438c8u14"
+	},
+	{
+		"nombre": "Nerea Perkins",
+		"apellido": "Solomon Love",
+		"email": "nereaperkins@outlook.com",
+		"tel": "32053226",
+		"password": "873z1u62"
+	},
+	{
+		"nombre": "Priscilla Mcclure",
+		"apellido": "Gentry Franks",
+		"email": "priscillamcclure@outlook.com",
+		"tel": "92215483",
+		"password": "350r5n53"
+	},
+	{
+		"nombre": "Jade Knight",
+		"apellido": "Horn Briggs",
+		"email": "jadeknight8643@outlook.com",
+		"tel": "92884261",
+		"password": "955n6j71"
+	},
+	{
+		"nombre": "Kylie Tillman",
+		"apellido": "Simon Marsh",
+		"email": "kylietillman@yahoo.com",
+		"tel": "92867363",
+		"password": "498f0p55"
+	},
+	{
+		"nombre": "Colby Bond",
+		"apellido": "Powell Shaw",
+		"email": "colbybond625@gmail.com",
+		"tel": "36138157",
+		"password": "257k4b35"
+	},
+	{
+		"nombre": "Acton Rosa",
+		"apellido": "Gallagher Atkins",
+		"email": "actonrosa1186@gmail.com",
+		"tel": "35192446",
+		"password": "988j3n64"
+	},
+	{
+		"nombre": "Cynthia Arnold",
+		"apellido": "Whitehead Camacho",
+		"email": "cynthiaarnold@outlook.com",
+		"tel": "93353869",
+		"password": "555q4f28"
+	},
+	{
+		"nombre": "Unity Freeman",
+		"apellido": "Hooper Kidd",
+		"email": "unityfreeman@gmail.com",
+		"tel": "96287178",
+		"password": "248g4u43"
+	},
+	{
+		"nombre": "Gwendolyn Bird",
+		"apellido": "Cobb Sellers",
+		"email": "gwendolynbird2825@gmail.com",
+		"tel": "91551842",
+		"password": "673u5e87"
+	},
+	{
+		"nombre": "Vivian Santos",
+		"apellido": "Barrera Boyle",
+		"email": "viviansantos@gmail.com",
+		"tel": "81268457",
+		"password": "114m1t64"
+	},
+	{
+		"nombre": "Harding Gardner",
+		"apellido": "Tate Stanley",
+		"email": "hardinggardner4548@yahoo.com",
+		"tel": "31514725",
+		"password": "426a4v78"
+	},
+	{
+		"nombre": "Brielle Berg",
+		"apellido": "Whitaker Fitzgerald",
+		"email": "brielleberg8251@yahoo.com",
+		"tel": "86622933",
+		"password": "453y4m06"
+	},
+	{
+		"nombre": "Gray Brady",
+		"apellido": "Blanchard Daugherty",
+		"email": "graybrady2041@outlook.com",
+		"tel": "38487618",
+		"password": "393m9i16"
+	},
+	{
+		"nombre": "Galvin Barber",
+		"apellido": "Stone Hunter",
+		"email": "galvinbarber9809@outlook.com",
+		"tel": "33252287",
+		"password": "622e4b75"
+	},
+	{
+		"nombre": "Chanda Simpson",
+		"apellido": "Roy Wagner",
+		"email": "chandasimpson9892@gmail.com",
+		"tel": "32277471",
+		"password": "570s2e86"
+	},
+	{
+		"nombre": "Frances Burris",
+		"apellido": "Charles Williamson",
+		"email": "francesburris@gmail.com",
+		"tel": "37044153",
+		"password": "966d4m33"
+	},
+	{
+		"nombre": "Julie Benton",
+		"apellido": "Crane Cochran",
+		"email": "juliebenton7329@outlook.com",
+		"tel": "36713676",
+		"password": "496m6k52"
+	},
+	{
+		"nombre": "Rhona Gibbs",
+		"apellido": "Bowers Whitney",
+		"email": "rhonagibbs6980@outlook.com",
+		"tel": "37716965",
+		"password": "977g4g46"
+	},
+	{
+		"nombre": "Halla Waters",
+		"apellido": "Puckett Velazquez",
+		"email": "hallawaters@outlook.com",
+		"tel": "87112657",
+		"password": "667q1o07"
+	},
+	{
+		"nombre": "Zeus Hart",
+		"apellido": "Hess Wolfe",
+		"email": "zeushart226@yahoo.com",
+		"tel": "34718321",
+		"password": "612g7y21"
+	},
+	{
+		"nombre": "Yoshio Clark",
+		"apellido": "Robertson Spencer",
+		"email": "yoshioclark@yahoo.com",
+		"tel": "83426391",
+		"password": "195e5f47"
+	},
+	{
+		"nombre": "Abel Allison",
+		"apellido": "Ferrell Joseph",
+		"email": "abelallison@yahoo.com",
+		"tel": "80719263",
+		"password": "582w9a62"
+	},
+	{
+		"nombre": "Ashely Tucker",
+		"apellido": "Frederick Pacheco",
+		"email": "ashelytucker9006@gmail.com",
+		"tel": "96577754",
+		"password": "105b0i76"
+	},
+	{
+		"nombre": "Madonna Cook",
+		"apellido": "Baldwin Hartman",
+		"email": "madonnacook170@gmail.com",
+		"tel": "81683121",
+		"password": "660s4e45"
+	}
+]

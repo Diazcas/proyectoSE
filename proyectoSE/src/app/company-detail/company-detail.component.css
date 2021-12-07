@@ -129,3 +129,7 @@
   background-color: rgb(165, 165, 165);
 }
 
+.error, .exitoso{
+  margin-top: 10px;
+}
+

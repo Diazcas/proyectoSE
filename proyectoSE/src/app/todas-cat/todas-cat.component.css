@@ -16,6 +16,7 @@
 
 section {
   overflow: hidden;
+  min-width: 320px;
 }
 
 .objetoCont {
@@ -76,7 +77,7 @@ section {
 }
 
 .objetoDetalle h2 {
-  text-shadow: -1px -2px 1px black;
+  text-shadow: 0px 0px 4px black;
   padding: 0px 10px;
   color: white;
 }
@@ -92,6 +93,8 @@ button {
   text-align: center;
   margin: 15px;
   text-shadow: 0px 0px 3px grey;
+  font-family: "cookie";
+  font-size: 250%;
 }
 
 #botonMenu {

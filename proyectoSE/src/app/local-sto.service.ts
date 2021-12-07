@@ -82,11 +82,11 @@ export class LocalStoService {
     if (JSON.parse(carrito).length == 0) {
       carrito = carrito.replace(']', `${JSON.stringify(prod)}]`);
       localStorage.setItem('carritoActual', carrito);
-      console.log('entre aqui porque no hay');
+      // console.log('entre aqui porque no hay');
     } else {
       carrito = carrito.replace(']', `,${JSON.stringify(prod)}]`);
       localStorage.setItem('carritoActual', carrito);
-      console.log(JSON.parse(carrito));
+      // console.log(JSON.parse(carrito));
     }
   }
 

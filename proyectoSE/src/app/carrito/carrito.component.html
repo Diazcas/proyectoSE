@@ -4,7 +4,7 @@
     <h3 class="error" *ngIf="carritoLleno == false">Agrega algo a tu carrito primero!</h3>
     <div class="carrito"  *ngIf="carritoLleno == true">
         <div class="objetoCont" *ngFor="let item of carrito; let i = index">
-            <div class="objetoImagen" style="background-image: url(../../assets/img/productos/{{item.img}});">
+            <div class="objetoImagen" style="background-image: url(http://localhost:8888/public/productos/{{item.img}});">
                 <h3>{{item.nombre}}</h3>
             </div>
             <div class="objetoDetalle">

@@ -14,7 +14,7 @@ export class NavComponent implements OnInit {
   faWindowClose = faWindowClose;
   navbar = 'false'
   sesion:string = '';
-  nombreCliente = localStorage.getItem('idClienteActivoNombre')
+  nombreCliente = localStorage.getItem('clienteActivoNom')
   productosCarrito = JSON.parse(localStorage.getItem('carritoActual') || '[]').length
 
   constructor(
@@ -40,8 +40,14 @@ export class NavComponent implements OnInit {
   }
 
   cerrarSesion(){
+    localStorage.removeItem('clienteActivoNom')
+    localStorage.removeItem('clienteActivoApe')
+    localStorage.removeItem('cuentaActivada')
+    localStorage.removeItem('cuentaTotalActual')
+    localStorage.removeItem('direccion')
     localStorage.setItem('cuentaActivada','0');
-    localStorage.setItem('idClienteActivo', 'null')
+    localStorage.removeItem('idClienteActivo')
+    // localStorage.setItem('idClienteActivo', 'null')
     localStorage.removeItem('carritoActual')
     let link = ["clientes"]
     this.router.navigateByUrl('/clientes/login', {skipLocationChange: true}).then(()=>

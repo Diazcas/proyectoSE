@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 import {faCheck , faWindowClose ,faThumbtack, faMotorcycle, faHome } from '@fortawesome/free-solid-svg-icons'
-import { LocalStoService } from '../local-sto.service'
+import { ConnectService } from '../connect.service'
 
 @Component({
   selector: 'app-driver-mis-ordenes',
@@ -15,24 +16,30 @@ export class DriverMisOrdenesComponent implements OnInit {
   faThumbtack = faThumbtack;
   faMotorcycle = faMotorcycle;
   faHome = faHome;
-  ordenesArray:any;
   ordenes:any
   objetos:any
   tieneO = false;
+  cargando = true;
+  detalle = false;
+  ordenSelec: any
+  finalizada = false;
 
-  constructor(private localSto: LocalStoService) { }
+  constructor(private connectDb: ConnectService, private router: Router) { }
 
-  ngOnInit(): void {
-    this.ordenesArray = (JSON.parse(localStorage.getItem('ordenes')||""))
-    this.ordenes = (this.localSto.traerOrdenesActuales()[0])
-    this.tieneO = this.localSto.traerOrdenesActuales()[1]
-    console.log(this.tieneO)
+  async ngOnInit(): Promise<void> {
+    this.ordenes = await this.connectDb.traerOrdenSeguimiento(localStorage.getItem('driverSesion_id'))
+    this.cargando = false
+    if(this.ordenes.length > 0){
+      this.tieneO = true
+    }
+    // console.log(this.tieneO)
 
     // console.log(this.ordenes)
   }
 
   abrirOrden(orden:any){
-    console.log(orden)
+    // console.log(orden)
+    this.detalle = false;
     this.objetos = orden;
     this.modal = 'true'
   }
@@ -41,10 +48,31 @@ export class DriverMisOrdenesComponent implements OnInit {
     this.modal = 'false'
   }
 
-  cambiarEstado(estado:any, orden:any){
-    orden.estado = estado;
-    this.ordenesArray[orden.id] = orden;
-    console.log(this.ordenesArray)
-    localStorage.setItem('ordenes',JSON.stringify(this.ordenesArray))
+  cambiarEstado(i:any,estado:any, orden:any){
+    this.ordenSelec = [i,orden]
+    if(estado == 3){
+      this.modal = 'true';
+      this.detalle = true;
+    }else{
+      orden.estado = estado;
+      this.connectDb.actualizarOrden(orden);
+    }
+  }
+
+  finalizarOrden(){
+    this.ordenes.splice(this.ordenSelec[0],1)
+    this.ordenSelec[1].estado = '3'
+    this.connectDb.actualizarOrden(this.ordenSelec[1]);
+    this.finalizada = true 
+    setTimeout(() => {
+      this.quitarModal()
+      this.finalizada = false 
+    }, 1000);
+  }
+
+  verMapa(dir:any){
+    // console.log(dir)
+    localStorage.setItem('driverDir',JSON.stringify(dir))
+    this.router.navigate(['driver/ordenUbicacion'])
   }
 }

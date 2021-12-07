@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 import {faCheck , faWindowClose ,faThumbtack, faMotorcycle, faHome } from '@fortawesome/free-solid-svg-icons'
-import { LocalStoService } from '../local-sto.service'
+import { ConnectService } from '../connect.service'
 
 @Component({
   selector: 'app-driver-orden-disponible',
@@ -14,24 +15,26 @@ export class DriverOrdenDisponibleComponent implements OnInit {
   faThumbtack = faThumbtack;
   faMotorcycle = faMotorcycle;
   faHome = faHome;
-  ordenesArray:any;
   ordenes:any
   objetos:any
   tieneO = false;
+  cargando = true;
 
-  constructor(private localSto: LocalStoService) { }
+  constructor(private connectDb: ConnectService, private router: Router) { }
 
-  ngOnInit(): void {
-    this.ordenesArray = (JSON.parse(localStorage.getItem('ordenes')||""))
-    this.ordenes = (this.localSto.traerOrdenesDisponibles()[0])
-    this.tieneO = this.localSto.traerOrdenesDisponibles()[1]
-    console.log(this.tieneO)
+  async ngOnInit(): Promise<void> {
+    this.ordenes = await this.connectDb.traerOrdenDisponible()
+    this.cargando = false
 
-    // console.log(this.ordenes)
+    if(this.ordenes.length > 0){
+      this.tieneO = true
+    }
+
+    // console.log(this.tieneO)
   }
 
   abrirOrden(orden:any){
-    console.log(orden)
+    // console.log(orden)
     this.objetos = orden;
     this.modal = 'true'
   }
@@ -41,10 +44,20 @@ export class DriverOrdenDisponibleComponent implements OnInit {
   }
 
   cambiarEstado(estado:any, orden:any){
+    // console.log(orden)
     orden.estado = estado;
-    orden.driverId = localStorage.getItem('driver')
-    this.ordenesArray[orden.id] = orden;
-    console.log(this.ordenesArray)
-    localStorage.setItem('ordenes',JSON.stringify(this.ordenesArray))
+    orden.driverId = localStorage.getItem('driverSesion_id')
+    orden.driverNombre = localStorage.getItem('driverSesion_nombre')
+    this.connectDb.actualizarOrden(orden);
+
+    let link = ["/driver/ordenesDisponibles"]
+    this.router.navigateByUrl('/clientes/login', {skipLocationChange: true}).then(()=>
+    this.router.navigate(link)); 
+  }
+
+  verMapa(dir:any){
+    // console.log(dir)
+    localStorage.setItem('driverDir',JSON.stringify(dir))
+    this.router.navigate(['driver/ordenUbicacion'])
   }
 }

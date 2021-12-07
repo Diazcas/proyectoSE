@@ -1,0 +1,34 @@
+[
+    {
+        "categoriaId": "61a67f9d4fde0a846065fb84",
+        "nombre": "Burguer King",
+        "banner": "burguer.jpg",
+        "logo": "burguer.png",
+        "descripcion": "En BURGER KING®, hemos preparado nuestros productos a la parrilla desde que empezamos en 1954, desde el primer día. Solo usamos llama viva para darte la hamburguesa que mereces.",
+        "puntuacion": 4
+    },
+    {
+        "categoriaId": "61a67f9d4fde0a846065fb84",
+        "nombre": "Mc'Donalds",
+        "banner": "mc.jpg",
+        "logo": "mc.png",
+        "descripcion": "Somos otra empresa que vende muy buenas burguers",
+        "puntuacion": 5
+    },
+    {
+        "categoriaId": "61a67f9d4fde0a846065fb85",
+        "nombre": "Farma City",
+        "banner": "fc.jfif",
+        "logo": "fc.jpg",
+        "descripcion": "Somos una empresa que vende pastillas muy buenas",
+        "puntuacion": 3
+    },
+    {
+        "categoriaId": "61a67f9d4fde0a846065fb85",
+        "nombre": "Farmacia del ahorro",
+        "banner": "fa.jfif",
+        "logo": "fa.png",
+        "descripcion": "Somos otra empresa que vende pastillas muy buenas",
+        "puntuacion": 4
+    }
+]

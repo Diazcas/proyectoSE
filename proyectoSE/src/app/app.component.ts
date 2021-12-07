@@ -18,17 +18,17 @@ export class AppComponent {
   title = 'proyectoSE';
 }
 
-localStorage.setItem('companys', JSON.stringify(companias))
+// localStorage.setItem('companys', JSON.stringify(companias))
 // localStorage.setItem('carritoActual', '[]')
-if(!localStorage.getItem('drivers')){
-  localStorage.setItem('drivers', JSON.stringify(drivers))
-}
-localStorage.setItem('idClienteActivo', 'null') 
+// if(!localStorage.getItem('drivers')){
+//   localStorage.setItem('drivers', JSON.stringify(drivers))
+// }
+// localStorage.setItem('idClienteActivo', 'null') 
 
-localStorage.setItem('clientes', JSON.stringify(cliente))
-if(!localStorage.getItem('ordenes')){
-  localStorage.setItem('ordenes', JSON.stringify(ordenes))
-}
-localStorage.setItem('driver', '0')
-localStorage.setItem('admin', JSON.stringify(admin))
+// localStorage.setItem('clientes', JSON.stringify(cliente))
+// if(!localStorage.getItem('ordenes')){
+//   localStorage.setItem('ordenes', JSON.stringify(ordenes))
+// }
+// localStorage.setItem('driver', '0')
+// localStorage.setItem('admin', JSON.stringify(admin))
 

@@ -3,3 +3,10 @@ nav {
   padding: 10px 30px;
 }
 
+div{
+  height: 70px;
+}
+div img{
+  height: 100%;
+}
+

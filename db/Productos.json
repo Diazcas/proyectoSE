@@ -1,0 +1,82 @@
+[
+    {
+        "empresaId": "61a680df4fde0a846065fb93",
+        "empresaNombre": "Burguer King",
+        "img": "texana.png",
+        "nombre": "Texana Burguer",
+        "detalle": "Carne 100% asada a la parrilla, salsa barbacoa, tocino, lechuga. tomate, cebolla y pepinillos",
+        "precio": 5.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb93",
+        "empresaNombre": "Burguer King",
+        "img": "whopper.png",
+        "nombre": "Whopper Burguer",
+        "detalle": "Carne de res asada a la parrilla, pepinillos, cebolla, tomate, lechuga, kétchup y mayonesa en pan con semillas de ajonjolí.",
+        "precio": 3.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb93",
+        "empresaNombre": "Burguer King",
+        "img": "whopperJr.png",
+        "nombre": "Whopper Jr",
+        "detalle": "Carne de res asada a la parrilla, pan con semillas de ajonjolí, lechuga, tomate, cebolla, pepinillos y mayonesa.",
+        "precio": 5.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb93",
+        "empresaNombre": "Burguer King",
+        "img": "veggie.png",
+        "nombre": "Veggie Whopper",
+        "detalle": "La nueva Veggie Whopper tiene el mismo sabor a carne de res hecho a base de plantas.",
+        "precio": 5.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb93",
+        "empresaNombre": "Burguer King",
+        "img": "baconKing.png",
+        "nombre": "Bacon King",
+        "detalle": "Nuestro BACON KING ™ cuenta con dos hamburguesas de carne a la parrilla a la llama, de ¼ lb *, con abundante porción de tocino ahumado , queso americano derretido y cubierto con salsa de tomate y mayonesa cremosa, todo en un panecillo de semillas de sésamo.",
+        "precio": 5.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb93",
+        "empresaNombre": "Burguer King",
+        "img": "bigTasty.png",
+        "nombre": "Big Tasty Pollo",
+        "detalle": "Deliciosa hamburguesa en un pan con ajonjolí, con una pechuga de pollo crispy o grilled, cebolla, lechuga, dos rodajas de tomate, tres rodajas de queso emmental, acompañado de su especial aderezo Tasty.",
+        "precio": 4.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb94",
+        "empresaNombre": "Mc'Donalds",
+        "img": "bigMac.png",
+        "nombre": "Big Mac",
+        "detalle": "La perfección: dos deliciosas tortas de carne 100% de res y salsa Big Mac, entre un pan de semillas de sésamo. Se completa con pepinillos, lechuga rallada, cebolla finamente picada y queso americano para una hamburguesa con un sabor sin igual.",
+        "precio": 4.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb94",
+        "empresaNombre": "Mc'Donalds",
+        "img": "mcNifica.png",
+        "nombre": "McNífica™ de Res",
+        "detalle": "McNífica de Res es una fresca hamburguesa, con lechuga rallada, una rodaja de tomate, una torta de 1/4 de libra de res deliciosamente jugosa, sazonada con una pizca de sal y pimienta con una rebanada de queso cheddar amarillo, mayonesa, kétchup, cebolla, en un pan de hamburguesa con semillas de sésamo suave y esponjoso.",
+        "precio": 4.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb94",
+        "empresaNombre": "Mc'Donalds",
+        "img": "dobleB.png",
+        "nombre": "Doble Bacon",
+        "detalle": "Hamburguesa elaborada con dos tortas de carne 100% de res, tocino, mostaza, kétchup, cebolla, pepinillos y 2 rodajas de queso.",
+        "precio": 4.99
+    },
+    {
+        "empresaId": "61a680df4fde0a846065fb94",
+        "empresaNombre": "Mc'Donalds",
+        "img": "quesoH.png",
+        "nombre": "Quesoburguesa",
+        "detalle": "Nuestra sencilla y clásica hamburguesa con queso cheddar amarillo, con una torta de carne 100% de res sazonada con una pizca de sal y pimienta, acompañada con un pepinillo, cebolla picada, kétchup y mostaza.",
+        "precio": 4.99
+    }
+]

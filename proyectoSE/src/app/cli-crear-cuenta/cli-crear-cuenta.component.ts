@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { LocalStoService } from '../local-sto.service'
+import { ConnectService } from '../connect.service'
 
 @Component({
   selector: 'app-cli-crear-cuenta',
@@ -8,13 +9,13 @@ import { LocalStoService } from '../local-sto.service'
   styleUrls: ['./cli-crear-cuenta.component.css'],
 })
 export class CliCrearCuentaComponent implements OnInit {
-  constructor(private localSto:LocalStoService) {}
+  constructor(private localSto:LocalStoService, private connectDB: ConnectService) {}
 
   formularioCliente = new FormGroup({
     nombre : new FormControl('', [Validators.required]),
     apellido : new FormControl('', [Validators.required]),
     email : new FormControl('', [Validators.required, Validators.email]),
-    contrasenia : new FormControl('', [Validators.required, Validators.minLength(5)]),
+    password : new FormControl('', [Validators.required, Validators.minLength(5)]),
     tel : new FormControl('', [Validators.required]),
   });
 
@@ -24,7 +25,7 @@ export class CliCrearCuentaComponent implements OnInit {
     pApellido : new FormControl('', [Validators.required]),
     sApellido : new FormControl('', [Validators.required]),
     email : new FormControl('', [Validators.required, Validators.email]),
-    contrasenia : new FormControl('', [Validators.required, Validators.minLength(5)]),
+    password : new FormControl('', [Validators.required, Validators.minLength(5)]),
     tel : new FormControl('', [Validators.required]),
     estado : new FormControl(false)
   });
@@ -38,22 +39,26 @@ export class CliCrearCuentaComponent implements OnInit {
   }
 
   guardarCli(){
-    // console.log(this.formularioCliente.value)
-    // console.log(this.formularioCliente.valid);
-    this.localSto.aniadirCli(this.formularioCliente.value)
+    if(this.formularioCliente.valid){
+      this.connectDB.guardarCliente(this.formularioCliente.value)
+    } else{
+      alert("Error en los datos")
+    }
   }
 
   guardarRep(){
-    console.log(this.formularioRepartidor.value)
-    console.log(this.formularioRepartidor.valid)
-    this.localSto.aniadirRep(this.formularioRepartidor.value)
+    if(this.formularioRepartidor.valid){
+      this.connectDB.guardarDriver(this.formularioRepartidor.value)
+    } else{
+      alert("Error en los datos")
+    }
   }
 
-  get contrasenia(){
+  get password(){
     if(this.mostrarRegion == 'repartidor'){
-      return this.formularioRepartidor.get('contrasenia');
+      return this.formularioRepartidor.get('password');
     }else{
-      return this.formularioCliente.get('contrasenia');
+      return this.formularioCliente.get('password');
     }
   }
   get email(){

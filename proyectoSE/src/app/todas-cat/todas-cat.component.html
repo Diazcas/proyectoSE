@@ -7,7 +7,7 @@
                 <h1>{{catActual}}</h1>
             </div>
             <div class="empresasCont">
-                <div (click)="selectComp()" routerLink="/clientes/productos/{{catActual}}/{{item.id}}" *ngFor="let item of data; let i = index" class="objetoCont" style="background-image: url(../../assets/img/banners/{{item.banner}})" >
+                <div (click)="selectComp()" routerLink="/clientes/productos/{{catActual}}/{{item._id}}" *ngFor="let item of data; let i = index" class="objetoCont" style="background-image: url(http://localhost:8888/public/empresas/{{item.banner}})" >
                     <p class="calificacion">
                         <fa-icon *ngIf="item.puntuacion >= 1" class="active" [icon]="faStar"></fa-icon>
                         <fa-icon *ngIf="item.puntuacion < 1" class="" [icon]="faStar"></fa-icon>
@@ -21,7 +21,7 @@
                         <fa-icon *ngIf="item.puntuacion < 5" class="" [icon]="faStar"></fa-icon>
                     </p>
                     <div class="empresaLogo">
-                        <img src="../../assets/img/logos/{{item.logo}}" alt="">
+                        <img src="http://localhost:8888/public/logos/{{item.logo}}" alt="">
                     </div>
                     <div class="objetoDetalle">
                         <h2>{{item.nombre}}</h2>

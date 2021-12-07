@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStoService } from '../local-sto.service'
 import {FormGroup, FormControl} from '@angular/forms'
+import { ConnectService } from '../connect.service'
 
 @Component({
   selector: 'app-cli-pago',
@@ -15,20 +16,21 @@ export class CliPagoComponent implements OnInit {
     fecha : new FormControl('')
   })
 
-  constructor(private localSto: LocalStoService) { }
+  constructor(private localSto: LocalStoService, private connectDB: ConnectService) { }
 
   orden: any
 //prueba
   ngOnInit(): void {
     let direccion = JSON.parse( localStorage.getItem('direccion')||'')
     let cuenta = JSON.parse( localStorage.getItem('cuentaTotalActual')||'')
-    let nombre = this.localSto.buscarCliId(localStorage.getItem('idClienteActivo'))
+    let nombre = `${localStorage.getItem('clienteActivoNom')} ${localStorage.getItem('clienteActivoApe')}`
     let productos = JSON.parse( localStorage.getItem('carritoActual')||'')
 
     this.orden = {
-      "id": JSON.parse(localStorage.getItem('ordenes')||'').length,
+      "clienteId": localStorage.getItem('idClienteActivo'),
       "clienteNombre": nombre,
       "driverId": null,
+      "driverNombre": null,
       "estado": null,
       "direccion": direccion,
       "totalOrden": cuenta.total,
@@ -36,13 +38,17 @@ export class CliPagoComponent implements OnInit {
       "productos": productos
     }
 
+    // console.log(this.orden)
+
 
 
   }
   
   pagoRealizado(){
-    console.log(this.orden)
-    this.localSto.agregarOrden(this.orden);
+    // console.log(this.orden)
+    this.connectDB.guardarOrden(this.orden)
+    localStorage.removeItem('carritoActual')
+    // this.localSto.agregarOrden(this.orden);
   }
 
 
