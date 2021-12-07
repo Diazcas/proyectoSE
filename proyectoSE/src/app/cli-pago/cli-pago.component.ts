@@ -18,7 +18,7 @@ export class CliPagoComponent implements OnInit {
   constructor(private localSto: LocalStoService) { }
 
   orden: any
-
+//prueba
   ngOnInit(): void {
     let direccion = JSON.parse( localStorage.getItem('direccion')||'')
     let cuenta = JSON.parse( localStorage.getItem('cuentaTotalActual')||'')
