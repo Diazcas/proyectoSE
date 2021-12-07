@@ -3,7 +3,7 @@
 <h1 class="avisoError" *ngIf="tieneO == false && cargando == false">No tiene ordenes seleccionadas</h1>
 <div *ngIf="tieneO == true">
     <h2 class="titulo">Ordenes en seguimiento</h2>
-    <section *ngFor="let item of ordenes">
+    <section *ngFor="let item of ordenes; let i = index">
         <div class="info">
             <h2>Cliente: {{item.clienteNombre}}</h2>
             <p>Direccion:</p>
@@ -15,19 +15,19 @@
 
         </div>
         <div class="iconosCont">
-            <div (click)="cambiarEstado(0,(item))" class="tomada" [ngClass]="{'active': item.estado==0}">
+            <div (click)="cambiarEstado(0 ,0,(item))" class="tomada" [ngClass]="{'active': item.estado==0}">
                 <fa-icon [icon]="faThumbtack" size="2x"></fa-icon>
                 <p>Tomada</p>
             </div>
-            <div (click)="cambiarEstado(1,(item))" class="camino" [ngClass]="{'active': item.estado==1}">
+            <div (click)="cambiarEstado(0 ,1,(item))" class="camino" [ngClass]="{'active': item.estado==1}">
                 <fa-icon [icon]="faMotorcycle" size="2x"></fa-icon>
                 <p>Camino</p>
             </div>
-            <div (click)="cambiarEstado(2,(item))" class="punto" [ngClass]="{'active': item.estado==2}">
+            <div (click)="cambiarEstado(0 ,2,(item))" class="punto" [ngClass]="{'active': item.estado==2}">
                 <fa-icon [icon]="faHome" size="2x"></fa-icon>
                 <p>Punto</p>
             </div>
-            <div (click)="cambiarEstado(3,(item))" class="entregada" [ngClass]="{'active': item.estado==3}">
+            <div (click)="cambiarEstado(i ,3,(item))" class="entregada" [ngClass]="{'active': item.estado==3}">
                 <fa-icon [icon]="faCheck" size="2x"></fa-icon>
                 <p>Entregada</p>
             </div>
@@ -36,7 +36,7 @@
 </div>
 
 <div class="modalBack" *ngIf="modal == 'true'">
-    <div class="modalCont">
+    <div class="modalCont" *ngIf="detalle == false">
         <div class="modalNav">
             <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
             <h4>Objetos de orden</h4>
@@ -54,6 +54,36 @@
             <hr>
         </div>
         <div class="modalFooter">
+        </div>
+    </div>
+
+    <div class="modalCont" *ngIf="detalle == true">
+        <div class="modalNav">
+            <fa-icon [icon]="faWindowClose" (click)="quitarModal()"></fa-icon>
+            <h4>Detalle orden</h4>
+            <hr>
+        </div>
+        <div class="modalBody">
+                <div class="ordenCont">
+                    <p class="titu"><b>Coste productos:</b></p>
+                    <p>{{ordenSelec[1].costes.costePro}}$</p>
+                    <hr>
+                    <p class="titu"><b>Coste administrativo:</b></p>
+                    <p>{{ordenSelec[1].costes.precioEnv}}$</p>
+                    <hr>
+                    <p class="titu"><b>ISV:</b></p>
+                    <p>{{ordenSelec[1].costes.ISV}}$</p>
+                    <hr>
+                    <p class="titu"><b>Total:</b></p>
+                    <p>{{ordenSelec[1].costes.total}}$</p>
+                </div>
+
+                <div *ngIf="finalizada == true" class="exitoso">Orden finalizada correctamente</div>
+            <hr>
+        </div>
+        <div class="modalFooter">
+            <button (click)="finalizarOrden()">Finalizar</button>
+            <button (click)="quitarModal()">Volver</button>
         </div>
     </div>
 </div>

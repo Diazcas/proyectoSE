@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     password : new FormControl('', [Validators.required])
   })
   
-  visible = 'ordenes';
+  visible = 'empresas';
   sesion = localStorage.getItem('adminSesion');
   error = 0;
 
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
   async iniciarSesion(){
     let admin = await this.connectDB.iniciarSesionAdmin(this.iniciarSesionForm.value)
-    console.log(admin)
+    // console.log(admin)
     if(admin){
       localStorage.setItem('adminSesion', '1');
     } else{

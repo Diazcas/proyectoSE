@@ -18,11 +18,11 @@ export class NavCategoriasComponent implements OnInit {
   
   async ngOnInit(): Promise<void> {
     this.categorias = await this.connectBd.traerCategorias();
-    console.log(this.categorias);
+    // console.log(this.categorias);
   }
 
   mostrarCategoria(categorias:string){
-    console.log(categorias)
+    // console.log(categorias)
     this.cambiarCategoria.emit(categorias)
   }
 }

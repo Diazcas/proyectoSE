@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { faWindowClose, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faWindowClose, faTrash, faCheck ,faThumbtack, faMotorcycle, faHome  } from '@fortawesome/free-solid-svg-icons';
 import { ConnectService } from '../../connect.service';
 
 @Component({
@@ -12,6 +12,10 @@ export class AdminTablaOrdenComponent implements OnInit {
   constructor(private connect: ConnectService, private router: Router) {}
   faWindowClose = faWindowClose;
   faTrash = faTrash;
+  faCheck = faCheck
+  faThumbtack = faThumbtack
+  faMotorcycle = faMotorcycle
+  faHome = faHome
 
   tableData: any;
   tableHead: any;

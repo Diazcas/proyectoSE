@@ -30,11 +30,11 @@ export class DriverOrdenDisponibleComponent implements OnInit {
       this.tieneO = true
     }
 
-    console.log(this.tieneO)
+    // console.log(this.tieneO)
   }
 
   abrirOrden(orden:any){
-    console.log(orden)
+    // console.log(orden)
     this.objetos = orden;
     this.modal = 'true'
   }
@@ -44,15 +44,19 @@ export class DriverOrdenDisponibleComponent implements OnInit {
   }
 
   cambiarEstado(estado:any, orden:any){
-    console.log(orden)
+    // console.log(orden)
     orden.estado = estado;
     orden.driverId = localStorage.getItem('driverSesion_id')
     orden.driverNombre = localStorage.getItem('driverSesion_nombre')
     this.connectDb.actualizarOrden(orden);
+
+    let link = ["/driver/ordenesDisponibles"]
+    this.router.navigateByUrl('/clientes/login', {skipLocationChange: true}).then(()=>
+    this.router.navigate(link)); 
   }
 
   verMapa(dir:any){
-    console.log(dir)
+    // console.log(dir)
     localStorage.setItem('driverDir',JSON.stringify(dir))
     this.router.navigate(['driver/ordenUbicacion'])
   }

@@ -38,15 +38,16 @@ export class CliPagoComponent implements OnInit {
       "productos": productos
     }
 
-    console.log(this.orden)
+    // console.log(this.orden)
 
 
 
   }
   
   pagoRealizado(){
-    console.log(this.orden)
+    // console.log(this.orden)
     this.connectDB.guardarOrden(this.orden)
+    localStorage.removeItem('carritoActual')
     // this.localSto.agregarOrden(this.orden);
   }
 

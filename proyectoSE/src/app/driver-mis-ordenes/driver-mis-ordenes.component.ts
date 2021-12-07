@@ -20,6 +20,9 @@ export class DriverMisOrdenesComponent implements OnInit {
   objetos:any
   tieneO = false;
   cargando = true;
+  detalle = false;
+  ordenSelec: any
+  finalizada = false;
 
   constructor(private connectDb: ConnectService, private router: Router) { }
 
@@ -29,13 +32,14 @@ export class DriverMisOrdenesComponent implements OnInit {
     if(this.ordenes.length > 0){
       this.tieneO = true
     }
-    console.log(this.tieneO)
+    // console.log(this.tieneO)
 
     // console.log(this.ordenes)
   }
 
   abrirOrden(orden:any){
-    console.log(orden)
+    // console.log(orden)
+    this.detalle = false;
     this.objetos = orden;
     this.modal = 'true'
   }
@@ -44,13 +48,30 @@ export class DriverMisOrdenesComponent implements OnInit {
     this.modal = 'false'
   }
 
-  cambiarEstado(estado:any, orden:any){
-    orden.estado = estado;
-    this.connectDb.actualizarOrden(orden);
+  cambiarEstado(i:any,estado:any, orden:any){
+    this.ordenSelec = [i,orden]
+    if(estado == 3){
+      this.modal = 'true';
+      this.detalle = true;
+    }else{
+      orden.estado = estado;
+      this.connectDb.actualizarOrden(orden);
+    }
+  }
+
+  finalizarOrden(){
+    this.ordenes.splice(this.ordenSelec[0],1)
+    this.ordenSelec[1].estado = '3'
+    this.connectDb.actualizarOrden(this.ordenSelec[1]);
+    this.finalizada = true 
+    setTimeout(() => {
+      this.quitarModal()
+      this.finalizada = false 
+    }, 1000);
   }
 
   verMapa(dir:any){
-    console.log(dir)
+    // console.log(dir)
     localStorage.setItem('driverDir',JSON.stringify(dir))
     this.router.navigate(['driver/ordenUbicacion'])
   }

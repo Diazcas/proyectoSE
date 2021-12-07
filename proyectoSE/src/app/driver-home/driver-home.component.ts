@@ -35,7 +35,7 @@ export class DriverHomeComponent implements OnInit {
     this.error = 0;
     let driver = this.iniciarSesionForm.value;
     let estado = await this.connect.verificarDriver(driver);
-    console.log(estado)
+    // console.log(estado)
     if (estado) {
       this.sesion = '1';
       localStorage.setItem('driverSesion', '1');

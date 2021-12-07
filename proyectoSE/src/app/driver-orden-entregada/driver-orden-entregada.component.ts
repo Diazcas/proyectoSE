@@ -35,7 +35,7 @@ export class DriverOrdenEntregadaComponent implements OnInit {
   }
 
   abrirOrden(orden:any){
-    console.log(orden)
+    // console.log(orden)
     this.objetos = orden;
     this.modal = 'true'
   }
@@ -52,7 +52,7 @@ export class DriverOrdenEntregadaComponent implements OnInit {
   }
 
   verMapa(dir:any){
-    console.log(dir)
+    // console.log(dir)
     localStorage.setItem('driverDir',JSON.stringify(dir))
     this.router.navigate(['driver/ordenUbicacion'])
   }

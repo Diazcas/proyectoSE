@@ -8,6 +8,7 @@ export class ConnectService {
   constructor(private httpClient: HttpClient) {}
 
   backendHost = 'http://localhost:8888';
+  // backendHost = 'https://backendse.herokuapp.com';
 
   //-----------------------------------------Peticiones para Administradores
 
@@ -39,14 +40,14 @@ export class ConnectService {
       this.httpClient
         .get(`${this.backendHost}/clientes`)
         .subscribe((res: any) => {
-          console.log(res);
+          // console.log(res);
 
           let encontrado =
             res.filter(
               (item: any) =>
                 item.email == usuario.email && item.password == usuario.password
             )[0] || undefined;
-          console.log(encontrado);
+          // console.log(encontrado);
 
           if (encontrado != undefined) {
             resolve([
@@ -85,7 +86,7 @@ export class ConnectService {
               item.correo == driver.email && item.password == driver.password
           )[0];
           if (encontrado != undefined) {
-            console.log(encontrado);
+            // console.log(encontrado);
             resolve([
               true,
               encontrado._id,
@@ -250,6 +251,7 @@ export class ConnectService {
             'Dirección',
             'Precio Total',
             'Motorista',
+            'Estado'
           ];
           let tableName = 'Tabla Ordenes';
           resolve([res, tableHead, tableName]);
@@ -292,7 +294,7 @@ export class ConnectService {
       this.httpClient
         .get(`${this.backendHost}/ordenes/disponible`)
         .subscribe((res: any) => {
-          console.log(res);
+          // console.log(res);
           resolve(res);
         });
     });
@@ -303,7 +305,7 @@ export class ConnectService {
       this.httpClient
         .get(`${this.backendHost}/ordenes/seguimiento/${id}`)
         .subscribe((res: any) => {
-          console.log(res);
+          // console.log(res);
           resolve(res);
         });
     });
@@ -314,7 +316,7 @@ export class ConnectService {
       this.httpClient
         .get(`${this.backendHost}/ordenes/finalizadas/${id}`)
         .subscribe((res: any) => {
-          console.log(res);
+          // console.log(res);
           resolve(res);
         });
     });

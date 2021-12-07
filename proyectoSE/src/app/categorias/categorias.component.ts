@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { faStar  } from '@fortawesome/free-solid-svg-icons';
 import { LocalStoService } from '../local-sto.service';
 
@@ -18,7 +17,6 @@ export class CategoriasComponent implements OnInit {
   faStar = faStar;
   
   constructor(
-    private router: Router,
     private localSto: LocalStoService) { }
   
   ngOnInit(): void {
@@ -27,7 +25,7 @@ export class CategoriasComponent implements OnInit {
       "categoria" : this.categoria
     }]
 
-    console.log(this.categoria)
+    // console.log(this.categoria)
 
     // console.log(this.data)
   }

@@ -28,10 +28,10 @@ export class CliIniciarSesionComponent implements OnInit {
 
     let clienteEncontrado:any =  await this.connectDB.iniciarSesionCliente(this.iniciarSesionForm.value)
     // console.log(this.iniciarSesionForm.value)
-    console.log(clienteEncontrado)
+    // console.log(clienteEncontrado)
 
     if(clienteEncontrado[0] !== false){
-      console.log('Te redirijo')
+      // console.log('Te redirijo')
       this.router.navigate(['/clientes'])
       localStorage.setItem('cuentaActivada','1')
       localStorage.setItem('idClienteActivo', clienteEncontrado[1])

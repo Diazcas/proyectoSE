@@ -94,3 +94,12 @@ section{
 .objetoCont .detalle{
     text-indent: 25px;
 }
+
+.titu{
+ background-color: black;
+ padding: 5px 0px;
+}
+
+.ordenCont hr{
+    margin: 5px 0px;
+}

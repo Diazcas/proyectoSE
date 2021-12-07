@@ -22,12 +22,12 @@ export class CliUbicacionComponent implements OnInit {
 
     if ('geolocation' in navigator) {
       const onUbicacionConcedida = (ubicacion: any) => {
-        console.log(
-          'Tengo la ubicación: ',
-          ubicacion,
-          ubicacion.coords.latitude,
-          ubicacion.coords.longitude
-        );
+        // console.log(
+        //   'Tengo la ubicación: ',
+        //   ubicacion,
+        //   ubicacion.coords.latitude,
+        //   ubicacion.coords.longitude
+        // );
         this.mapa = this.map.buildMap(ubicacion.coords.longitude, ubicacion.coords.latitude);
         this.map.crearMarcador(this.mapa, ubicacion.coords.longitude, ubicacion.coords.latitude);
         this.interval = setInterval(() => {
@@ -37,7 +37,7 @@ export class CliUbicacionComponent implements OnInit {
         this.carritoActual = JSON.parse(
           localStorage.getItem('carritoActual') || ''
         );
-        console.log(this.carritoActual);
+        // console.log(this.carritoActual);
       };
       navigator.geolocation.getCurrentPosition(onUbicacionConcedida);
     } else {
@@ -52,14 +52,14 @@ export class CliUbicacionComponent implements OnInit {
       this.carritoActual = JSON.parse(
         localStorage.getItem('carritoActual') || ''
         );
-        console.log(this.carritoActual);
+        // console.log(this.carritoActual);
       }
   }
 
   verificarDireccion() {
     if (localStorage.getItem('direccionCambio') == '1') {
       this.direccion = JSON.parse(localStorage.getItem('direccion') || '[]');
-      console.log('Esta es: ', this.direccion);
+      // console.log('Esta es: ', this.direccion);
       clearInterval(this.interval);
       this.activarModal();
     } else {

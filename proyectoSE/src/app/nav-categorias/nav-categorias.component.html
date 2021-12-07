@@ -1,10 +1,10 @@
 <div class="h1Cont">
-    <h1>¡Bienvenido!</h1>
-    <fa-icon routerLink="/clientes/carrito" [icon]="faShoppingCart" size="2x"></fa-icon>
+  <h1>¡Bienvenido!</h1>
+  <fa-icon routerLink="/clientes/carrito" [icon]="faShoppingCart" size="2x"></fa-icon>
 </div>
+<p>Somos una tienda donde puedes realizar pedidos desde la comodidad tu casa.</p>
 <ul class="nav justify-content-center">
-
-    <li class="nav-item" *ngFor="let item of categorias; let i = index;" >
-      <a *ngIf="i < 3" class="nav-link border active" (click)="mostrarCategoria(item._id)">{{item.nombre}}</a>
-    </li>
-  </ul>
+  <li class="nav-item" *ngFor="let item of categorias; let i = index;">
+    <a *ngIf="i < 3" class="nav-link border active" (click)="mostrarCategoria(item._id)">{{item.nombre}}</a>
+  </li>
+</ul>

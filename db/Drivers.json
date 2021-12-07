@@ -1,0 +1,102 @@
+[
+	{
+		"pNombre": "Anibal",
+		"sNombre": "Mauricio",
+		"pApellido": "Diaz",
+		"sApellido": "Castillo",
+		"correo": "anibalmauriciod@gmail.com",
+		"password": "12345",
+		"tel": "33442567",
+		"estado": true
+	},
+	{
+		"pNombre": "Kitra",
+		"sNombre": "Giacomo",
+		"pApellido": "Hopper",
+		"sApellido": "Rodriguez",
+		"correo": "k-hopper@gmail.com",
+		"password": "378a5s74",
+		"tel": 88381129,
+		"estado": true
+	},
+	{
+		"pNombre": "Dalton",
+		"sNombre": "Aileen",
+		"pApellido": "Stokes",
+		"sApellido": "Holman",
+		"correo": "s_dalton2388@outlook.com",
+		"password": "574o1p16",
+		"tel": 33751219,
+		"estado": false
+	},
+	{
+		"pNombre": "Buckminster",
+		"sNombre": "Brittany",
+		"pApellido": "Rowe",
+		"sApellido": "Sears",
+		"correo": "rowe.buckminster@gmail.com",
+		"password": "938s2r72",
+		"tel": 36777144,
+		"estado": true
+	},
+	{
+		"pNombre": "Ebony",
+		"sNombre": "Florence",
+		"pApellido": "Soto",
+		"sApellido": "Grant",
+		"correo": "e_soto4308@outlook.com",
+		"password": "422f5f03",
+		"tel": 36994828,
+		"estado": false
+	},
+	{
+		"pNombre": "Pearl",
+		"sNombre": "Irene",
+		"pApellido": "Carson",
+		"sApellido": "Gay",
+		"correo": "carson_pearl@gmail.com",
+		"password": "120x7x23",
+		"tel": 96163474,
+		"estado": true
+	},
+	{
+		"pNombre": "Hunter",
+		"sNombre": "Dante",
+		"pApellido": "Montoya",
+		"sApellido": "Patton",
+		"correo": "montoya.hunter@yahoo.com",
+		"password": "867o5a37",
+		"tel": 97202072,
+		"estado": true
+	},
+	{
+		"pNombre": "Kiara",
+		"sNombre": "Ira",
+		"pApellido": "Perry",
+		"sApellido": "Weiss",
+		"correo": "kiara.perry@gmail.com",
+		"password": "754s2i38",
+		"tel": 36462085,
+		"estado": true
+	},
+	{
+		"pNombre": "Dale",
+		"sNombre": "Callum",
+		"pApellido": "Taylor",
+		"sApellido": "Lambert",
+		"correo": "taylor-dale7221@outlook.com",
+		"password": "653b2e26",
+		"tel": 98604007,
+		"estado": false
+	},
+	{
+		"pNombre": "Uriah",
+		"sNombre": "Hedley",
+		"pApellido": "Jordan",
+		"sApellido": "Robinson",
+		"correo": "j-uriah@outlook.com",
+		"password": "482j7i50",
+		"tel": 87753984,
+		"estado": false
+	}
+]

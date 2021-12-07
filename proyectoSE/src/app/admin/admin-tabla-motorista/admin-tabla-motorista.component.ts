@@ -30,7 +30,7 @@ export class AdminTablaMotoristaComponent implements OnInit {
 
   cambiarEstadoMotorista(estado: boolean, driver: any) {
     driver.estado = estado;
-    console.log(estado, driver);
+    // console.log(estado, driver);
     this.connect.actualizarDriver(driver);
   }
 
