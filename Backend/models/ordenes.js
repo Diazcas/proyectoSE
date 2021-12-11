@@ -10,7 +10,8 @@ var esquema = new mongoose.Schema({
     direccion: JSON,
     totalOrden: Number,
     costes: JSON,
-    productos: JSON
+    productos: JSON,
+    pago: String
 });
 
 module.exports = mongoose.model('ordenes', esquema)

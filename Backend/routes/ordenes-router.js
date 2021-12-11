@@ -27,13 +27,16 @@ router.get('/disponible', function (req, res) {
 
 //Traer las ordenes en seguimiento
 router.get('/seguimiento/:id', function (req, res) {
-    ordenes.find({ driverId: req.params.id, finalizado: false}).then((result) => {
+    ordenes.find({ driverId: req.params.id}).then((result) => {
+        console.log(result)
         var filter = [];
         for(let i = 0; i < result.length; i++){
             if(result[i].estado < 3){
                 filter.push(result[i])
             }
         }
+        console.log("--------------------------------------")
+        console.log(filter)
         res.send(filter);
         res.end()
     }).catch(error => {
@@ -82,7 +85,8 @@ router.post('/', function (req, res) {
         direccion: req.body.direccion,
         totalOrden: req.body.totalOrden,
         costes: req.body.costes,
-        productos: req.body.productos
+        productos: req.body.productos,
+        pago: req.body.pago
     })
 
     // console.log(orden);

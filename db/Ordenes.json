@@ -1,0 +1,113 @@
+[{
+  "_id": {
+    "$oid": "61b3f4140bdc00a0496a4f5d"
+  },
+  "clienteId": "61afc878e2acded74a270718",
+  "clienteNombre": "Pedro Manuel Izaguirre",
+  "driverId": "61afc9e5e2acded74a27073c",
+  "driverNombre": "Anibal Diaz",
+  "estado": 3,
+  "direccion": {
+    "lng": -86.57001291891675,
+    "lat": 14.031483312670375
+  },
+  "totalOrden": 7.89,
+  "costes": {
+    "costePro": 5.99,
+    "precioEnv": 1,
+    "ISV": 0.9,
+    "total": 7.89
+  },
+  "productos": [
+    {
+      "_id": "61a6828c4fde0a846065fb99",
+      "empresaId": "61a680df4fde0a846065fb93",
+      "empresaNombre": "Burguer King",
+      "img": "texana.png",
+      "nombre": "Texana Burguer",
+      "detalle": "Carne 100% asada a la parrilla, salsa barbacoa, tocino, lechuga. tomate, cebolla y pepinillos",
+      "precio": 5.99,
+      "cantidad": 1
+    }
+  ],
+  "pago": "Efectivo",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b3f4f30bdc00a0496a4f9c"
+  },
+  "clienteId": "61afc878e2acded74a27071e",
+  "clienteNombre": "Kaye Wood Dillon Bush",
+  "driverId": null,
+  "driverNombre": null,
+  "estado": null,
+  "direccion": {
+    "lng": -86.58345219354568,
+    "lat": 14.02652314791672
+  },
+  "totalOrden": 20.22,
+  "costes": {
+    "costePro": 14.97,
+    "precioEnv": 3,
+    "ISV": 2.25,
+    "total": 20.22
+  },
+  "productos": [
+    {
+      "_id": "61a6828c4fde0a846065fba2",
+      "empresaId": "61a680df4fde0a846065fb94",
+      "empresaNombre": "Mc'Donalds",
+      "img": "quesoH.png",
+      "nombre": "Quesoburguesa",
+      "detalle": "Nuestra sencilla y clásica hamburguesa con queso cheddar amarillo, con una torta de carne 100% de res sazonada con una pizca de sal y pimienta, acompañada con un pepinillo, cebolla picada, kétchup y mostaza.",
+      "precio": 4.99,
+      "cantidad": 2
+    },
+    {
+      "_id": "61b3ddb19d1b1633f25fcfd4",
+      "empresaId": "61b11ce06d46cc15090f6b27",
+      "empresaNombre": "Pizza Napoles",
+      "img": "n3.jpg",
+      "nombre": "Pizza de pollo",
+      "detalle": "La Pizza de pollo, queso brie y arándanos es la reina de los contrastes ya que el sabor ácido del arándano y la textura cremosa del queso brie, funcionan estupendamente con el pollo, consiguiendo una mezcla muy equilibrada.",
+      "precio": 4.99,
+      "cantidad": 1
+    }
+  ],
+  "pago": "Efectivo",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b3f82b0bdc00a0496a4fff"
+  },
+  "clienteId": "61afc878e2acded74a270721",
+  "clienteNombre": "Priscilla Mcclure Gentry Franks",
+  "driverId": null,
+  "driverNombre": null,
+  "estado": null,
+  "direccion": {
+    "lng": -86.56776978841181,
+    "lat": 14.033880789461676
+  },
+  "totalOrden": 15.78,
+  "costes": {
+    "costePro": 11.98,
+    "precioEnv": 2,
+    "ISV": 1.8,
+    "total": 15.78
+  },
+  "productos": [
+    {
+      "_id": "61b3ddb19d1b1633f25fcfce",
+      "empresaId": "61b11ce06d46cc15090f6b28",
+      "empresaNombre": "Lo Mejor De Mi Tierra",
+      "img": "l1.jpg",
+      "nombre": "Banderillas de Salchicha",
+      "detalle": "Las banderillas de salchicha o corndogs, es una receta típicamente estadounidense. Consiste en una salchicha frankfurt, pinchada con una brocheta.",
+      "precio": 5.99,
+      "cantidad": 2
+    }
+  ],
+  "pago": "Efectivo",
+  "__v": 0
+}]

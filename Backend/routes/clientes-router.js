@@ -46,4 +46,26 @@ router.get('/:id', function (req, res) {
     })
 })
 
+router.put('/:id', function (req, res) {
+    console.log(req.params.id)
+    console.log(req.body.nombre)
+    clientes.update(
+        {
+            _id: req.params.id
+        },
+        {
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            password: req.body.password,
+            tel: req.body.tel,
+        }).then(result => {
+            res.send(result);
+            res.end()
+        }).catch(error => {
+            res.send(error);
+            res.end()
+        })
+})
+
 module.exports = router;

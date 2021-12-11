@@ -1,0 +1,166 @@
+[{
+  "_id": {
+    "$oid": "61b11ce06d46cc15090f6b29"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb84",
+  "nombreCategoria": "Restaurantes",
+  "nombre": "Ovi&ser",
+  "banner": "ovi-ser.jpg",
+  "logo": "oviser.jfif",
+  "descripcion": "Ovi&Ser Restaurante y Ovi&Ser Pizza, es una empresa que se dedica a “Complacer el paladar” de los amantes de la buena cocina. Con un menú variado en carnes, hamburguesas y pastas puede complacer a un público amplio en gustos",
+  "puntuacion": 3
+},{
+  "_id": {
+    "$oid": "61a680df4fde0a846065fb94"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb84",
+  "nombreCategoria": "Restaurantes",
+  "nombre": "Mc'Donalds",
+  "banner": "mc.webp",
+  "logo": "mc.jpg",
+  "descripcion": "Somos otra empresa que vende muy buenas burguers",
+  "puntuacion": 5
+},{
+  "_id": {
+    "$oid": "61a680df4fde0a846065fb93"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb84",
+  "nombreCategoria": "Restaurantes",
+  "nombre": "Burguer King",
+  "banner": "burguer.jpg",
+  "logo": "burguer.png",
+  "descripcion": "En BURGER KING®, hemos preparado nuestros productos a la parrilla desde que empezamos en 1954, desde el primer día. Solo usamos llama viva para darte la hamburguesa que mereces.",
+  "puntuacion": 4
+},{
+  "_id": {
+    "$oid": "61b11ce06d46cc15090f6b27"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb84",
+  "nombreCategoria": "Restaurantes",
+  "nombre": "Pizza Napoles",
+  "banner": "nap.jpg",
+  "logo": "napo.jpg",
+  "descripcion": "Pizzeria Napoles, Honduras aún no tiene suficientes puntuaciones de la comida, el servicio, la relación calidad/precio o la atmósfera. ¡Sé de los primeros en escribir una opinión!",
+  "puntuacion": 3
+},{
+  "_id": {
+    "$oid": "61b11ce06d46cc15090f6b28"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb84",
+  "nombreCategoria": "Restaurantes",
+  "nombre": "Lo Mejor De Mi Tierra",
+  "banner": "lo-mejor-de-mi-tierra.jpg",
+  "logo": "tierra.png",
+  "descripcion": "Lo Mejor De Mi Tierra, Honduras aún no tiene suficientes puntuaciones de la comida, el servicio, la relación calidad/precio o la atmósfera. ¡Sé de los primeros en escribir una opinión!",
+  "puntuacion": 3
+},{
+  "_id": {
+    "$oid": "61a680df4fde0a846065fb96"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb85",
+  "nombreCategoria": "Farmacias",
+  "nombre": "Farmacia del ahorro",
+  "banner": "fa.jfif",
+  "logo": "fa.png",
+  "descripcion": "Somos otra empresa que vende pastillas muy buenas",
+  "puntuacion": 4
+},{
+  "_id": {
+    "$oid": "61a680df4fde0a846065fb95"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb85",
+  "nombreCategoria": "Farmacias",
+  "nombre": "Farma City",
+  "banner": "fc.jfif",
+  "logo": "fc.jpg",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 3
+},{
+  "_id": {
+    "$oid": "61b3d3609d1b1633f25fcfb3"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb85",
+  "nombreCategoria": "Farmacias",
+  "nombre": "Farmacia Siman",
+  "banner": "siman.png",
+  "logo": "siman.jfif",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 3
+},{
+  "_id": {
+    "$oid": "61b3d3609d1b1633f25fcfb4"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb85",
+  "nombreCategoria": "Farmacias",
+  "nombre": "Farmacia kielsa",
+  "banner": "kielsa.jpg",
+  "logo": "kielsa.jfif",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 3
+},{
+  "_id": {
+    "$oid": "61b3d3609d1b1633f25fcfb5"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb86",
+  "nombreCategoria": "Ferreterias",
+  "nombre": "El Soldador",
+  "banner": "soldador.jpg",
+  "logo": "ferre.jpg",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 5
+},{
+  "_id": {
+    "$oid": "61b3d3609d1b1633f25fcfb6"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb86",
+  "nombreCategoria": "Ferreterias",
+  "nombre": "Tool Shop",
+  "banner": "tool.jpg",
+  "logo": "ferre.jpg",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 4
+},{
+  "_id": {
+    "$oid": "61b3d3609d1b1633f25fcfb7"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb86",
+  "nombreCategoria": "Ferreterias",
+  "nombre": "Ferretul",
+  "banner": "ferretul.png",
+  "logo": "ferre.jpg",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 2
+},{
+  "_id": {
+    "$oid": "61b3d3609d1b1633f25fcfb8"
+  },
+  "categoriaId": "61a67f9d4fde0a846065fb86",
+  "nombreCategoria": "Ferreterias",
+  "nombre": "Hardware Tools",
+  "banner": "hardTool.jpg",
+  "logo": "ferre.jpg",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 1
+},{
+  "_id": {
+    "$oid": "61b3d3609d1b1633f25fcfb9"
+  },
+  "categoriaId": "61b3d31b9d1b1633f25fcfb0",
+  "nombreCategoria": "Supermercados",
+  "nombre": "La Colonia",
+  "banner": "Colonia.jfif",
+  "logo": "colonia.png",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 4
+},{
+  "_id": {
+    "$oid": "61b3d3609d1b1633f25fcfba"
+  },
+  "categoriaId": "61b3d31b9d1b1633f25fcfb0",
+  "nombreCategoria": "Supermercados",
+  "nombre": "La despensa familiar",
+  "banner": "despensa.png",
+  "logo": "despensa.png",
+  "descripcion": "Somos una empresa que vende pastillas muy buenas",
+  "puntuacion": 3
+}]

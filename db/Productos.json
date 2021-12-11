@@ -1,82 +1,261 @@
-[
-    {
-        "empresaId": "61a680df4fde0a846065fb93",
-        "empresaNombre": "Burguer King",
-        "img": "texana.png",
-        "nombre": "Texana Burguer",
-        "detalle": "Carne 100% asada a la parrilla, salsa barbacoa, tocino, lechuga. tomate, cebolla y pepinillos",
-        "precio": 5.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb93",
-        "empresaNombre": "Burguer King",
-        "img": "whopper.png",
-        "nombre": "Whopper Burguer",
-        "detalle": "Carne de res asada a la parrilla, pepinillos, cebolla, tomate, lechuga, kétchup y mayonesa en pan con semillas de ajonjolí.",
-        "precio": 3.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb93",
-        "empresaNombre": "Burguer King",
-        "img": "whopperJr.png",
-        "nombre": "Whopper Jr",
-        "detalle": "Carne de res asada a la parrilla, pan con semillas de ajonjolí, lechuga, tomate, cebolla, pepinillos y mayonesa.",
-        "precio": 5.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb93",
-        "empresaNombre": "Burguer King",
-        "img": "veggie.png",
-        "nombre": "Veggie Whopper",
-        "detalle": "La nueva Veggie Whopper tiene el mismo sabor a carne de res hecho a base de plantas.",
-        "precio": 5.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb93",
-        "empresaNombre": "Burguer King",
-        "img": "baconKing.png",
-        "nombre": "Bacon King",
-        "detalle": "Nuestro BACON KING ™ cuenta con dos hamburguesas de carne a la parrilla a la llama, de ¼ lb *, con abundante porción de tocino ahumado , queso americano derretido y cubierto con salsa de tomate y mayonesa cremosa, todo en un panecillo de semillas de sésamo.",
-        "precio": 5.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb93",
-        "empresaNombre": "Burguer King",
-        "img": "bigTasty.png",
-        "nombre": "Big Tasty Pollo",
-        "detalle": "Deliciosa hamburguesa en un pan con ajonjolí, con una pechuga de pollo crispy o grilled, cebolla, lechuga, dos rodajas de tomate, tres rodajas de queso emmental, acompañado de su especial aderezo Tasty.",
-        "precio": 4.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb94",
-        "empresaNombre": "Mc'Donalds",
-        "img": "bigMac.png",
-        "nombre": "Big Mac",
-        "detalle": "La perfección: dos deliciosas tortas de carne 100% de res y salsa Big Mac, entre un pan de semillas de sésamo. Se completa con pepinillos, lechuga rallada, cebolla finamente picada y queso americano para una hamburguesa con un sabor sin igual.",
-        "precio": 4.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb94",
-        "empresaNombre": "Mc'Donalds",
-        "img": "mcNifica.png",
-        "nombre": "McNífica™ de Res",
-        "detalle": "McNífica de Res es una fresca hamburguesa, con lechuga rallada, una rodaja de tomate, una torta de 1/4 de libra de res deliciosamente jugosa, sazonada con una pizca de sal y pimienta con una rebanada de queso cheddar amarillo, mayonesa, kétchup, cebolla, en un pan de hamburguesa con semillas de sésamo suave y esponjoso.",
-        "precio": 4.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb94",
-        "empresaNombre": "Mc'Donalds",
-        "img": "dobleB.png",
-        "nombre": "Doble Bacon",
-        "detalle": "Hamburguesa elaborada con dos tortas de carne 100% de res, tocino, mostaza, kétchup, cebolla, pepinillos y 2 rodajas de queso.",
-        "precio": 4.99
-    },
-    {
-        "empresaId": "61a680df4fde0a846065fb94",
-        "empresaNombre": "Mc'Donalds",
-        "img": "quesoH.png",
-        "nombre": "Quesoburguesa",
-        "detalle": "Nuestra sencilla y clásica hamburguesa con queso cheddar amarillo, con una torta de carne 100% de res sazonada con una pizca de sal y pimienta, acompañada con un pepinillo, cebolla picada, kétchup y mostaza.",
-        "precio": 4.99
-    }
-]
+[{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fb9c"
+  },
+  "empresaId": "61a680df4fde0a846065fb93",
+  "empresaNombre": "Burguer King",
+  "img": "veggie.png",
+  "nombre": "Veggie Whopper",
+  "detalle": "La nueva Veggie Whopper tiene el mismo sabor a carne de res hecho a base de plantas.",
+  "precio": 5.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fb9f"
+  },
+  "empresaId": "61a680df4fde0a846065fb94",
+  "empresaNombre": "Mc'Donalds",
+  "img": "bigMac.png",
+  "nombre": "Big Mac",
+  "detalle": "La perfección: dos deliciosas tortas de carne 100% de res y salsa Big Mac, entre un pan de semillas de sésamo. Se completa con pepinillos, lechuga rallada, cebolla finamente picada y queso americano para una hamburguesa con un sabor sin igual.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fb9b"
+  },
+  "empresaId": "61a680df4fde0a846065fb93",
+  "empresaNombre": "Burguer King",
+  "img": "whopperJr.png",
+  "nombre": "Whopper Jr",
+  "detalle": "Carne de res asada a la parrilla, pan con semillas de ajonjolí, lechuga, tomate, cebolla, pepinillos y mayonesa.",
+  "precio": 5.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fba1"
+  },
+  "empresaId": "61a680df4fde0a846065fb94",
+  "empresaNombre": "Mc'Donalds",
+  "img": "dobleB.png",
+  "nombre": "Doble Bacon",
+  "detalle": "Hamburguesa elaborada con dos tortas de carne 100% de res, tocino, mostaza, kétchup, cebolla, pepinillos y 2 rodajas de queso.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fba2"
+  },
+  "empresaId": "61a680df4fde0a846065fb94",
+  "empresaNombre": "Mc'Donalds",
+  "img": "quesoH.png",
+  "nombre": "Quesoburguesa",
+  "detalle": "Nuestra sencilla y clásica hamburguesa con queso cheddar amarillo, con una torta de carne 100% de res sazonada con una pizca de sal y pimienta, acompañada con un pepinillo, cebolla picada, kétchup y mostaza.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fb99"
+  },
+  "empresaId": "61a680df4fde0a846065fb93",
+  "empresaNombre": "Burguer King",
+  "img": "texana.png",
+  "nombre": "Texana Burguer",
+  "detalle": "Carne 100% asada a la parrilla, salsa barbacoa, tocino, lechuga. tomate, cebolla y pepinillos",
+  "precio": 5.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fb9a"
+  },
+  "empresaId": "61a680df4fde0a846065fb93",
+  "empresaNombre": "Burguer King",
+  "img": "whopper.png",
+  "nombre": "Whopper Burguer",
+  "detalle": "Carne de res asada a la parrilla, pepinillos, cebolla, tomate, lechuga, kétchup y mayonesa en pan con semillas de ajonjolí.",
+  "precio": 3.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fb9e"
+  },
+  "empresaId": "61a680df4fde0a846065fb93",
+  "empresaNombre": "Burguer King",
+  "img": "bigTasty.png",
+  "nombre": "Big Tasty Pollo",
+  "detalle": "Deliciosa hamburguesa en un pan con ajonjolí, con una pechuga de pollo crispy o grilled, cebolla, lechuga, dos rodajas de tomate, tres rodajas de queso emmental, acompañado de su especial aderezo Tasty.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fba0"
+  },
+  "empresaId": "61a680df4fde0a846065fb94",
+  "empresaNombre": "Mc'Donalds",
+  "img": "mcNifica.png",
+  "nombre": "McNífica™ de Res",
+  "detalle": "McNífica de Res es una fresca hamburguesa, con lechuga rallada, una rodaja de tomate, una torta de 1/4 de libra de res deliciosamente jugosa, sazonada con una pizca de sal y pimienta con una rebanada de queso cheddar amarillo, mayonesa, kétchup, cebolla, en un pan de hamburguesa con semillas de sésamo suave y esponjoso.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61a6828c4fde0a846065fb9d"
+  },
+  "empresaId": "61a680df4fde0a846065fb93",
+  "empresaNombre": "Burguer King",
+  "img": "baconKing.png",
+  "nombre": "Bacon King",
+  "detalle": "Nuestro BACON KING ™ cuenta con dos hamburguesas de carne a la parrilla a la llama, de ¼ lb *, con abundante porción de tocino ahumado , queso americano derretido y cubierto con salsa de tomate y mayonesa cremosa, todo en un panecillo de semillas de sésamo.",
+  "precio": 5.99
+},{
+  "_id": {
+    "$oid": "61b3d96a9d1b1633f25fcfbf"
+  },
+  "empresaId": "61b3d3609d1b1633f25fcfba",
+  "empresaNombre": "La despensa familiar",
+  "img": "d1.jpg",
+  "nombre": "JABON GRISI PARA PERRO",
+  "detalle": "JABON GRISI PARA PERRO 100 GR.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61b3d96a9d1b1633f25fcfc0"
+  },
+  "empresaId": "61b3d3609d1b1633f25fcfba",
+  "empresaNombre": "La despensa familiar",
+  "img": "d2.jpg",
+  "nombre": "SHAMPOO FIDO PERRO",
+  "detalle": "SHAMPOO FIDO PERRO 480 ML.",
+  "precio": 6.99
+},{
+  "_id": {
+    "$oid": "61b3d96a9d1b1633f25fcfc1"
+  },
+  "empresaId": "61b3d3609d1b1633f25fcfba",
+  "empresaNombre": "La despensa familiar",
+  "img": "d3.jpg",
+  "nombre": "CAT CHOW",
+  "detalle": "ALIMENTO CAT CHOW GATO PURINA GATITOS 1500GR.",
+  "precio": 14.99
+},{
+  "_id": {
+    "$oid": "61b3d96a9d1b1633f25fcfc2"
+  },
+  "empresaId": "61b3d3609d1b1633f25fcfba",
+  "empresaNombre": "La despensa familiar",
+  "img": "d4.jpg",
+  "nombre": "PAPA",
+  "detalle": "PAPA CLASIFICADA LIBRA.",
+  "precio": 2.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfc9"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b29",
+  "empresaNombre": "Ovi&ser",
+  "img": "o1.jpg",
+  "nombre": "Pollo a la naranja",
+  "detalle": "Pollo a la Naranja receta china: por Gorka Barredo RECETA DE POLLO A LA NARANJA El pollo a la naranja es una comida típica de Asia.",
+  "precio": 7.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfca"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b29",
+  "empresaNombre": "Ovi&ser",
+  "img": "o2.jpg",
+  "nombre": "Bizcocho de leche",
+  "detalle": "RECETA DEL BIZCOCHO DE LECHE ESPONJOSO CASERO Un delicioso bizcocho de leche esponjoso casero, ideal para comer tal cual, con mermelada o para mojar en leche.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfcb"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b29",
+  "empresaNombre": "Ovi&ser",
+  "img": "o3.jpg",
+  "nombre": "Pollo al horno",
+  "detalle": "Pollo al horno con verduras. Otra forma más de preparar esta popular carne. Pollo asado. Además es una opción muy saludable.",
+  "precio": 6.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfcc"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b29",
+  "empresaNombre": "Ovi&ser",
+  "img": "o4.jpg",
+  "nombre": "Tacos Mexicanos",
+  "detalle": "Los tacos mexicanos son una popular receta de este país americano.",
+  "precio": 5.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfcd"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b28",
+  "empresaNombre": "Lo Mejor De Mi Tierra",
+  "img": "l0.jpg",
+  "nombre": "Pollo Frito",
+  "detalle": "Los tacos mexicanos son una popular receta de este país americano.",
+  "precio": 5.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfce"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b28",
+  "empresaNombre": "Lo Mejor De Mi Tierra",
+  "img": "l1.jpg",
+  "nombre": "Banderillas de Salchicha",
+  "detalle": "Las banderillas de salchicha o corndogs, es una receta típicamente estadounidense. Consiste en una salchicha frankfurt, pinchada con una brocheta.",
+  "precio": 5.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfcf"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b28",
+  "empresaNombre": "Lo Mejor De Mi Tierra",
+  "img": "l2.jpg",
+  "nombre": "Pollo a la cerveza",
+  "detalle": "Pollo a la cerveza guisado. Una receta con mucha personalidad. Es como el guisado convencional.",
+  "precio": 7.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfd0"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b28",
+  "empresaNombre": "Lo Mejor De Mi Tierra",
+  "img": "l3.jpg",
+  "nombre": "Torilla de patata",
+  "detalle": "DE PATATAS RELLENA DE QUESO Y JAMON La tortilla de patatas rellena de queso.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfd1"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b27",
+  "empresaNombre": "Pizza Napoles",
+  "img": "n0.jpg",
+  "nombre": "Pizza de lacón con champiñones ",
+  "detalle": "Esta Pizza de lacón con champiñones y rúcula es buena para acostumbrarse a acompañar las pizzas con una buena cantidad de hojas verdes, que colocamos encima en el momento de servirla y llevarla a la mesa. El relleno, al utilizar lacón en lugar de jamón de York tiene ese toque especial que tanto nos gusta.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfd2"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b27",
+  "empresaNombre": "Pizza Napoles",
+  "img": "n1.jpg",
+  "nombre": "Pizza mexicana de carne",
+  "detalle": "La segunda opción que os proponemos es una Pizza mexicana de carne elaborada con una base de tomate y queso cubierta con carne picada, cebolla y rodajas de aguacate. El toque picante adecuado lo decides tú añadiendo más o menos Tabasco o chiles jalapeños.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfd3"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b27",
+  "empresaNombre": "Pizza Napoles",
+  "img": "n2.jpg",
+  "nombre": " Pizza de pera, jamón y gorgonzola",
+  "detalle": "Esta Pizza de pera, jamón y gorgonzola es una de mis pizzas favoritas ya que el toque dulce de la pera encaja muy bien con el salado del jamón, en contraste con el sabor especial del queso gorgonzola. Me estoy relamiendo al recordarla.",
+  "precio": 4.99
+},{
+  "_id": {
+    "$oid": "61b3ddb19d1b1633f25fcfd4"
+  },
+  "empresaId": "61b11ce06d46cc15090f6b27",
+  "empresaNombre": "Pizza Napoles",
+  "img": "n3.jpg",
+  "nombre": "Pizza de pollo",
+  "detalle": "La Pizza de pollo, queso brie y arándanos es la reina de los contrastes ya que el sabor ácido del arándano y la textura cremosa del queso brie, funcionan estupendamente con el pollo, consiguiendo una mezcla muy equilibrada.",
+  "precio": 4.99
+}]

@@ -29,10 +29,11 @@ router.get('/:idCategoria', function (req, res) {
 })
 
 router.get('/nombre/:nombreCategoria', function (req, res) {
+    // console.log(req.params.nombreCategoria)
     empresas.find({
         nombreCategoria: req.params.nombreCategoria,
     }).then((result) => {
-        // console.log(result)
+        console.log(result)
         res.send(result);
         res.end()
     }).catch(error => {
@@ -43,7 +44,7 @@ router.get('/nombre/:nombreCategoria', function (req, res) {
 
 //Traer una empresa por su id
 router.get('/empresaId/:idEmpresa', function (req, res) {
-    // console.log(req.params.idCategoria)
+    console.log(req.params.idEmpresa)
     empresas.find({
         _id: req.params.idEmpresa,
     }).then((result) => {

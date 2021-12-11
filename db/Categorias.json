@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "61a67f9d4fde0a846065fb86"
+  },
+  "nombre": "Ferreterias"
+},{
+  "_id": {
+    "$oid": "61a67f9d4fde0a846065fb84"
+  },
+  "nombre": "Restaurantes"
+},{
+  "_id": {
+    "$oid": "61a67f9d4fde0a846065fb85"
+  },
+  "nombre": "Farmacias"
+},{
+  "_id": {
+    "$oid": "61b3d31b9d1b1633f25fcfb0"
+  },
+  "nombre": "Supermercados"
+}]
