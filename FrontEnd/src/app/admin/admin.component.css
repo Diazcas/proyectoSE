@@ -58,7 +58,9 @@
   .cont {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 3%;
+    max-height: 70%;
+    overflow: auto;
   }
   
   .opciones {
