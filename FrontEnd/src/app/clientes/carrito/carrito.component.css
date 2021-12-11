@@ -1,0 +1,170 @@
+.objetoCont {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  height: 150px;
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: 0px 0px 5px grey;
+  transition: box-shadow 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.589);
+}
+
+.objetoImagen{
+    width: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
+
+.objetoDetalle {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 0;
+}
+
+.objetoDetalle p {
+  margin: 0;
+  color: black;
+  padding: 0px 10px;
+  height: 50px;
+  overflow: hidden;
+  text-shadow: 0px 0px 2px grey;
+  width: 90%;
+  overflow-y: scroll;
+}
+.objetoDetalle .detalle {
+  color: red;
+  float: left;
+  margin-left: 10px;
+}
+
+.objetoCont h3 {
+  text-shadow: 0px 0px 3px black;
+  margin-top: 55%;
+  margin-left: 10px;
+  padding: 0px 10px;
+  max-height: 30px;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.objetoDetalle b {
+  padding: 5px 10px;
+}
+
+.objetoCont button {
+  float: right;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.carritoCont h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px grey;
+}
+
+.carritoCont {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3.error {
+  text-align: center;
+}
+
+fa-icon.eliminarPro{
+  color: red;
+  float: right;
+  margin-right: 30px;
+  margin-top: -50px;
+}
+
+/*------------------------------- modal -------------------------------*/
+
+.modalBody p {
+  display: inline-block;
+  min-width: 50%;
+}
+
+.modalBody div p:first-child {
+  text-align: right;
+}
+
+.botonFlotante {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  box-shadow: 0px 0px 5px grey;
+}
+
+@media (min-width:769px) {
+    .carrito{
+        overflow: auto;
+        width: fit-content;
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .objetoCont{
+        height: fit-content;
+        max-width: 560px;
+        float: left;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+    .objetoCont:last-child{
+        margin-bottom: 20px;
+    }
+
+    .objetoCont .objetoDetalle{
+        min-height: 100%;
+    }
+
+    .objetoCont .objetoDetalle p{ 
+        height: 100%;
+        max-height: none;
+        height: 110px;
+        padding-right: 0px;
+        width: 80%;
+    }
+
+    .modalCont{
+        max-width: 340px;
+    }
+
+    .botonFlotante{
+      right: 15%;
+    }
+
+    .botonFlotante:hover{
+      cursor: pointer;
+    }
+
+    fa-icon.eliminarPro{
+      margin-top: -70px;
+      padding: 5px;
+    }
+    fa-icon.eliminarPro:hover{
+      cursor: pointer;
+    }
+
+    .objetoCont:hover{
+      cursor: auto;
+    }
+}

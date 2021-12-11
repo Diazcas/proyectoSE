@@ -1,0 +1,79 @@
+<app-nav></app-nav>
+<form action="" [formGroup]="formularioCliente" *ngIf="mostrarRegion == 'cliente'">
+    <fieldset class="clienteForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" formControlName="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" formControlName="apellido"  required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email"  formControlName="email"  required>
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error">
+            <span *ngIf="email?.errors?.email">Error, ingrese un correo válido</span>
+        </div>
+
+        <label for="password">Contraseña:</label>
+        <input [ngClass]="{'input-error':password?.invalid && (password?.dirty || password?.touched)}" type="password" formControlName="password" required>
+        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error">
+            <span *ngIf="password?.errors?.required">Error, el campo es obligatorio</span>
+            <span *ngIf="password?.errors?.minlength">La contraseña debe contener un minimo de 5 caracteres</span>
+        </div>
+
+        <label for="tel">Telefono:</label>
+        <input type="text" name="tel" id="tel" formControlName="tel" required>
+
+        <div>
+            <button routerLink="/clientes/login" [disabled]="!formularioCliente.valid" (click)='guardarCli()'>Resgistrarme</button>
+        </div>
+        <a (click)="cambiarform('repartidor')">Quiero registrarme como repartidor!</a>
+    </fieldset>
+</form>
+
+<form action="" [formGroup]="formularioRepartidor" *ngIf="mostrarRegion == 'repartidor'">
+    <fieldset class="repartidorForm">
+        <section>
+            <div>
+                <label for="pNombre">Primer nombre:</label>
+                <input type="text" name="pNombre" id="pNombre" formControlName="pNombre">
+            </div>
+            <div>
+                <label for="sNombre">Segundo nombre:</label>
+                <input type="text" name="sNombre" id="sNombre" formControlName="sNombre">
+            </div>
+        </section>
+        <section>
+            <div>
+                <label for="pApellido">Primer apellido:</label>
+                <input type="text" name="pApellido" id="pApellido" formControlName="pApellido">
+            </div>
+            <div>
+                <label for="sApellido">Segundo apellido:</label>
+                <input type="text" name="sApellido" id="sApellido" formControlName="sApellido">
+            </div>
+        </section>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" formControlName="email">
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error">
+            <span *ngIf="email?.errors?.email">Error, ingrese un correo válido</span>
+        </div>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="password" formControlName="password">
+        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error">
+            <span *ngIf="password?.errors?.required">Error, el campo es obligatorio</span>
+            <span *ngIf="password?.errors?.minlength">La contraseña debe contener un minimo de 5 caracteres</span>
+        </div>
+
+        <label for="tel">Telefono:</label>
+        <input type="text" name="tel" id="tel" formControlName="tel">
+
+        <div>
+            <button routerLink="/clientes/login" [disabled]="!formularioRepartidor.valid" (click)='guardarRep()'>Resgistrarme</button>
+        </div>
+        <a (click)="cambiarform('cliente')">Quiero registrarme como cliente!</a>
+    </fieldset>
+</form>
+
+

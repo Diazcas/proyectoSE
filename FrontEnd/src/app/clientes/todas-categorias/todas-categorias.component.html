@@ -1,0 +1,59 @@
+<app-nav></app-nav>
+
+<div class="categoriasCont">
+    <section>
+        <div class="empresas">
+            <div class="nombreCat">
+                <h1>{{catActual}}</h1>
+            </div>
+            <div class="empresasCont">
+                <div (click)="selectComp()" routerLink="/clientes/productos/{{catActual}}/{{item._id}}" *ngFor="let item of data; let i = index" class="objetoCont" style="background-image: url(http://localhost:8888/public/empresas/{{item.banner}})" >
+                    <p class="calificacion">
+                        <fa-icon *ngIf="item.puntuacion >= 1" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 1" class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 2" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 2" class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 3" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 3" class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 4" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 4" class="" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion >= 5" class="active" [icon]="faStar"></fa-icon>
+                        <fa-icon *ngIf="item.puntuacion < 5" class="" [icon]="faStar"></fa-icon>
+                    </p>
+                    <div class="empresaLogo">
+                        <img src="http://localhost:8888/public/logos/{{item.logo}}" alt="">
+                    </div>
+                    <div class="objetoDetalle">
+                        <h2>{{item.nombre}}</h2>
+                        <p class="descripcion">{{item.descripcion}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="botonMenu" (click)='mostrarCat()'>
+    <fa-icon [icon]="faStore"></fa-icon>
+</div>
+
+<div class="modalBack" *ngIf="movilVisible == 'movil'">
+    <div class="modalCont">
+      <div class="modalNav">
+        <fa-icon [icon]="faWindowClose" (click)="quitarCat()"></fa-icon>
+        <h4></h4>
+        <hr>
+      </div>
+      <div class="modalBody">
+        <ul>
+            <li (click)='verCat("Restaurantes")' [routerLink]="['/clientes/categorias/R']"><fa-icon [icon]="faUtensils"></fa-icon><a>Restaurantes</a></li>
+            <li (click)='verCat("Farmacias")' [routerLink]="['/clientes/categorias/Fa']"><fa-icon [icon]="faPrescriptionBottleAlt"></fa-icon><a>Farmacias</a></li>
+            <li (click)='verCat("Ferreterias")' [routerLink]="['/clientes/categorias/Fe']"><fa-icon [icon]="faTools"></fa-icon><a>Ferreterias</a></li>
+            <li (click)='verCat("Supermercados")' [routerLink]="['/clientes/categorias/S']"><fa-icon [icon]="faStore"></fa-icon><a>Supermercados</a></li>
+        </ul>
+        <hr>
+      </div>
+      <div class="modalFooter">
+      </div>
+    </div>
+  </div>

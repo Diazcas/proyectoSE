@@ -1,0 +1,26 @@
+.map-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+  }
+
+  .ayuda{
+    position: absolute;
+    z-index: 100;
+    right: 100px;
+    top: 10px;
+    border: 1px solid grey;
+    padding: 7px 5px;
+    background-color: white;
+  }
+
+  .ayuda p{
+    margin: 0px;
+  }
+  
+  /*------------------------------- modal -------------------------------*/
+  
+  .modalBack {
+    z-index: 100;
+  }

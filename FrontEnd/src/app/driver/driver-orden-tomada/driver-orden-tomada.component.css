@@ -1,0 +1,105 @@
+
+section{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
+    margin-block-end: 20px;
+    background-image: linear-gradient(to right, rgb(0, 162, 255), var(--color-boton));
+}
+
+.info h2, .info p{
+    margin: 0px;
+}
+
+.info p:last-child{
+    margin-bottom: 5px;
+}
+
+.info p{
+    float: left;
+}
+
+.info button{
+    float: right;
+    width: 100px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.info button.buttonArriba{
+    margin-top: 20px;
+}
+
+.info{
+    overflow: auto;
+}
+
+.info span{
+    color: black;
+}
+
+.info .precio{
+    width: 50%;
+}
+
+.iconosCont{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px grey;
+    color: black;
+    text-shadow: none;
+    padding: 5px 0px;
+}
+
+.iconosCont div{
+    text-align: center;
+    height: min-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.iconosCont div.active{
+    border: 1px solid black;
+}
+
+.iconosCont p{
+    margin: 0px;
+}
+
+.tomada fa-icon{
+    color: burlywood;
+}
+
+.camino fa-icon{
+    color: rgb(255, 67, 67);
+}
+
+.punto fa-icon{
+    color: rgb(74, 74, 255);
+}
+
+.objetoCont{
+    text-align: left;
+    padding: 5px 0px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.objetoCont .detalle{
+    text-indent: 25px;
+}
+
+.titu{
+ background-color: black;
+ padding: 5px 0px;
+}
+
+.ordenCont hr{
+    margin: 5px 0px;
+}

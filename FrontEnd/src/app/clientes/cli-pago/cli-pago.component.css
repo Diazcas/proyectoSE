@@ -1,0 +1,26 @@
+
+form{
+    text-align: center;
+}
+
+h2{
+    margin: 20px;
+    text-align: center;
+}
+label, input, select{
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+label{
+    font-weight: bold;
+}
+
+button{
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+}
+

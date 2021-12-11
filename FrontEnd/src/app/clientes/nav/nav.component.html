@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/clientes">
+      <img src="http://localhost:8888/public/logo.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" (click)='mostrarNav()'>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="saludo" *ngIf="sesion == '1'"><b>Hola {{nombreCliente}}!</b></div>
+  
+    <div class="navbar-collapse" id="navbarNav" *ngIf="res < 769 && navbar == true">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="sesion == '0'">
+          <a class="nav-link" routerLink="/clientes/login">Iniciar sesion</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '1'">
+          <a class="nav-link"  routerLink="/clientes/eCuenta">Configuración de cuenta</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '1'">
+          <a class="nav-link" (click)="cerrarSesion()">Cerrar sesion</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '0'">
+          <a class="nav-link" routerLink="/clientes/registro">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/clientes/carrito">Carrito ({{productosCarrito}})</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="big" *ngIf="res > 769 && navbar == true">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="sesion == '0'">
+          <a class="nav-link" routerLink="/clientes/login">Iniciar sesion</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '1'">
+          <a class="nav-link"  routerLink="/clientes/eCuenta">Configuracion de cuenta</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '1'">
+          <a class="nav-link" (click)="cerrarSesion()">Cerrar sesion</a>
+        </li>
+        <li class="nav-item" *ngIf="sesion == '0'">
+          <a class="nav-link" routerLink="/clientes/registro">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/clientes/carrito">Carrito ({{productosCarrito}})</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

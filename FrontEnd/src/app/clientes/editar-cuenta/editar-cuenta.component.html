@@ -1,0 +1,30 @@
+<app-nav></app-nav>
+<form action="" [formGroup]="formularioCliente">
+    <fieldset class="clienteForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" formControlName="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" formControlName="apellido"  required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email"  formControlName="email"  required>
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error">
+            <span *ngIf="email?.errors?.email">Error, ingrese un correo válido</span>
+        </div>
+
+        <label for="password">Contraseña:</label>
+        <input [ngClass]="{'input-error':password?.invalid && (password?.dirty || password?.touched)}" type="password" formControlName="password" required>
+        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error">
+            <span *ngIf="password?.errors?.required">Error, el campo es obligatorio</span>
+            <span *ngIf="password?.errors?.minlength">La contraseña debe contener un minimo de 5 caracteres</span>
+        </div>
+
+        <label for="tel">Telefono:</label>
+        <input type="text" name="tel" id="tel" formControlName="tel" required>
+
+        <div>
+            <button (click)="actualizar()">Actualizar datos</button>
+        </div>
+    </fieldset>
+</form>
