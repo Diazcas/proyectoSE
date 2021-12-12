@@ -1,0 +1,9 @@
+----------------------Frontend----------------------
+ng serve --open 
+
+----------------------Backend----------------------
+node index
+
+----------------------Base de datos----------------------
+La base de datos funciona en la nube de mongoDB Atlas por lo que permite ingresar desde cualquier IP, los
+datos se encuentran en la carpeta DB 
